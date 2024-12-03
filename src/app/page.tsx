@@ -1,13 +1,13 @@
-import { HomeIcon } from "@heroicons/react/20/solid";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { HomeIcon } from '@heroicons/react/20/solid';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
-const commonStyles = "w-full flex flex-col items-center";
+const commonStyles = 'w-full flex flex-col items-center';
 const titleStyles =
-  "bg-bottom-teal-300 border-b-2 border-teal-300 text-4xl font-bold mt-16 mb-4";
-const listTextStyle = "text-right w-48 text-lg mr-4 mt-1";
-const listDiv1Style = "w-48 h-4 border-2 relative";
-const listDiv2Style = "h-4 bg-white absolute top-0 left-0";
+  'bg-bottom-teal-300 border-b-2 border-teal-300 text-4xl font-bold mt-16 mb-4';
+const listTextStyle = 'text-right w-48 text-lg mr-4 mt-1';
+const listDiv1Style = 'w-48 h-4 border-2 relative';
+const listDiv2Style = 'h-4 bg-white absolute top-0 left-0';
 
 const SkillItem = ({ skill, width }: { skill: string; width: string }) => {
   return (
@@ -23,55 +23,68 @@ const SkillItem = ({ skill, width }: { skill: string; width: string }) => {
 
 export default function Home() {
   const tools = [
-    { name: "GitHub", width: "80%" },
-    { name: "Trello", width: "80%" },
-    { name: "VSCode", width: "90%" },
-    { name: "JetBrain IDEs", width: "70%" },
-    { name: "Firebase", width: "80%" },
-    { name: "SQLPlus", width: "70%" },
-    { name: "Unity", width: "90%" },
-    { name: "Android Studio", width: "65%" },
-    { name: "Maya", width: "90%" },
-    { name: "Blender", width: "120%" },
+    { name: 'GitHub', width: '80%' },
+    { name: 'Trello', width: '80%' },
+    { name: 'VSCode', width: '90%' },
+    { name: 'JetBrain IDEs', width: '70%' },
+    { name: 'Firebase', width: '80%' },
+    { name: 'SQLPlus', width: '70%' },
+    { name: 'Unity', width: '90%' },
+    { name: 'Android Studio', width: '65%' },
+    { name: 'Maya', width: '90%' },
+    { name: 'Blender', width: '120%' },
   ];
 
   const languages = [
-    { name: "Java", width: "100%" },
-    { name: "C/C++", width: "85%" },
-    { name: "Python", width: "80%" },
-    { name: "JavaScript", width: "60%" },
-    { name: "HTML/CSS", width: "70%" },
-    { name: "Kotlin", width: "90%" },
-    { name: "C#", width: "80%" },
-    { name: "SQL", width: "60%" },
-    { name: "MatLab", width: "60%" },
-    { name: "Lua", width: "50%" },
+    { name: 'Java', width: '100%' },
+    { name: 'C/C++', width: '85%' },
+    { name: 'Python', width: '80%' },
+    { name: 'JavaScript', width: '60%' },
+    { name: 'HTML/CSS', width: '70%' },
+    { name: 'Kotlin', width: '90%' },
+    { name: 'C#', width: '80%' },
+    { name: 'SQL', width: '60%' },
+    { name: 'MatLab', width: '60%' },
+    { name: 'Lua', width: '50%' },
   ];
 
   const libraries = [
-    { name: "CUDA Toolkit", width: "90%" },
-    { name: "YOLO", width: "70%" },
-    { name: "OpenCV", width: "80%" },
-    { name: "React", width: "90%" },
-    { name: "TailWind", width: "90%" },
-    { name: "Node.js", width: "70%" },
-    { name: "Next.js", width: "90%" },
-    { name: "Java3D", width: "100%" },
-    { name: "Swing", width: "75%" },
-    { name: "PyGame", width: "60%" },
+    { name: 'CUDA Toolkit', width: '90%' },
+    { name: 'YOLO', width: '70%' },
+    { name: 'OpenCV', width: '80%' },
+    { name: 'React', width: '90%' },
+    { name: 'TailWind', width: '90%' },
+    { name: 'Node.js', width: '70%' },
+    { name: 'Next.js', width: '90%' },
+    { name: 'Java3D', width: '100%' },
+    { name: 'Swing', width: '75%' },
+    { name: 'PyGame', width: '60%' },
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar */}
-      <nav className="w-full bg-bottom-teal-300 border-b-2 border-teal-300 fixed top-0">
-        <ul className="flex justify-start space-between bg-neutral-800 w-full gap-8 pl-8">
+      <nav className="flex w-full bg-bottom-teal-300 border-b-2 border-teal-300 fixed top-0">
+        <ul className="flex justify-start space-between bg-neutral-800 w-1/2 gap-8 pl-8">
           <li>
             <HomeIcon className="h-8 w-8 mt-3" />
           </li>
           <li className="p-3 text-2xl font-bold">Skills</li>
           <li className="p-3 text-2xl font-bold">Projects</li>
+          <li className="p-3 text-2xl font-bold">Models</li>
           <li className="p-3 text-2xl font-bold">Contact</li>
+        </ul>
+        <ul className="flex justify-end space-between bg-neutral-800 w-1/2 gap-8 pr-8">
+          <li>
+            <a href="https://www.github.com/YousefKart" target="#">
+              <FaGithub className="h-8 w-8 mt-3" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/yousef-kart/" target="#">
+              <FaLinkedin className="h-8 w-8 mt-3" />
+            </a>
+          </li>
         </ul>
       </nav>
 
