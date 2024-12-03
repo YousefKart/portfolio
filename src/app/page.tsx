@@ -1,6 +1,7 @@
 import { HomeIcon } from "@heroicons/react/20/solid";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
-// Common Styles
 const commonStyles = "w-full flex flex-col items-center";
 const titleStyles =
   "bg-bottom-teal-300 border-b-2 border-teal-300 text-4xl font-bold mt-16 mb-4";
@@ -8,7 +9,6 @@ const listTextStyle = "text-right w-48 text-lg mr-4 mt-1";
 const listDiv1Style = "w-48 h-4 border-2 relative";
 const listDiv2Style = "h-4 bg-white absolute top-0 left-0";
 
-// Skill Item Component
 const SkillItem = ({ skill, width }: { skill: string; width: string }) => {
   return (
     <li className="flex">
@@ -21,18 +21,18 @@ const SkillItem = ({ skill, width }: { skill: string; width: string }) => {
   );
 };
 
-export default function SkillsList() {
+export default function Home() {
   const tools = [
-    { name: "VS Code", width: "90%" },
-    { name: "IntelliJ", width: "90%" },
-    { name: "PyCharm", width: "80%" },
-    { name: "Eclipse", width: "70%" },
-    { name: "Android Studio", width: "80%" },
-    { name: "Git", width: "80%" },
-    { name: "Postman", width: "70%" },
-    { name: "Docker", width: "60%" },
-    { name: "Jira", width: "60%" },
-    { name: "Slack", width: "60%" },
+    { name: "GitHub", width: "80%" },
+    { name: "Trello", width: "80%" },
+    { name: "VSCode", width: "90%" },
+    { name: "JetBrain IDEs", width: "70%" },
+    { name: "Firebase", width: "80%" },
+    { name: "SQLPlus", width: "70%" },
+    { name: "Unity", width: "90%" },
+    { name: "Android Studio", width: "65%" },
+    { name: "Maya", width: "90%" },
+    { name: "Blender", width: "120%" },
   ];
 
   const languages = [
@@ -49,16 +49,16 @@ export default function SkillsList() {
   ];
 
   const libraries = [
-    { name: "React", width: "80%" },
+    { name: "CUDA Toolkit", width: "90%" },
+    { name: "YOLO", width: "70%" },
+    { name: "OpenCV", width: "80%" },
+    { name: "React", width: "90%" },
+    { name: "TailWind", width: "90%" },
     { name: "Node.js", width: "70%" },
-    { name: "Express", width: "70%" },
-    { name: "JQuery", width: "60%" },
-    { name: "Bootstrap", width: "70%" },
-    { name: "Tailwind", width: "80%" },
-    { name: "Material-UI", width: "70%" },
-    { name: "Socket.io", width: "60%" },
-    { name: "Django", width: "70%" },
-    { name: "Flask", width: "60%" },
+    { name: "Next.js", width: "90%" },
+    { name: "Java3D", width: "100%" },
+    { name: "Swing", width: "75%" },
+    { name: "PyGame", width: "60%" },
   ];
 
   return (
@@ -134,13 +134,39 @@ export default function SkillsList() {
           </div>
           <div className={`${commonStyles}`}>
             <h1 className={`${titleStyles} w-3/4 text-center`}>Contact</h1>
+            <ul className="flex flex-col gap-4 mt-4 mb-8">
+              <li className="flex justify-center items-center gap-4">
+                <MdEmail className="h-8 w-8" />
+                <a href="mailto:yousefkart21@gmail.com" target="#">
+                  Email
+                </a>
+              </li>
+              <li className="flex justify-center items-center gap-4">
+                <FaGithub className="h-8 w-8" />
+                <a href="https://github.com/YousefKart" target="#">
+                  GitHub
+                </a>
+              </li>
+              <li className="flex justify-center items-center gap-4">
+                <FaLinkedin className="h-8 w-8" />
+                <a href="https://www.linkedin.com/in/yousef-kart/" target="#">
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
           </div>
         </main>
       </div>
 
       {/* Footer */}
       <footer className="w-full bg-neutral-800 flex justify-center items-center py-4 border-t-2 border-teal-300">
-        <p>(c) 2024 Yousef Kart</p>
+        <p>
+          (c) 2024 Yousef Kart | [
+          <a href="https://github.com/YousefKart/portfolio" target="#">
+            WIP
+          </a>
+          ]
+        </p>
       </footer>
     </div>
   );
