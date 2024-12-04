@@ -62,17 +62,25 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen"> 
       {/* Navbar */}
-      <nav className="flex w-full bg-bottom-teal-300 border-b-2 border-teal-300 fixed top-0">
+      <nav className="flex w-full bg-bottom-teal-300 border-b-2 border-teal-300 fixed top-0 z-50">
         <ul className="flex justify-start space-between bg-neutral-800 w-1/2 gap-8 pl-8">
           <li>
             <HomeIcon className="h-8 w-8 mt-3" />
           </li>
-          <li className="p-3 text-2xl font-bold">Skills</li>
-          <li className="p-3 text-2xl font-bold">Projects</li>
-          <li className="p-3 text-2xl font-bold">Models</li>
-          <li className="p-3 text-2xl font-bold">Contact</li>
+            <li className="p-3 text-2xl font-bold">
+            <a href="#skills">Skills</a>
+            </li>
+            <li className="p-3 text-2xl font-bold">
+            <a href="#projects">Projects</a>
+            </li>
+            <li className="p-3 text-2xl font-bold">
+            <a href="#models">Models</a>
+            </li>
+            <li className="p-3 text-2xl font-bold">
+            <a href="#contact">Contact</a>
+            </li>
         </ul>
         <ul className="flex justify-end space-between bg-neutral-800 w-1/2 gap-8 pr-8">
           <li>
@@ -99,9 +107,9 @@ export default function Home() {
             I have 60 years programming experience.
           </p>
         </header>
-
         <main className={`${commonStyles} bg-neutral-900`}>
-          <div className={`${commonStyles}`}>
+
+          <div id="skills" className={`${commonStyles}`}>
             <h1 className={`${titleStyles} w-3/4 text-center`}>Skills</h1>
             <div className="flex gap-16 space-between justify-center">
               <div>
@@ -142,10 +150,16 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={`${commonStyles}`}>
+
+          <div id="projects" className={`${commonStyles}`}>
             <h1 className={`${titleStyles} w-3/4 text-center`}>Projects</h1>
           </div>
-          <div className={`${commonStyles}`}>
+
+          <div id="models" className={`${commonStyles}`}>
+            <h1 className={`${titleStyles} w-3/4 text-center`}>Models</h1>
+          </div>
+
+          <div id="contact" className={`${commonStyles}`}>
             <h1 className={`${titleStyles} w-3/4 text-center`}>Contact</h1>
             <ul className="flex flex-col gap-4 mt-4 mb-8">
               <li className="flex justify-center items-center gap-4">
@@ -168,6 +182,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
+
         </main>
       </div>
 
