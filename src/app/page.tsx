@@ -10,18 +10,6 @@ const listTextStyle = 'text-right w-48 text-lg mr-4 mt-1';
 const listDiv1Style = 'w-48 h-4 border-2 relative';
 const listDiv2Style = 'h-4 bg-white absolute top-0 left-0';
 
-const SkillItem = ({ skill, width }: { skill: string; width: string }) => {
-  return (
-    <li className="flex">
-      <p className={listTextStyle}>{skill}</p>
-      <div className="relative mt-3 ml-4">
-        <div className={listDiv1Style} />
-        <div className={listDiv2Style} style={{ width }} />
-      </div>
-    </li>
-  );
-};
-
 export default function Home() {
   const tools = [
     { name: 'GitHub', width: '80%' },
@@ -156,286 +144,146 @@ export default function Home() {
           <div id="projects" className={`${commonStyles}`}>
             <h1 className={`${titleStyles} w-3/4 text-center`}>Projects</h1>
             <ul className={`${commonStyles} gap-4 mt-4 mb-8`}>
-              <li className={`${commonStyles}`}>
-                <div className="flex w-2/5 relative mb-28">
-                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
-                    2025
-                  </h2>
-                  <h2
-                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
-                  >
-                    AI Monitoring System
-                  </h2>
-                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
-                    <a href="https" target="#">
-                      <FaGithub className="h-8 w-8" />
-                    </a>
-                    <a href="https" target="#">
-                      <FaLink className="h-8 w-8" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex gap-8 mt-4">
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                </div>
-                <p className="w-2/5 text-center mt-8">Desc</p>
-              </li>
+              <ProjectItem
+                year="2025"
+                title="AI Monitiring System"
+                githubLink="https://github.com/ai-monitoring-system"
+                liveLink="https://4990.tanzimfh.com/"
+                images={[
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                ]}
+                description="A software solution designed to provide real-time monitoring and alert capabilities using repurposed devices. The system streams live video to a web application where users can monitor their environment, record footage, and receive notifications for specific events, detected by AI."
+              />
 
-              <li className={`${commonStyles}`}>
-                <div className="flex w-2/5 relative mb-28">
-                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
-                    2024
-                  </h2>
-                  <h2
-                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
-                  >
-                    Flag Frenzy
-                  </h2>
-                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
-                    <a href="https" target="#">
-                      <FaGithub className="h-8 w-8" />
-                    </a>
-                    <a href="https" target="#">
-                      <FaLink className="h-8 w-8" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex gap-8 mt-4">
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                </div>
-                <p className="w-2/5 text-center mt-8">Desc</p>
-              </li>
+              <ProjectItem
+                year="2024"
+                title="Flag Frenzy"
+                githubLink="https"
+                liveLink="https://www.roblox.com/games/15222475262/NEW-GUNS-FLAG-FRENZY-RED-VS-BLUE"
+                images={[
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                ]}
+                description="A 1st/3rd person shooter game on Roblox where players are divided into two teams and must capture the opposing team's flag while defending their own. The game features a variety of weapons, maps, and game modes."
+              />
 
-              <li className={`${commonStyles}`}>
-                <div className="flex w-2/5 relative mb-28">
-                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
-                    2024
-                  </h2>
-                  <h2
-                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
-                  >
-                    Tourify
-                  </h2>
-                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
-                    <a href="https" target="#">
-                      <FaGithub className="h-8 w-8" />
-                    </a>
-                    <a href="https" target="#">
-                      <FaLink className="h-8 w-8" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex gap-8 mt-4">
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                </div>
-                <p className="w-2/5 text-center mt-8">Desc</p>
-              </li>
+              <ProjectItem
+                year="2024"
+                title="Tourify"
+                githubLink="https://github.com/BorhanSaflo/tourify-android-app"
+                liveLink="https"
+                images={[
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                ]}
+                description="An Android mobile application that allows users to share and discover tourist locations around the world. Users can create and share their own tours, view tours created by others, and rate tours they have visited."
+              />
 
-              <li className={`${commonStyles}`}>
-                <div className="flex w-2/5 relative mb-28">
-                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
-                    2024
-                  </h2>
-                  <h2
-                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
-                  >
-                    Volt Vista
-                  </h2>
-                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
-                    <a href="https" target="#">
-                      <FaGithub className="h-8 w-8" />
-                    </a>
-                    <a href="https" target="#">
-                      <FaLink className="h-8 w-8" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex gap-8 mt-4">
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                </div>
-                <p className="w-2/5 text-center mt-8">Desc</p>
-              </li>
+              <ProjectItem
+                year="2023"
+                title="Volt Vista"
+                githubLink="https://github.com/BorhanSaflo/volt-vista"
+                liveLink="https://volt.borhansaflo.com/"
+                images={[
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                ]}
+                description="An energy monitring and management soltion. The system allows users to monitor their energy usage, set goals, and receive notifications when they are close to exceeding their budget. The system also provides recommendations on how to reduce energy consumption."
+              />
 
-              <li className={`${commonStyles}`}>
-                <div className="flex w-2/5 relative mb-28">
-                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
-                    2023
-                  </h2>
-                  <h2
-                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
-                  >
-                    Escape Java
-                  </h2>
-                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
-                    <a href="https" target="#">
-                      <FaGithub className="h-8 w-8" />
-                    </a>
-                    <a href="https" target="#">
-                      <FaLink className="h-8 w-8" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex gap-8 mt-4">
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                </div>
-                <p className="w-2/5 text-center mt-8">Desc</p>
-              </li>
+              <ProjectItem
+                year="2023"
+                title="Escape Java"
+                githubLink="https://github.com/BorhanSaflo/EscapeJava"
+                liveLink="https://www.youtube.com/watch?v=1XG5x_ulwCk"
+                images={[
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                ]}
+                description="A Java3D project designed to simulate an escape room game set in the Java Lounge (computer science commons). The game is designed to challenge players with various puzzles and obstacles, created in pure Java code."
+              />
 
-              <li className={`${commonStyles}`}>
-                <div className="flex w-2/5 relative mb-28">
-                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
-                    2023
-                  </h2>
-                  <h2
-                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
-                  >
-                    Ocean Anarchy
-                  </h2>
-                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
-                    <a href="https" target="#">
-                      <FaGithub className="h-8 w-8" />
-                    </a>
-                    <a href="https" target="#">
-                      <FaLink className="h-8 w-8" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex gap-8 mt-4">
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                </div>
-                <p className="w-2/5 text-center mt-8">Desc</p>
-              </li>
+              <ProjectItem
+                year="2022"
+                title="Ocean Anarchy"
+                githubLink="https"
+                liveLink="https"
+                images={[
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                ]}
+                description="A pirate-themed open-world game where players can explore the high seas, engage in naval battles, and search for hidden treasures. The game features a variety of ships, weapons, and upgrades to customize the player's experience."
+              />
 
-              <li className={`${commonStyles}`}>
-                <div className="flex w-2/5 relative mb-28">
-                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
-                    2021
-                  </h2>
-                  <h2
-                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
-                  >
-                    Take Cover
-                  </h2>
-                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
-                    <a href="https" target="#">
-                      <FaGithub className="h-8 w-8" />
-                    </a>
-                    <a href="https" target="#">
-                      <FaLink className="h-8 w-8" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex gap-8 mt-4">
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                </div>
-                <p className="w-2/5 text-center mt-8">Desc</p>
-              </li>
+              <ProjectItem
+                year="2021"
+                title="Take Cover"
+                githubLink="https"
+                liveLink="https"
+                images={[
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                ]}
+                description="A top-down shooter game where players must survive waves of zombies that get progressively stronger. The game features a variety of weapons, power-ups, and enemy types to keep players engaged."
+              />
 
-              <li className={`${commonStyles}`}>
-                <div className="flex w-2/5 relative mb-28">
-                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
-                    2020
-                  </h2>
-                  <h2
-                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
-                  >
-                    Idle Island
-                  </h2>
-                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
-                    <a href="https" target="#">
-                      <FaGithub className="h-8 w-8" />
-                    </a>
-                    <a href="https" target="#">
-                      <FaLink className="h-8 w-8" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex gap-8 mt-4">
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                </div>
-                <p className="w-2/5 text-center mt-8">Desc</p>
-              </li>
+              <ProjectItem
+                year="2021"
+                title="Idle Island"
+                githubLink="https"
+                liveLink="https"
+                images={[
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                ]}
+                description="A 2D idle game where players must manage and grow their own island. Players can build structures, gather resources, and expand their island. The game features a variety of upgrades and unlockables to keep players engaged."
+              />
 
-              <li className={`${commonStyles}`}>
-                <div className="flex w-2/5 relative mb-28">
-                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
-                    2020
-                  </h2>
-                  <h2
-                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
-                  >
-                    Frogger
-                  </h2>
-                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
-                    <a href="https" target="#">
-                      <FaGithub className="h-8 w-8" />
-                    </a>
-                    <a href="https" target="#">
-                      <FaLink className="h-8 w-8" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex gap-8 mt-4">
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                  <img src="https://via.placeholder.com/250" alt="Project" />
-                </div>
-                <p className="w-2/5 text-center mt-8">Desc</p>
-              </li>
+              <ProjectItem
+                year="2020"
+                title="Frogger"
+                githubLink="https"
+                liveLink="https"
+                images={[
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                  'https://via.placeholder.com/250',
+                ]}
+                description="A remake of the popular arcade game Frogger. Players must guide a frog across a busy road and river to reach their home. The game features multiple levels and a high score system to challenge players."
+              />
             </ul>
           </div>
 
           <div id="models" className={`${commonStyles}`}>
             <h1 className={`${titleStyles} w-3/4 text-center`}>Models</h1>
             <ul className="grid grid-cols-4 gap-12 mt-4 mb-8">
-              <li className="flex flex-col items-center">
-                <img src="https://via.placeholder.com/250" alt="Model" />
-                <h2 className="text-2xl font-bold mt-4">Model 1</h2>
-              </li>
-              <li className="flex flex-col items-center">
-                <img src="https://via.placeholder.com/250" alt="Model" />
-                <h2 className="text-2xl font-bold mt-4">Model 2</h2>
-              </li>
-              <li className="flex flex-col items-center">
-                <img src="https://via.placeholder.com/250" alt="Model" />
-                <h2 className="text-2xl font-bold mt-4">Model 3</h2>
-              </li>
-              <li className="flex flex-col items-center">
-                <img src="https://via.placeholder.com/250" alt="Model" />
-                <h2 className="text-2xl font-bold mt-4">Model 4</h2>
-              </li>
-              <li className="flex flex-col items-center">
-                <img src="https://via.placeholder.com/250" alt="Model" />
-                <h2 className="text-2xl font-bold mt-4">Model 5</h2>
-              </li>
-              <li className="flex flex-col items-center">
-                <img src="https://via.placeholder.com/250" alt="Model" />
-                <h2 className="text-2xl font-bold mt-4">Model 6</h2>
-              </li>
-              <li className="flex flex-col items-center">
-                <img src="https://via.placeholder.com/250" alt="Model" />
-                <h2 className="text-2xl font-bold mt-4">Model 7</h2>
-              </li>
-              <li className="flex flex-col items-center">
-                <img src="https://via.placeholder.com/250" alt="Model" />
-                <h2 className="text-2xl font-bold mt-4">Model 8</h2>
-              </li>
+              {[
+                { title: 'Model 1', image: 'https://via.placeholder.com/250' },
+                { title: 'Model 2', image: 'https://via.placeholder.com/250' },
+                { title: 'Model 3', image: 'https://via.placeholder.com/250' },
+                { title: 'Model 4', image: 'https://via.placeholder.com/250' },
+                { title: 'Model 5', image: 'https://via.placeholder.com/250' },
+                { title: 'Model 6', image: 'https://via.placeholder.com/250' },
+                { title: 'Model 7', image: 'https://via.placeholder.com/250' },
+                { title: 'Model 8', image: 'https://via.placeholder.com/250' },
+                { title: 'Model 9', image: 'https://via.placeholder.com/250' },
+                { title: 'Model 10', image: 'https://via.placeholder.com/250' },
+              ].map((model) => (
+                <ModelItem
+                  key={model.title}
+                  title={model.title}
+                  image={model.image}
+                />
+              ))}
             </ul>
           </div>
 
@@ -478,3 +326,78 @@ export default function Home() {
     </div>
   );
 }
+
+const SkillItem = ({ skill, width }: { skill: string; width: string }) => {
+  return (
+    <li className="flex">
+      <p className={listTextStyle}>{skill}</p>
+      <div className="relative mt-3 ml-4">
+        <div className={listDiv1Style} />
+        <div className={listDiv2Style} style={{ width }} />
+      </div>
+    </li>
+  );
+};
+
+const ProjectItem = ({
+  year,
+  title,
+  githubLink,
+  liveLink,
+  images,
+  description,
+}: {
+  year: string;
+  title: string;
+  githubLink: string;
+  liveLink: string;
+  images: string[];
+  description: string;
+}) => {
+  return (
+    <li className="w-full flex flex-col items-center">
+      <div className="flex w-2/5 relative mb-28">
+        <h2 className="text-2xl font-bold mt-16 absolute left-0">{year}</h2>
+        <h2 className="border-b-2 border-tertiary text-2xl font-bold mt-16 mb-4 absolute left-1/2 transform -translate-x-1/2">
+          {title}
+        </h2>
+        <div className="flex gap-4 h-8 mt-16 absolute right-0">
+          <a
+            href={githubLink}
+            target="#"
+            aria-label={`GitHub link for ${title}`}
+          >
+            <FaGithub className="h-8 w-8" />
+          </a>
+          <a
+            href={liveLink}
+            target="#"
+            aria-label={`Live demo link for ${title}`}
+          >
+            <FaLink className="h-8 w-8" />
+          </a>
+        </div>
+      </div>
+      <div className="flex gap-8 mt-4">
+        {images.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`${title} screenshot ${index + 1}`}
+            className="rounded-md"
+          />
+        ))}
+      </div>
+      <p className="w-2/5 text-center mt-8">{description}</p>
+    </li>
+  );
+};
+
+const ModelItem = ({ title, image }: { title: string; image: string }) => {
+  return (
+    <li className="flex flex-col items-center">
+      <img src={image} alt={title} className="rounded-md" />
+      <h2 className="text-2xl font-bold mt-4">{title}</h2>
+    </li>
+  );
+};
