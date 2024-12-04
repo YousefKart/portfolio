@@ -1,5 +1,5 @@
 import { HomeIcon } from '@heroicons/react/20/solid';
-import { FaLinkedin, FaGithub, FaLink } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaLink, FaYoutube } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const commonStyles = 'w-full flex flex-col items-center';
@@ -11,45 +11,6 @@ const listDiv1Style = 'w-48 h-4 border-2 relative';
 const listDiv2Style = 'h-4 bg-white absolute top-0 left-0';
 
 export default function Home() {
-  const tools = [
-    { name: 'GitHub', width: '80%' },
-    { name: 'Trello', width: '80%' },
-    { name: 'VSCode', width: '90%' },
-    { name: 'Roblox Studio', width: '70%' },
-    { name: 'Firebase', width: '80%' },
-    { name: 'SQLPlus', width: '70%' },
-    { name: 'Unity', width: '90%' },
-    { name: 'Android Studio', width: '65%' },
-    { name: 'Maya', width: '90%' },
-    { name: 'Blender', width: '120%' },
-  ];
-
-  const languages = [
-    { name: 'Java', width: '100%' },
-    { name: 'C/C++', width: '85%' },
-    { name: 'Python', width: '80%' },
-    { name: 'JavaScript', width: '60%' },
-    { name: 'HTML/CSS', width: '70%' },
-    { name: 'Kotlin', width: '90%' },
-    { name: 'C#', width: '80%' },
-    { name: 'SQL', width: '60%' },
-    { name: 'MatLab', width: '60%' },
-    { name: 'Lua', width: '50%' },
-  ];
-
-  const libraries = [
-    { name: 'CUDA Toolkit', width: '90%' },
-    { name: 'YOLO', width: '70%' },
-    { name: 'OpenCV', width: '80%' },
-    { name: 'React', width: '90%' },
-    { name: 'TailWind', width: '90%' },
-    { name: 'Node.js', width: '70%' },
-    { name: 'Next.js', width: '90%' },
-    { name: 'Java3D', width: '100%' },
-    { name: 'Swing', width: '75%' },
-    { name: 'PyGame', width: '60%' },
-  ];
-
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar */}
@@ -105,7 +66,18 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl font-bold text-center">Tools</h2>
                 <ul className="relative right-8">
-                  {tools.map((tool) => (
+                  {[
+                    { name: 'GitHub', width: '80%' },
+                    { name: 'Trello', width: '80%' },
+                    { name: 'VSCode', width: '90%' },
+                    { name: 'Roblox Studio', width: '70%' },
+                    { name: 'Firebase', width: '80%' },
+                    { name: 'SQLPlus', width: '70%' },
+                    { name: 'Unity', width: '90%' },
+                    { name: 'Android Studio', width: '65%' },
+                    { name: 'Maya', width: '90%' },
+                    { name: 'Blender', width: '120%' },
+                  ].map((tool) => (
                     <SkillItem
                       key={tool.name}
                       skill={tool.name}
@@ -117,7 +89,18 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl font-bold text-center">Languages</h2>
                 <ul className="relative right-8">
-                  {languages.map((language) => (
+                  {[
+                    { name: 'Java', width: '100%' },
+                    { name: 'C/C++', width: '85%' },
+                    { name: 'Python', width: '80%' },
+                    { name: 'JavaScript', width: '60%' },
+                    { name: 'HTML/CSS', width: '70%' },
+                    { name: 'Kotlin', width: '90%' },
+                    { name: 'C#', width: '80%' },
+                    { name: 'SQL', width: '60%' },
+                    { name: 'MatLab', width: '60%' },
+                    { name: 'Lua', width: '50%' },
+                  ].map((language) => (
                     <SkillItem
                       key={language.name}
                       skill={language.name}
@@ -129,7 +112,18 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl font-bold text-center">Libraries</h2>
                 <ul className="relative right-8">
-                  {libraries.map((librarie) => (
+                  {[
+                    { name: 'CUDA Toolkit', width: '90%' },
+                    { name: 'YOLO', width: '70%' },
+                    { name: 'OpenCV', width: '80%' },
+                    { name: 'React', width: '90%' },
+                    { name: 'TailWind', width: '90%' },
+                    { name: 'Node.js', width: '70%' },
+                    { name: 'Next.js', width: '90%' },
+                    { name: 'Java3D', width: '100%' },
+                    { name: 'Swing', width: '75%' },
+                    { name: 'PyGame', width: '60%' },
+                  ].map((librarie) => (
                     <SkillItem
                       key={librarie.name}
                       skill={librarie.name}
@@ -147,25 +141,30 @@ export default function Home() {
               <ProjectItem
                 year="2025"
                 title="AI Monitiring System"
-                githubLink="https://github.com/ai-monitoring-system"
-                liveLink="https://4990.tanzimfh.com/"
-                images={[
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
+                links={[
+                  {
+                    icon: <FaGithub />,
+                    url: 'https://github.com/ai-monitoring-system',
+                  },
+                  { icon: <FaLink />, url: 'https://4990.tanzimfh.com/' },
                 ]}
+                images={[]}
                 description="A software solution designed to provide real-time monitoring and alert capabilities using repurposed devices. The system streams live video to a web application where users can monitor their environment, record footage, and receive notifications for specific events, detected by AI."
               />
 
               <ProjectItem
                 year="2024"
                 title="Flag Frenzy"
-                githubLink="https"
-                liveLink="https://www.roblox.com/games/15222475262/NEW-GUNS-FLAG-FRENZY-RED-VS-BLUE"
+                links={[
+                  {
+                    icon: <FaLink />,
+                    url: 'https://www.roblox.com/games/15222475262/NEW-GUNS-FLAG-FRENZY-RED-VS-BLUE',
+                  },
+                ]}
                 images={[
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
+                  'images/FlagFrenzyHome.webp',
+                  'images/FlagFrenzyGame.webp',
+                  'images/FlagFrenzyVehicles.webp',
                 ]}
                 description="A 1st/3rd person shooter game on Roblox where players are divided into two teams and must capture the opposing team's flag while defending their own. The game features a variety of weapons, maps, and game modes."
               />
@@ -173,12 +172,16 @@ export default function Home() {
               <ProjectItem
                 year="2024"
                 title="Tourify"
-                githubLink="https://github.com/BorhanSaflo/tourify-android-app"
-                liveLink="https"
+                links={[
+                  {
+                    icon: <FaGithub />,
+                    url: 'https://github.com/BorhanSaflo/tourify-android-app',
+                  },
+                ]}
                 images={[
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
+                  'images/TourifyHome.webp',
+                  'images/TourifyLogo.webp',
+                  'images/TourifyDemo.webp',
                 ]}
                 description="An Android mobile application that allows users to share and discover tourist locations around the world. Users can create and share their own tours, view tours created by others, and rate tours they have visited."
               />
@@ -186,78 +189,67 @@ export default function Home() {
               <ProjectItem
                 year="2023"
                 title="Volt Vista"
-                githubLink="https://github.com/BorhanSaflo/volt-vista"
-                liveLink="https://volt.borhansaflo.com/"
-                images={[
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
+                links={[
+                  {
+                    icon: <FaGithub />,
+                    url: 'https://github.com/BorhanSaflo/volt-vista',
+                  },
+                  { icon: <FaLink />, url: 'https://volt.borhansaflo.com/' },
                 ]}
-                description="An energy monitring and management soltion. The system allows users to monitor their energy usage, set goals, and receive notifications when they are close to exceeding their budget. The system also provides recommendations on how to reduce energy consumption."
+                images={[
+                  'images/VoltVistaRender.webp',
+                  'images/VoltVistaLogo.webp',
+                  'images/VoltVistaHome.webp',
+                ]}
+                description="An energy monitoring and management solution. The system allows users to monitor their energy usage, set goals, and receive notifications when they are close to exceeding their budget. The system also provides recommendations on how to reduce energy consumption."
               />
 
               <ProjectItem
                 year="2023"
                 title="Escape Java"
-                githubLink="https://github.com/BorhanSaflo/EscapeJava"
-                liveLink="https://www.youtube.com/watch?v=1XG5x_ulwCk"
-                images={[
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
+                links={[
+                  {
+                    icon: <FaGithub />,
+                    url: 'https://github.com/BorhanSaflo/EscapeJava',
+                  },
+                  {
+                    icon: <FaYoutube />,
+                    url: 'https://www.youtube.com/watch?v=1XG5x_ulwCk',
+                  },
                 ]}
+                images={[]}
                 description="A Java3D project designed to simulate an escape room game set in the Java Lounge (computer science commons). The game is designed to challenge players with various puzzles and obstacles, created in pure Java code."
               />
 
               <ProjectItem
                 year="2022"
                 title="Ocean Anarchy"
-                githubLink="https"
-                liveLink="https"
-                images={[
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                ]}
+                links={[]}
+                images={[]}
                 description="A pirate-themed open-world game where players can explore the high seas, engage in naval battles, and search for hidden treasures. The game features a variety of ships, weapons, and upgrades to customize the player's experience."
               />
 
               <ProjectItem
                 year="2021"
                 title="Take Cover"
-                githubLink="https"
-                liveLink="https"
-                images={[
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                ]}
+                links={[]}
+                images={[]}
                 description="A top-down shooter game where players must survive waves of zombies that get progressively stronger. The game features a variety of weapons, power-ups, and enemy types to keep players engaged."
               />
 
               <ProjectItem
                 year="2021"
                 title="Idle Island"
-                githubLink="https"
-                liveLink="https"
-                images={[
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                ]}
+                links={[]}
+                images={[]}
                 description="A 2D idle game where players must manage and grow their own island. Players can build structures, gather resources, and expand their island. The game features a variety of upgrades and unlockables to keep players engaged."
               />
 
               <ProjectItem
                 year="2020"
                 title="Frogger"
-                githubLink="https"
-                liveLink="https"
-                images={[
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                  'https://via.placeholder.com/250',
-                ]}
+                links={[]}
+                images={[]}
                 description="A remake of the popular arcade game Frogger. Players must guide a frog across a busy road and river to reach their home. The game features multiple levels and a high score system to challenge players."
               />
             </ul>
@@ -342,40 +334,37 @@ const SkillItem = ({ skill, width }: { skill: string; width: string }) => {
 const ProjectItem = ({
   year,
   title,
-  githubLink,
-  liveLink,
+  links,
   images,
   description,
 }: {
   year: string;
   title: string;
-  githubLink: string;
-  liveLink: string;
+  links: { icon: JSX.Element; url: string }[];
   images: string[];
   description: string;
 }) => {
   return (
     <li className="w-full flex flex-col items-center">
       <div className="flex w-2/5 relative mb-28">
-        <h2 className="text-2xl font-bold mt-16 absolute left-0">{year}</h2>
+        <h2 className="text-xl font-bold mt-16 absolute left-0 top-2">
+          {year}
+        </h2>
         <h2 className="border-b-2 border-tertiary text-2xl font-bold mt-16 mb-4 absolute left-1/2 transform -translate-x-1/2">
           {title}
         </h2>
         <div className="flex gap-4 h-8 mt-16 absolute right-0">
-          <a
-            href={githubLink}
-            target="#"
-            aria-label={`GitHub link for ${title}`}
-          >
-            <FaGithub className="h-8 w-8" />
-          </a>
-          <a
-            href={liveLink}
-            target="#"
-            aria-label={`Live demo link for ${title}`}
-          >
-            <FaLink className="h-8 w-8" />
-          </a>
+          {links.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="#"
+              aria-label={`Link for ${title}`}
+              className="h-8 w-8 flex items-center justify-center"
+            >
+              <span className="text-2xl">{link.icon}</span>
+            </a>
+          ))}
         </div>
       </div>
       <div className="flex gap-8 mt-4">
@@ -384,7 +373,7 @@ const ProjectItem = ({
             key={index}
             src={src}
             alt={`${title} screenshot ${index + 1}`}
-            className="rounded-md"
+            className="rounded-md w-64 h-64 object-cover"
           />
         ))}
       </div>
