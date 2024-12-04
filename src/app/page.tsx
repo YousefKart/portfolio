@@ -4,8 +4,6 @@ import { MdEmail } from 'react-icons/md';
 
 const commonStyles = 'w-full flex flex-col items-center';
 const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
-const subtitleStyles =
-  'border-b-2 border-tertiary text-2xl font-bold mt-16 mb-4';
 const listTextStyle = 'text-right w-48 text-lg mr-4 mt-1';
 const listDiv1Style = 'w-48 h-4 border-2 relative';
 const listDiv2Style = 'h-4 bg-white absolute top-0 left-0';
