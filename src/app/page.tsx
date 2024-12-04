@@ -1,9 +1,11 @@
 import { HomeIcon } from '@heroicons/react/20/solid';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaLink } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const commonStyles = 'w-full flex flex-col items-center';
 const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
+const subtitleStyles =
+  'border-b-2 border-tertiary text-2xl font-bold mt-16 mb-4';
 const listTextStyle = 'text-right w-48 text-lg mr-4 mt-1';
 const listDiv1Style = 'w-48 h-4 border-2 relative';
 const listDiv2Style = 'h-4 bg-white absolute top-0 left-0';
@@ -25,7 +27,7 @@ export default function Home() {
     { name: 'GitHub', width: '80%' },
     { name: 'Trello', width: '80%' },
     { name: 'VSCode', width: '90%' },
-    { name: 'JetBrain IDEs', width: '70%' },
+    { name: 'Roblox Studio', width: '70%' },
     { name: 'Firebase', width: '80%' },
     { name: 'SQLPlus', width: '70%' },
     { name: 'Unity', width: '90%' },
@@ -66,7 +68,9 @@ export default function Home() {
       <nav className="flex w-full border-b-2 border-tertiary fixed top-0 z-50">
         <ul className="flex justify-start space-between bg-secondary w-1/2 gap-8 pl-8">
           <li>
-            <HomeIcon className="h-8 w-8 mt-3" />
+            <a href="#">
+              <HomeIcon className="h-8 w-8 mt-3" />
+            </a>
           </li>
           <li className="p-3 text-2xl font-bold">
             <a href="#skills">Skills</a>
@@ -151,10 +155,288 @@ export default function Home() {
 
           <div id="projects" className={`${commonStyles}`}>
             <h1 className={`${titleStyles} w-3/4 text-center`}>Projects</h1>
+            <ul className={`${commonStyles} gap-4 mt-4 mb-8`}>
+              <li className={`${commonStyles}`}>
+                <div className="flex w-2/5 relative mb-28">
+                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
+                    2025
+                  </h2>
+                  <h2
+                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
+                  >
+                    AI Monitoring System
+                  </h2>
+                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
+                    <a href="https" target="#">
+                      <FaGithub className="h-8 w-8" />
+                    </a>
+                    <a href="https" target="#">
+                      <FaLink className="h-8 w-8" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-8 mt-4">
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                </div>
+                <p className="w-2/5 text-center mt-8">Desc</p>
+              </li>
+
+              <li className={`${commonStyles}`}>
+                <div className="flex w-2/5 relative mb-28">
+                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
+                    2024
+                  </h2>
+                  <h2
+                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
+                  >
+                    Flag Frenzy
+                  </h2>
+                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
+                    <a href="https" target="#">
+                      <FaGithub className="h-8 w-8" />
+                    </a>
+                    <a href="https" target="#">
+                      <FaLink className="h-8 w-8" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-8 mt-4">
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                </div>
+                <p className="w-2/5 text-center mt-8">Desc</p>
+              </li>
+
+              <li className={`${commonStyles}`}>
+                <div className="flex w-2/5 relative mb-28">
+                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
+                    2024
+                  </h2>
+                  <h2
+                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
+                  >
+                    Tourify
+                  </h2>
+                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
+                    <a href="https" target="#">
+                      <FaGithub className="h-8 w-8" />
+                    </a>
+                    <a href="https" target="#">
+                      <FaLink className="h-8 w-8" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-8 mt-4">
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                </div>
+                <p className="w-2/5 text-center mt-8">Desc</p>
+              </li>
+
+              <li className={`${commonStyles}`}>
+                <div className="flex w-2/5 relative mb-28">
+                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
+                    2024
+                  </h2>
+                  <h2
+                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
+                  >
+                    Volt Vista
+                  </h2>
+                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
+                    <a href="https" target="#">
+                      <FaGithub className="h-8 w-8" />
+                    </a>
+                    <a href="https" target="#">
+                      <FaLink className="h-8 w-8" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-8 mt-4">
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                </div>
+                <p className="w-2/5 text-center mt-8">Desc</p>
+              </li>
+
+              <li className={`${commonStyles}`}>
+                <div className="flex w-2/5 relative mb-28">
+                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
+                    2023
+                  </h2>
+                  <h2
+                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
+                  >
+                    Escape Java
+                  </h2>
+                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
+                    <a href="https" target="#">
+                      <FaGithub className="h-8 w-8" />
+                    </a>
+                    <a href="https" target="#">
+                      <FaLink className="h-8 w-8" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-8 mt-4">
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                </div>
+                <p className="w-2/5 text-center mt-8">Desc</p>
+              </li>
+
+              <li className={`${commonStyles}`}>
+                <div className="flex w-2/5 relative mb-28">
+                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
+                    2023
+                  </h2>
+                  <h2
+                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
+                  >
+                    Ocean Anarchy
+                  </h2>
+                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
+                    <a href="https" target="#">
+                      <FaGithub className="h-8 w-8" />
+                    </a>
+                    <a href="https" target="#">
+                      <FaLink className="h-8 w-8" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-8 mt-4">
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                </div>
+                <p className="w-2/5 text-center mt-8">Desc</p>
+              </li>
+
+              <li className={`${commonStyles}`}>
+                <div className="flex w-2/5 relative mb-28">
+                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
+                    2021
+                  </h2>
+                  <h2
+                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
+                  >
+                    Take Cover
+                  </h2>
+                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
+                    <a href="https" target="#">
+                      <FaGithub className="h-8 w-8" />
+                    </a>
+                    <a href="https" target="#">
+                      <FaLink className="h-8 w-8" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-8 mt-4">
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                </div>
+                <p className="w-2/5 text-center mt-8">Desc</p>
+              </li>
+
+              <li className={`${commonStyles}`}>
+                <div className="flex w-2/5 relative mb-28">
+                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
+                    2020
+                  </h2>
+                  <h2
+                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
+                  >
+                    Idle Island
+                  </h2>
+                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
+                    <a href="https" target="#">
+                      <FaGithub className="h-8 w-8" />
+                    </a>
+                    <a href="https" target="#">
+                      <FaLink className="h-8 w-8" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-8 mt-4">
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                </div>
+                <p className="w-2/5 text-center mt-8">Desc</p>
+              </li>
+
+              <li className={`${commonStyles}`}>
+                <div className="flex w-2/5 relative mb-28">
+                  <h2 className="text-2xl font-bold mt-16 absolute left-0">
+                    2020
+                  </h2>
+                  <h2
+                    className={`${subtitleStyles} absolute left-1/2 transform -translate-x-1/2`}
+                  >
+                    Frogger
+                  </h2>
+                  <div className="flex gap-4 h-8 mt-16 absolute right-0">
+                    <a href="https" target="#">
+                      <FaGithub className="h-8 w-8" />
+                    </a>
+                    <a href="https" target="#">
+                      <FaLink className="h-8 w-8" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-8 mt-4">
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                  <img src="https://via.placeholder.com/250" alt="Project" />
+                </div>
+                <p className="w-2/5 text-center mt-8">Desc</p>
+              </li>
+            </ul>
           </div>
 
           <div id="models" className={`${commonStyles}`}>
             <h1 className={`${titleStyles} w-3/4 text-center`}>Models</h1>
+            <ul className="grid grid-cols-4 gap-12 mt-4 mb-8">
+              <li className="flex flex-col items-center">
+                <img src="https://via.placeholder.com/250" alt="Model" />
+                <h2 className="text-2xl font-bold mt-4">Model 1</h2>
+              </li>
+              <li className="flex flex-col items-center">
+                <img src="https://via.placeholder.com/250" alt="Model" />
+                <h2 className="text-2xl font-bold mt-4">Model 2</h2>
+              </li>
+              <li className="flex flex-col items-center">
+                <img src="https://via.placeholder.com/250" alt="Model" />
+                <h2 className="text-2xl font-bold mt-4">Model 3</h2>
+              </li>
+              <li className="flex flex-col items-center">
+                <img src="https://via.placeholder.com/250" alt="Model" />
+                <h2 className="text-2xl font-bold mt-4">Model 4</h2>
+              </li>
+              <li className="flex flex-col items-center">
+                <img src="https://via.placeholder.com/250" alt="Model" />
+                <h2 className="text-2xl font-bold mt-4">Model 5</h2>
+              </li>
+              <li className="flex flex-col items-center">
+                <img src="https://via.placeholder.com/250" alt="Model" />
+                <h2 className="text-2xl font-bold mt-4">Model 6</h2>
+              </li>
+              <li className="flex flex-col items-center">
+                <img src="https://via.placeholder.com/250" alt="Model" />
+                <h2 className="text-2xl font-bold mt-4">Model 7</h2>
+              </li>
+              <li className="flex flex-col items-center">
+                <img src="https://via.placeholder.com/250" alt="Model" />
+                <h2 className="text-2xl font-bold mt-4">Model 8</h2>
+              </li>
+            </ul>
           </div>
 
           <div id="contact" className={`${commonStyles}`}>
