@@ -5,9 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-color: #1b1b1b;
-  --secondary-color: #282828;
-  --tertiary-color: #5ef5d4;
+  --primary-color: #ffffff;
+  --secondary-color: #c9c9c9;
+  --tertiary-color: #004738;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,17 +23,41 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.primary {
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary-color);
+}
+
+.text-primary {
   color: var(--primary-color);
 }
 
-.secondary {
+.text-secondary {
   color: var(--secondary-color);
 }
 
-.tertiary {
+.text-tertiary {
   color: var(--tertiary-color);
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.border-secondary {
+  border-color: var(--secondary-color);
+}
+
+.border-tertiary {
+  border-color: var(--tertiary-color);
 }
