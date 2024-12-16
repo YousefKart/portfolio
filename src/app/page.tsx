@@ -1,6 +1,11 @@
+'use client';
+
 import { HomeIcon } from '@heroicons/react/20/solid';
 import { FaLinkedin, FaGithub, FaLink, FaYoutube } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const commonStyles = 'w-full flex flex-col items-center';
 const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
@@ -9,6 +14,12 @@ const listDiv1Style = 'w-48 h-4 border-2 relative';
 const listDiv2Style = 'h-4 bg-white absolute top-0 left-0';
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      // Global settings here
+    });
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar */}
@@ -215,8 +226,13 @@ export default function Home() {
                     url: 'https://www.youtube.com/watch?v=1XG5x_ulwCk',
                   },
                 ]}
-                images={[]}
-                description="A Java3D project designed to simulate an escape room game set in the Java Lounge (computer science commons). The game is designed to challenge players with various puzzles and obstacles, created in pure Java code."
+                images={[
+                  'images/EscapeJavaGame1.webp',
+                  'images/EscapeJavaGame2.webp',
+                  'images/EscapeJavaGame3.webp',
+                  'images/EscapeJavaGame4.webp',
+                ]}
+                description="A Java3D project designed to simulate an escape room game set in the Java Lounge (computer science commons). The game is designed to challenge players with various puzzles and obstacles, created purely in Java (no visual tools!)."
               />
 
               <ProjectItem
