@@ -9,12 +9,6 @@ import Footer from './containers/footer';
 const commonStyles = 'w-full flex flex-col items-center';
 
 export default function Home() {
-  useEffect(() => {
-    AOS.init({
-      // Global settings here
-    });
-  }, []);
-
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />

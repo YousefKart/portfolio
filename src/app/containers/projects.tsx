@@ -138,9 +138,14 @@ export default function Projects() {
                             url: 'https://www.youtube.com/watch?v=1XG5x_ulwCk',
                           },
                         ]}
-                        images={[]}
-                        description="A Java3D project designed to simulate an escape room game set in the Java Lounge (computer science commons). The game is designed to challenge players with various puzzles and obstacles, created in pure Java code."
-                      />
+                        images={[
+                          'images/EscapeJavaGame1.webp',
+                          'images/EscapeJavaGame2.webp',
+                          'images/EscapeJavaGame3.webp',
+                          'images/EscapeJavaGame4.webp',
+                        ]}
+                        description="A Java3D project designed to simulate an escape room game set in the Java Lounge (computer science commons). The game is designed to challenge players with various puzzles and obstacles, created purely in Java (no visual tools!)."
+                        />
         
                       <ProjectItem
                         year="2022"
