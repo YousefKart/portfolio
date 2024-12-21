@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaLink, FaYoutube } from 'react-icons/fa';
+import { FaLinkedin, FaGithub} from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const commonStyles = 'w-full flex flex-col items-center';
