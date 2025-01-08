@@ -13,7 +13,7 @@ const ProjectItem = ({
 }) => {
   return (
     <li className="w-full flex flex-col items-center">
-      <div className="flex w-2/5 relative mb-28">
+      <div className="flex w-4/5 sm:w-3/4 md:w-3/5 lg:w-2/5 relative mb-28">
         <h2 className="text-xl font-bold mt-16 absolute left-0 top-2">
           {year}
         </h2>
@@ -34,7 +34,7 @@ const ProjectItem = ({
           ))}
         </div>
       </div>
-      <div className="flex gap-8 mt-4">
+      <div className="flex flex-col lg:flex-row gap-8 mt-4">
         {images.map((src, index) => (
           <img
             key={index}
@@ -44,7 +44,9 @@ const ProjectItem = ({
           />
         ))}
       </div>
-      <p className="w-2/5 text-center mt-8">{description}</p>
+      <p className="w-4/5 sm:w-3/4 md:w-3/5 lg:w-2/5 text-center mt-8">
+        {description}
+      </p>
     </li>
   );
 };

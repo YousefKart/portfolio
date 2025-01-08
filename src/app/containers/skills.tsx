@@ -7,7 +7,7 @@ export default function Skills() {
   return (
     <div id="skills" className={`${commonStyles}`}>
       <h1 className={`${titleStyles} w-3/4 text-center`}>Skills</h1>
-      <div className="flex gap-16 space-between justify-center">
+      <div className="flex flex-col gap-16 lg:flex-row lg:gap-0 xl:gap-8 2xl:gap-16 justify-between items-center">
         <div>
           <h2 className="text-2xl font-bold text-center">Tools</h2>
           <ul className="relative right-8">

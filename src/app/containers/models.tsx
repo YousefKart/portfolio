@@ -7,7 +7,7 @@ export default function Models() {
   return (
     <div id="models" className={`${commonStyles}`}>
       <h1 className={`${titleStyles} w-3/4 text-center`}>Models</h1>
-      <ul className="grid grid-cols-4 gap-12 mt-4 mb-8">
+      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mt-4 mb-8">
         {[
           { title: 'Model 1', image: 'https://via.placeholder.com/250' },
           { title: 'Model 2', image: 'https://via.placeholder.com/250' },
