@@ -1,6 +1,6 @@
 import Navbar from './containers/navbar';
 import Hero from './containers/hero';
-import Skills from './containers/skills'
+import Skills from './containers/skills';
 import Projects from './containers/projects';
 import Models from './containers/models';
 import Contact from './containers/contact';
