@@ -35,9 +35,9 @@ export default function Projects() {
             },
           ]}
           images={[
-            'images/FlagFrenzyHome.webp',
-            'images/FlagFrenzyGame.webp',
-            'images/FlagFrenzyVehicles.webp',
+            'images/projects/FlagFrenzyHome.webp',
+            'images/projects/FlagFrenzyGame.webp',
+            'images/projects/FlagFrenzyVehicles.webp',
           ]}
           description="A 1st/3rd person shooter game on Roblox where players are divided into two teams and must capture the opposing team's flag while defending their own. The game features a variety of weapons, maps, and game modes."
         />
@@ -52,9 +52,9 @@ export default function Projects() {
             },
           ]}
           images={[
-            'images/TourifyHome.webp',
-            'images/TourifyLogo.webp',
-            'images/TourifyDemo.webp',
+            'images/projects/TourifyHome.webp',
+            'images/projects/TourifyLogo.webp',
+            'images/projects/TourifyDemo.webp',
           ]}
           description="An Android mobile application that allows users to share and discover tourist locations around the world. Users can create and share their own tours, view tours created by others, and rate tours they have visited."
         />
@@ -70,9 +70,9 @@ export default function Projects() {
             { icon: <FaLink />, url: 'https://volt.borhansaflo.com/' },
           ]}
           images={[
-            'images/VoltVistaRender.webp',
-            'images/VoltVistaLogo.webp',
-            'images/VoltVistaHome.webp',
+            'images/projects/VoltVistaRender.webp',
+            'images/projects/VoltVistaLogo.webp',
+            'images/projects/VoltVistaHome.webp',
           ]}
           description="An energy monitoring and management solution. The system allows users to monitor their energy usage, set goals, and receive notifications when they are close to exceeding their budget. The system also provides recommendations on how to reduce energy consumption."
         />
@@ -91,10 +91,10 @@ export default function Projects() {
             },
           ]}
           images={[
-            'images/EscapeJavaGame1.webp',
-            'images/EscapeJavaGame2.webp',
-            'images/EscapeJavaGame3.webp',
-            'images/EscapeJavaGame4.webp',
+            'images/projects/EscapeJavaGame1.webp',
+            'images/projects/EscapeJavaGame2.webp',
+            'images/projects/EscapeJavaGame3.webp',
+            'images/projects/EscapeJavaGame4.webp',
           ]}
           description="A Java3D project designed to simulate an escape room game set in the Java Lounge (computer science commons). The game is designed to challenge players with various puzzles and obstacles, created purely in Java (no visual tools!)."
         />
