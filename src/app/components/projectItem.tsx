@@ -12,7 +12,7 @@ const ProjectItem = ({
   description: string;
 }) => {
   return (
-    <li className="w-full flex flex-col items-center">
+    <li className="w-full flex flex-col items-center" data-aos="fade-up">
       <div className="flex w-4/5 sm:w-3/4 md:w-3/5 lg:w-2/5 relative mb-28">
         <h2 className="text-xl font-bold mt-16 absolute left-0 top-2">
           {year}

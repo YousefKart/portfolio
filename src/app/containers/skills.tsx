@@ -6,9 +6,11 @@ const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
 export default function Skills() {
   return (
     <div id="skills" className={`${commonStyles}`}>
-      <h1 className={`${titleStyles} w-3/4 text-center`}>Skills</h1>
+      <h1 className={`${titleStyles} w-3/4 text-center`} data-aos="fade-up">
+        Skills
+      </h1>
       <div className="flex flex-col gap-16 lg:flex-row lg:gap-0 xl:gap-8 2xl:gap-16 justify-between items-center">
-        <div>
+        <div data-aos="fade-up">
           <h2 className="text-2xl font-bold text-center">Tools</h2>
           <ul className="relative right-8">
             {[
@@ -27,7 +29,7 @@ export default function Skills() {
             ))}
           </ul>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <h2 className="text-2xl font-bold text-center">Languages</h2>
           <ul className="relative right-8">
             {[
@@ -50,7 +52,7 @@ export default function Skills() {
             ))}
           </ul>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <h2 className="text-2xl font-bold text-center">Libraries</h2>
           <ul className="relative right-8">
             {[

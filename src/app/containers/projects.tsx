@@ -7,7 +7,9 @@ const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
 export default function Projects() {
   return (
     <div id="projects" className={`${commonStyles}`}>
-      <h1 className={`${titleStyles} w-3/4 text-center`}>Projects</h1>
+      <h1 className={`${titleStyles} w-3/4 text-center`} data-aos="fade-up">
+        Projects
+      </h1>
       <ul className={`${commonStyles} gap-4 mt-4 mb-8`}>
         <ProjectItem
           year="2025"
