@@ -2,6 +2,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 import Navbar from './containers/navbar';
 import Hero from './containers/hero';
@@ -31,6 +32,7 @@ export default function Home() {
           <Projects />
           <Models />
           <Contact />
+          <Analytics />
         </main>
       </div>
 

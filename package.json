@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@vercel/analytics": "^1.4.1",
     "aos": "^2.3.4",
     "fs": "^0.0.1-security",
     "next": "15.0.3",
