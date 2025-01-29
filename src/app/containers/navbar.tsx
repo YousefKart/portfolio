@@ -11,7 +11,7 @@ export default function Navbar() {
           </a>
         </li>
         <li className="p-3 text-2xl font-bold">
-          <a href="#skills">Skills</a>s
+          <a href="#skills">Skills</a>
         </li>
         <li className="p-3 text-2xl font-bold">
           <a href="#projects">Projects</a>
