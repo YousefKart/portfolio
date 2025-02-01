@@ -92,9 +92,8 @@ export default function Projects() {
           ]}
           images={[
             'images/projects/EscapeJavaGame1.webp',
-            'images/projects/EscapeJavaGame2.webp',
+            'images/projects/EscapeJavaGame2.png',
             'images/projects/EscapeJavaGame3.webp',
-            'images/projects/EscapeJavaGame4.webp',
           ]}
           description="A Java3D project designed to simulate an escape room game set in the Java Lounge (computer science commons). The game is designed to challenge players with various puzzles and obstacles, created purely in Java (no visual tools!)."
         />
@@ -103,7 +102,10 @@ export default function Projects() {
           year="2022"
           title="Ocean Anarchy"
           links={[]}
-          images={[]}
+          images={[
+            'images/projects/OceanAnarchyAlpha.png',
+            'images/projects/OceanAnarchyBoats.png',
+          ]}
           description="A pirate-themed open-world game where players can explore the high seas, engage in naval battles, and search for hidden treasures. The game features a variety of ships, weapons, and upgrades to customize the player's experience."
         />
 
@@ -120,7 +122,7 @@ export default function Projects() {
           title="Idle Island"
           links={[]}
           images={[]}
-          description="A 2D idle game where players must manage and grow their own island. Players can build structures, gather resources, and expand their island. The game features a variety of upgrades and unlockables to keep players engaged."
+          description="A 2D idle game where players must manage and grow a factory on an island. Players build structures to gain resources, which are then used to build more advanced structures."
         />
 
         <ProjectItem

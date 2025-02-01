@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaFile } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const commonStyles = 'w-full flex flex-col items-center';
@@ -16,7 +16,7 @@ export default function Contact() {
           data-aos="fade-up"
         >
           <MdEmail className="h-8 w-8" />
-          <a href="mailto:yousefkart21@gmail.com" target="#">
+          <a href="mailto:yousefkart21@gmail.com" target="_blank">
             Email
           </a>
         </li>
@@ -25,7 +25,7 @@ export default function Contact() {
           data-aos="fade-up"
         >
           <FaGithub className="h-8 w-8" />
-          <a href="https://github.com/YousefKart" target="#">
+          <a href="https://github.com/YousefKart" target="_blank">
             GitHub
           </a>
         </li>
@@ -34,8 +34,17 @@ export default function Contact() {
           data-aos="fade-up"
         >
           <FaLinkedin className="h-8 w-8" />
-          <a href="https://www.linkedin.com/in/yousef-kart/" target="#">
+          <a href="https://www.linkedin.com/in/yousef-kart/" target="_blank">
             LinkedIn
+          </a>
+        </li>
+        <li
+          className="flex justify-center items-center gap-4"
+          data-aos="fade-up"
+        >
+          <FaFile className="h-8 w-8" />
+          <a href="/resume/Yousef%20Kart%20Resume.pdf" target="_blank">
+            Resume
           </a>
         </li>
       </ul>

@@ -25,7 +25,7 @@ const ProjectItem = ({
             <a
               key={index}
               href={link.url}
-              target="#"
+              target="_blank"
               aria-label={`Link for ${title}`}
               className="h-8 w-8 flex items-center justify-center"
             >

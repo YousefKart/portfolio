@@ -1,5 +1,5 @@
 import { HomeIcon } from '@heroicons/react/20/solid';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaFile } from 'react-icons/fa';
 
 export default function Navbar() {
   return (
@@ -25,13 +25,18 @@ export default function Navbar() {
       </ul>
       <ul className="flex justify-end space-between bg-secondary w-1/2 gap-8 pr-8">
         <li>
-          <a href="https://www.github.com/YousefKart" target="#">
+          <a href="https://www.github.com/YousefKart" target="_blank">
             <FaGithub className="h-8 w-8 mt-3" />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/yousef-kart/" target="#">
+          <a href="https://www.linkedin.com/in/yousef-kart/" target="_blank">
             <FaLinkedin className="h-8 w-8 mt-3" />
+          </a>
+        </li>
+        <li>
+          <a href="/resume/Yousef%20Kart%20Resume.pdf" target="_blank">
+            <FaFile className="h-8 w-8 mt-3" />
           </a>
         </li>
       </ul>
