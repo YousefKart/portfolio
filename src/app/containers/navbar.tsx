@@ -1,5 +1,5 @@
 import { HomeIcon } from '@heroicons/react/20/solid';
-import { FaLinkedin, FaGithub, FaFile } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa';
 
 export default function Navbar() {
   return (
@@ -36,7 +36,7 @@ export default function Navbar() {
         </li>
         <li>
           <a href="/resume/Yousef%20Kart%20Resume.pdf" target="_blank">
-            <FaFile className="h-8 w-8 mt-3" />
+            <FaFileAlt className="h-8 w-8 mt-3" />
           </a>
         </li>
       </ul>
