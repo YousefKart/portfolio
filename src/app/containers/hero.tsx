@@ -11,7 +11,7 @@ export default function Hero() {
         4th Year Computer Science Student
       </h2>
       <p className="w-2/5 text-center" data-aos="fade-up">
-        Passionate about Software Development, Game Design, and 3D Modelling.
+        Passionate about Software Development, Game Design, and 3D Modeling.
       </p>
     </header>
   );
