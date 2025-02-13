@@ -34,9 +34,9 @@ export default function Skills() {
           <ul className="relative right-8">
             {[
               { name: 'Java', width: '100%' },
-              { name: 'C/C++', width: '85%' },
-              { name: 'Python', width: '80%' },
-              { name: 'JavaScript', width: '60%' },
+              { name: 'Python', width: '85%' },
+              { name: 'TypeScript', width: '80%' },
+              { name: 'C/C++', width: '70%' },
               { name: 'HTML/CSS', width: '70%' },
               { name: 'Kotlin', width: '90%' },
               { name: 'C#', width: '80%' },
@@ -61,8 +61,8 @@ export default function Skills() {
               { name: 'OpenCV', width: '80%' },
               { name: 'React', width: '90%' },
               { name: 'TailWind', width: '90%' },
-              { name: 'Node.js', width: '70%' },
-              { name: 'Next.js', width: '90%' },
+              { name: 'Node.js', width: '80%' },
+              { name: 'Next.js', width: '80%' },
               { name: 'Java3D', width: '100%' },
               { name: 'Swing', width: '75%' },
               { name: 'PyGame', width: '60%' },
