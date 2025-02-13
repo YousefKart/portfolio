@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-primary">
       <Navbar />
 
       <div className={`${commonStyles} flex-grow mt-12`}>

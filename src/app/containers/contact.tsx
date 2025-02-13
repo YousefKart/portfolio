@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaFile } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const commonStyles = 'w-full flex flex-col items-center';
@@ -42,7 +42,7 @@ export default function Contact() {
           className="flex justify-center items-center gap-4"
           data-aos="fade-up"
         >
-          <FaFile className="h-8 w-8" />
+          <FaFileAlt className="h-8 w-8" />
           <a href="/resume/Yousef%20Kart%20Resume.pdf" target="_blank">
             Resume
           </a>
