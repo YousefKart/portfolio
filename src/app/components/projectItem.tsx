@@ -4,12 +4,14 @@ const ProjectItem = ({
   links,
   images,
   description,
+  imageWidth = 'w-64',
 }: {
   year: string;
   title: string;
   links: { icon: JSX.Element; url: string }[];
   images: string[];
   description: string;
+  imageWidth?: string;
 }) => {
   return (
     <li className="w-full flex flex-col items-center" data-aos="fade-up">
@@ -40,7 +42,7 @@ const ProjectItem = ({
             key={index}
             src={src}
             alt={`${title} screenshot ${index + 1}`}
-            className="rounded-md w-64 h-64 object-cover"
+            className={`rounded-md ${imageWidth} h-64 object-cover`}
           />
         ))}
       </div>

@@ -26,6 +26,15 @@ export default function Projects() {
         />
 
         <ProjectItem
+          year="2025"
+          title="The Last Ride"
+          links={[{ icon: <FaLink />, url: 'https://4500.yousefkart.com/' }]}
+          images={['images/projects/TLR1.png', 'images/projects/TLR2.png']}
+          description="A 3D animation project that tells the story of a forgotten vintage car on a journey to reconnect with the modern world."
+          imageWidth="w-96"
+        />
+
+        <ProjectItem
           year="2024"
           title="Flag Frenzy"
           links={[
