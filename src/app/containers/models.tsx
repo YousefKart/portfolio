@@ -12,7 +12,7 @@ export default function Models() {
     { title: 'Sci-Fi Weapons', image: 'images/models/Low poly Sci-Fi Weapons.png' },
     { title: 'Curtiss Cb', image: 'images/models/Curtiss Cb.png' },
     { title: 'Coins and Diamonds', image: 'images/models/Coins and Diamonds.png' },
-    { title: 'StarWars Speeder', image: 'images/models/Speeder.png' },
+    { title: 'StarWars Speeder', image: 'images/models/SW Speeder.png' },
     { title: 'Coin Store', image: 'images/models/Coin Store.png' },
     { title: 'Jetskis', image: 'images/models/Ivas\'s Jetskis.png' },
     { title: 'Scanners', image: 'images/models/Captio\'s Airport Module 1.png' },
@@ -24,7 +24,7 @@ export default function Models() {
     { title: 'Low Poly Guns', image: 'images/models/Low Poly Untextured Guns.png' },
     { title: 'Neighbourhood', image: 'images/models/neighbourhood.png' },
     { title: 'S5 Wheel', image: 'images/models/Vehicle Wheel.png' },
-    { title: 'Wooden Boats', image: 'images/models/Boats.png' },
+    { title: 'Wooden Boats', image: 'images/models/Wooden Boats.png' },
   ];
 
   return (

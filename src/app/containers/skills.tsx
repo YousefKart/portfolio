@@ -17,13 +17,13 @@ export default function Skills() {
               { name: 'GitHub', width: '80%' },
               { name: 'Trello', width: '80%' },
               { name: 'VSCode', width: '90%' },
-              { name: 'Roblox Studio', width: '70%' },
               { name: 'Firebase', width: '80%' },
               { name: 'SQLPlus', width: '70%' },
               { name: 'Unity', width: '90%' },
               { name: 'Android Studio', width: '65%' },
-              { name: 'Maya', width: '90%' },
+              { name: 'Roblox Studio', width: '70%' },
               { name: 'Blender', width: '120%' },
+              { name: 'Maya', width: '90%' },
             ].map((tool) => (
               <SkillItem key={tool.name} skill={tool.name} width={tool.width} />
             ))}
