@@ -8,10 +8,10 @@ export default function Hero() {
         YOUSEF KART
       </h1>
       <h2 className="text-2xl font-bold mt-4 mb-8" data-aos="fade-up">
-        4th Year Computer Science Student
+        Software Developer, Game Designer, and 3D Modeller
       </h2>
       <p className="w-2/5 text-center" data-aos="fade-up">
-        Passionate about Software Development, Game Design, and 3D Modeling.
+        Honours Graduate in Computer Science from the University of Windsor.
       </p>
     </header>
   );
