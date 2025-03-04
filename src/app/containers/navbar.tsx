@@ -21,19 +21,15 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full top-0 z-50 transition-colors duration-300 ${
-        isScrolled
-          ? 'bg-secondary border-b-2 border-tertiary'
-          : 'bg-transparent border-b-2 border-transparent'
-      }`}
+      isScrolled ? 'lg:bg-secondary lg:border-b-2 lg:border-tertiary' : 'lg:bg-transparent lg:border-b-2 lg:border-transparent'
+      } bg-secondary border-b-2 border-tertiary`}
     >
-      <div className="flex justify-between items-center w-full px-8 py-4">
-        {/* Left Section: Home Icon & Section Shortcuts */}
+      <div className="flex justify-between items-center w-full px-8 py-4 lg:py-0">
         <div className="flex items-center gap-8">
           <a href="#">
             <HomeIcon className="h-8 w-8" />
           </a>
 
-          {/* Desktop Menu */}
           <ul className="hidden lg:flex gap-8">
             {['Skills', 'Projects', 'Models', 'Contact'].map((item, index) => (
               <li key={index} className="p-3 text-2xl font-bold">
@@ -43,7 +39,6 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* Right Section: Social Icons */}
         <ul className="hidden lg:flex justify-end gap-8">
           <li>
             <a href="https://www.github.com/YousefKart" target="_blank">
@@ -62,7 +57,7 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Mobile Menu Toggle */}
+        {/* HAMBURGER MENU */}
         <button
           className="lg:hidden text-white focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -71,9 +66,8 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Animated Mobile Dropdown Menu */}
       <div
-        className={`lg:hidden bg-secondary w-full flex flex-col items-center overflow-hidden mt-[-64] border-b-2 border-tertiary transition-all duration-300 ease-in-out ${
+        className={`lg:hidden bg-secondary w-full flex flex-col items-center overflow-hidden mt-[-64] transition-all duration-300 ease-in-out ${
           menuOpen ? 'max-h-[500px] py-4' : 'max-h-0 py-0'
         }`}
       >
@@ -82,7 +76,7 @@ export default function Navbar() {
             key={index}
             href={`#${item.toLowerCase()}`}
             className="text-2xl mt-1 mb-1 font-bold hover:text-tertiary transition-colors"
-            onClick={() => setMenuOpen(false)} // Close menu on click
+            onClick={() => setMenuOpen(false)}
           >
             {item}
           </a>
