@@ -30,7 +30,7 @@ export default function Models() {
   return (
     <div id="models" className={`${commonStyles}`}>
       <h1 className={`${titleStyles} w-3/4 text-center`} data-aos="fade-up">Models</h1>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-4 mb-8">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8 mb-8">
         {models.map((model) => (
           <ModelItem
             key={model.title}

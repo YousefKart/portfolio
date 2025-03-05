@@ -9,7 +9,7 @@ export default function Skills() {
       <h1 className={`${titleStyles} w-3/4 text-center`} data-aos="fade-up">
         Skills
       </h1>
-      <div className="flex flex-col gap-16 lg:flex-row lg:gap-0 xl:gap-8 2xl:gap-16 justify-between items-center">
+      <div className="flex flex-col gap-16 lg:flex-row lg:gap-0 xl:gap-8 2xl:gap-16 justify-between items-center mt-8">
         <div data-aos="fade-up">
           <h2 className="text-2xl font-bold text-center">Tools</h2>
           <ul className="relative right-8">
