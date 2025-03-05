@@ -1,6 +1,5 @@
-import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
 import JobItem from '../components/jobItem';
-import { FaGithub, FaLink, FaYoutube } from 'react-icons/fa';
+import { FaLink, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const commonStyles = 'w-full flex flex-col items-center';
 const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
@@ -12,7 +11,8 @@ const jobs = [
     title: '3D Pre-Construction Lead',
     company: 'Powered by Scelta',
     links: [
-      { icon: <FaGithub />, url: '' },
+      { icon: <FaLinkedin />, url: 'https://www.linkedin.com/company/sceltatech/posts/?feedView=all' },
+      { icon: <FaInstagram />, url: 'https://www.instagram.com/scelta.tech/' },
       { icon: <FaLink />, url: 'https://www.scelta.tech/' },
     ],
     description:

@@ -1,7 +1,7 @@
 const hover =
   'hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out';
 
-const JobItem = ({ start, end, title, company, description, links, images }: { start: string; end: string; title: string; company: string; description: string; links: { icon: JSX.Element; url: string }[], images: string }) => {
+const JobItem = ({ start, end, title, company, description, links}: { start: string; end: string; title: string; company: string; description: string; links: { icon: JSX.Element; url: string }[] }) => {
     return (
         <li className="flex flex-col items-center w-3/4 lg:w-1/2" data-aos="fade-up">
             <div className="flex flex-col lg:flex-row w-full justify-between">
