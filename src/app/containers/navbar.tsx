@@ -29,7 +29,7 @@ export default function Navbar() {
           : 'lg:bg-transparent lg:border-b-2 lg:border-transparent'
       } bg-secondary border-b-2 border-tertiary`}
     >
-      <div className="flex justify-between items-center w-full px-8 py-4 lg:py-0 ml-32">
+      <div className="flex justify-between items-center w-full px-8 py-4 lg:py-0 xl:ml-32">
         <div className="flex items-center gap-8">
           <a href="#">
             <HomeIcon className="h-8 w-8 hover:text-tertiary transition-colors" />
@@ -49,7 +49,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <ul className="hidden lg:flex justify-end gap-8 mr-64">
+        <ul className="hidden lg:flex justify-end gap-8 xl:mr-64">
           <li>
             <a href="https://www.github.com/YousefKart" target="_blank">
               <FaGithub className={`h-8 w-8 ${hover}`} />
@@ -73,9 +73,9 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (
-            <FiX className="h-8 w-8" />
+            <FiX className="h-8 w-8 hover:text-tertiary transition-color" />
           ) : (
-            <FiMenu className="h-8 w-8" />
+            <FiMenu className="h-8 w-8 hover:text-tertiary transition-color" />
           )}
         </button>
       </div>
@@ -97,13 +97,13 @@ export default function Navbar() {
         ))}
         <div className="flex gap-6 mt-4">
           <a href="https://www.github.com/YousefKart" target="_blank">
-            <FaGithub className="h-8 w-8" />
+            <FaGithub className={`h-8 w-8 ${hover}`} />
           </a>
           <a href="https://www.linkedin.com/in/yousef-kart/" target="_blank">
-            <FaLinkedin className="h-8 w-8" />
+            <FaLinkedin className={`h-8 w-8 ${hover}`} />
           </a>
           <a href="/resume/Yousef%20Kart%20Resume.pdf" target="_blank">
-            <FaFileAlt className="h-8 w-8" />
+            <FaFileAlt className={`h-8 w-8 ${hover}`} />
           </a>
         </div>
       </div>

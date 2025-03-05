@@ -3,13 +3,13 @@ const hover =
 
 const JobItem = ({ start, end, title, company, description, links, images }: { start: string; end: string; title: string; company: string; description: string; links: { icon: JSX.Element; url: string }[], images: string }) => {
     return (
-        <li className="flex flex-col items-center w-1/2" data-aos="fade-up">
-            <div className="flex w-full justify-between">
-                <div className="flex flex-col w-1/2">
+        <li className="flex flex-col items-center w-3/4 lg:w-1/2" data-aos="fade-up">
+            <div className="flex flex-col lg:flex-row w-full justify-between">
+                <div className="flex flex-col lg:w-1/2">
                     <h2 className="text-2xl font-bold">{title}</h2>
                     <p>{description}</p>
                 </div>
-                <div className="flex flex-col w-1/2 items-end">
+                <div className="flex flex-col lg:w-1/2 items-end">
                     <p className="text-tertiary text-lg ml-2">{company}</p>
                     <p className="text-md ml-2">{start} - {end}</p>
                     <ul className="flex gap-4 mt-2">
