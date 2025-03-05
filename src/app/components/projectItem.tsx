@@ -19,7 +19,7 @@ const ProjectItem = ({
         <h2 className="text-xl font-bold mt-16 absolute left-0 top-2">
           {year}
         </h2>
-        <h2 className="border-b-2 border-tertiary text-2xl font-bold mt-16 mb-4 absolute left-1/2 transform -translate-x-1/2 text-center">
+        <h2 className="border-b-2 border-tertiary text-2xl font-bold mt-16 mb-4 absolute left-1/2 transform -translate-x-1/2">
           {title}
         </h2>
         <div className="flex gap-4 h-8 mt-16 absolute right-0">
