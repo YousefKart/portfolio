@@ -12,15 +12,16 @@ const projects = [
       { icon: <FaGithub />, url: 'https://github.com/ai-monitoring-system' },
       { icon: <FaLink />, url: 'https://4990.tanzimfh.com/' },
     ],
-    images: [],
+    media: ['videos/Bedroom.mp4', 'videos/Kitchen.mp4'],
     description:
       'A software solution designed to provide real-time monitoring and alert capabilities using repurposed devices. The system streams live video to a web application where users can monitor their environment, record footage, and receive notifications for specific events, detected by AI.',
+    imageWidth: 'w-128',
   },
   {
     year: '2025',
     title: 'The Last Ride',
     links: [{ icon: <FaLink />, url: 'https://4500.yousefkart.com/' }],
-    images: ['images/projects/TLR1.png', 'images/projects/TLR2.png'],
+    media: ['images/projects/TLR1.png', 'images/projects/TLR2.png'],
     description:
       'A 3D animation project that tells the story of a forgotten vintage car on a journey to reconnect with the modern world.',
     imageWidth: 'w-96',
@@ -34,7 +35,7 @@ const projects = [
         url: 'https://www.roblox.com/games/15222475262/NEW-GUNS-FLAG-FRENZY-RED-VS-BLUE',
       },
     ],
-    images: [
+    media: [
       'images/projects/FlagFrenzyHome.webp',
       'images/projects/FlagFrenzyGame.webp',
       'images/projects/FlagFrenzyVehicles.webp',
@@ -51,7 +52,7 @@ const projects = [
         url: 'https://github.com/BorhanSaflo/tourify-android-app',
       },
     ],
-    images: [
+    media: [
       'images/projects/TourifyHome.webp',
       'images/projects/TourifyLogo.webp',
       'images/projects/TourifyDemo.webp',
@@ -66,7 +67,7 @@ const projects = [
       { icon: <FaGithub />, url: 'https://github.com/BorhanSaflo/volt-vista' },
       { icon: <FaLink />, url: 'https://volt.borhansaflo.com/' },
     ],
-    images: [
+    media: [
       'images/projects/VoltVistaRender.webp',
       'images/projects/VoltVistaLogo.webp',
       'images/projects/VoltVistaHome.webp',
@@ -84,7 +85,7 @@ const projects = [
         url: 'https://www.youtube.com/watch?v=1XG5x_ulwCk',
       },
     ],
-    images: [
+    media: [
       'images/projects/EscapeJavaGame1.webp',
       'images/projects/EscapeJavaGame2.png',
       'images/projects/EscapeJavaGame3.webp',
@@ -96,7 +97,7 @@ const projects = [
     year: '2022',
     title: 'Ocean Anarchy',
     links: [],
-    images: [
+    media: [
       'images/projects/OceanAnarchyAlpha.png',
       'images/projects/OceanAnarchyBoats.png',
     ],
@@ -107,7 +108,7 @@ const projects = [
     year: '2021',
     title: 'Take Cover',
     links: [],
-    images: [],
+    media: [],
     description:
       'A top-down shooter game where players must survive waves of zombies that get progressively stronger. The game features a variety of weapons, power-ups, and enemy types to keep players engaged.',
   },
@@ -115,7 +116,7 @@ const projects = [
     year: '2021',
     title: 'Idle Island',
     links: [],
-    images: [],
+    media: [],
     description:
       'A 2D idle game where players must manage and grow a factory on an island. Players build structures to gain resources, which are then used to build more advanced structures.',
   },
@@ -123,7 +124,7 @@ const projects = [
     year: '2020',
     title: 'Frogger',
     links: [],
-    images: [],
+    media: [],
     description:
       'A remake of the popular arcade game Frogger. Players must guide a frog across a busy road and river to reach their home. The game features multiple levels and a high score system to challenge players.',
   },
@@ -142,7 +143,7 @@ export default function Projects() {
             year={project.year}
             title={project.title}
             links={project.links}
-            images={project.images}
+            media={project.media}
             description={project.description}
             imageWidth={project.imageWidth}
           />

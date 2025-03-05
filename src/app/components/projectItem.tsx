@@ -5,14 +5,14 @@ const ProjectItem = ({
   year,
   title,
   links,
-  images,
+  media,
   description,
   imageWidth = 'w-64',
 }: {
   year: string;
   title: string;
   links: { icon: JSX.Element; url: string }[];
-  images: string[];
+  media: string[];
   description: string;
   imageWidth?: string;
 }) => {
@@ -39,16 +39,28 @@ const ProjectItem = ({
           ))}
         </div>
       </div>
+
       <div className="flex flex-col lg:flex-row gap-8 mt-4">
-        {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`${title} screenshot ${index + 1}`}
-            className={`rounded-md ${imageWidth} h-64 object-cover`}
-          />
-        ))}
+        {media.map((src, index) => {
+          const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
+          return isVideo ? (
+            <video
+              key={index}
+              src={src}
+              controls
+              className={`rounded-md ${imageWidth} h-64 object-cover`}
+            />
+          ) : (
+            <img
+              key={index}
+              src={src}
+              alt={`${title} screenshot ${index + 1}`}
+              className={`rounded-md ${imageWidth} h-64 object-cover`}
+            />
+          );
+        })}
       </div>
+
       <p className="w-4/5 sm:w-3/4 md:w-3/5 lg:w-2/5 text-center mt-8">
         {description}
       </p>
