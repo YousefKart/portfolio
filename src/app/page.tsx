@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 import Navbar from './containers/navbar';
 import Hero from './containers/hero';
+import Experience from './containers/experience';
 import Skills from './containers/skills';
 import Projects from './containers/projects';
 import Models from './containers/models';
@@ -27,7 +28,8 @@ export default function Home() {
 
       <div className={`${commonStyles} flex-grow mt-12`}>
         <Hero />
-        <main className={`${commonStyles} bg-primary`}>
+        <main className={`${commonStyles} bg-primary mt-16`}>
+          <Experience />
           <Skills />
           <Projects />
           <Models />

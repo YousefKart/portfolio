@@ -29,7 +29,7 @@ export default function Navbar() {
           : 'lg:bg-transparent lg:border-b-2 lg:border-transparent'
       } bg-secondary border-b-2 border-tertiary`}
     >
-      <div className="flex justify-between items-center w-full px-8 py-4 lg:py-0">
+      <div className="flex justify-between items-center w-full px-8 py-4 lg:py-0 ml-32">
         <div className="flex items-center gap-8">
           <a href="#">
             <HomeIcon className="h-8 w-8 hover:text-tertiary transition-colors" />
@@ -49,7 +49,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <ul className="hidden lg:flex justify-end gap-8">
+        <ul className="hidden lg:flex justify-end gap-8 mr-64">
           <li>
             <a href="https://www.github.com/YousefKart" target="_blank">
               <FaGithub className={`h-8 w-8 ${hover}`} />
