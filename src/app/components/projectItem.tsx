@@ -1,3 +1,6 @@
+const hover =
+  'hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out';
+
 const ProjectItem = ({
   year,
   title,
@@ -29,7 +32,7 @@ const ProjectItem = ({
               href={link.url}
               target="_blank"
               aria-label={`Link for ${title}`}
-              className="h-8 w-8 flex items-center justify-center"
+              className={`h-8 w-8 flex items-center justify-center ${hover}`}
             >
               <span className="text-2xl">{link.icon}</span>
             </a>

@@ -74,6 +74,10 @@ body {
   color: var(--tertiary-color);
 }
 
+.hover\:text-tertiary:hover {
+  color: var(--tertiary-color);
+}
+
 .border-primary {
   border-color: var(--primary-color);
 }

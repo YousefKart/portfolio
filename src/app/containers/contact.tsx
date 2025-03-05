@@ -3,6 +3,48 @@ import { MdEmail } from 'react-icons/md';
 
 const commonStyles = 'w-full flex flex-col items-center';
 const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
+const itemStyles =
+  'flex justify-center items-center gap-4 hover:text-tertiary transition-colors';
+
+const contactItems = [
+  {
+    icon: <MdEmail className="h-8 w-8" />,
+    label: 'Email',
+    link: 'mailto:yousefkart21@gmail.com',
+  },
+  {
+    icon: <FaGithub className="h-8 w-8" />,
+    label: 'GitHub',
+    link: 'https://github.com/YousefKart',
+  },
+  {
+    icon: <FaLinkedin className="h-8 w-8" />,
+    label: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/yousef-kart/',
+  },
+  {
+    icon: <FaFileAlt className="h-8 w-8" />,
+    label: 'Resume',
+    link: '/resume/Yousef%20Kart%20Resume.pdf',
+  },
+];
+
+const ContactItem = ({
+  icon,
+  label,
+  link,
+}: {
+  icon: JSX.Element;
+  label: string;
+  link: string;
+}) => (
+  <li className={itemStyles} data-aos="fade-up">
+    {icon}
+    <a href={link} target="_blank">
+      {label}
+    </a>
+  </li>
+);
 
 export default function Contact() {
   return (
@@ -11,42 +53,9 @@ export default function Contact() {
         Contact
       </h1>
       <ul className="flex flex-col gap-4 mt-4 mb-8">
-        <li
-          className="flex justify-center items-center gap-4"
-          data-aos="fade-up"
-        >
-          <MdEmail className="h-8 w-8" />
-          <a href="mailto:yousefkart21@gmail.com" target="_blank">
-            Email
-          </a>
-        </li>
-        <li
-          className="flex justify-center items-center gap-4"
-          data-aos="fade-up"
-        >
-          <FaGithub className="h-8 w-8" />
-          <a href="https://github.com/YousefKart" target="_blank">
-            GitHub
-          </a>
-        </li>
-        <li
-          className="flex justify-center items-center gap-4"
-          data-aos="fade-up"
-        >
-          <FaLinkedin className="h-8 w-8" />
-          <a href="https://www.linkedin.com/in/yousef-kart/" target="_blank">
-            LinkedIn
-          </a>
-        </li>
-        <li
-          className="flex justify-center items-center gap-4"
-          data-aos="fade-up"
-        >
-          <FaFileAlt className="h-8 w-8" />
-          <a href="/resume/Yousef%20Kart%20Resume.pdf" target="_blank">
-            Resume
-          </a>
-        </li>
+        {contactItems.map((item, index) => (
+          <ContactItem key={index} {...item} />
+        ))}
       </ul>
     </div>
   );

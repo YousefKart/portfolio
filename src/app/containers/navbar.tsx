@@ -32,13 +32,18 @@ export default function Navbar() {
       <div className="flex justify-between items-center w-full px-8 py-4 lg:py-0">
         <div className="flex items-center gap-8">
           <a href="#">
-            <HomeIcon className="h-8 w-8" />
+            <HomeIcon className="h-8 w-8 hover:text-tertiary transition-colors" />
           </a>
 
           <ul className="hidden lg:flex gap-8">
             {['Skills', 'Projects', 'Models', 'Contact'].map((item, index) => (
               <li key={index} className="p-3 text-2xl font-bold">
-                <a href={`#${item.toLowerCase()}`}>{item}</a>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="hover:text-tertiary transition-colors"
+                >
+                  {item}
+                </a>
               </li>
             ))}
           </ul>
