@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { HomeIcon } from '@heroicons/react/20/solid';
 import { FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa';
 
+const hover =
+  'hover:-translate-y-1 transform transition-transform duration-200';
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -23,9 +26,7 @@ export default function Navbar() {
   return (
     <nav
       className={`flex w-full fixed top-0 z-50 transition-colors duration-300 ${
-        isScrolled
-          ? 'bg-secondary border-b-2 border-tertiary'
-          : 'bg-transparent border-b-2 border-transparent'
+        isScrolled ? 'bg-secondary' : 'bg-transparent'
       }`}
     >
       <ul className="flex justify-start space-between w-1/2 gap-8 pl-8">
@@ -50,17 +51,17 @@ export default function Navbar() {
       <ul className="flex justify-end space-between w-1/2 gap-8 pr-8">
         <li>
           <a href="https://www.github.com/YousefKart" target="_blank">
-            <FaGithub className="h-8 w-8 mt-3" />
+            <FaGithub className={`h-8 w-8 mt-3 ${hover}`} />
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/yousef-kart/" target="_blank">
-            <FaLinkedin className="h-8 w-8 mt-3" />
+            <FaLinkedin className={`h-8 w-8 mt-3 ${hover}`} />
           </a>
         </li>
         <li>
           <a href="/resume/Yousef%20Kart%20Resume.pdf" target="_blank">
-            <FaFileAlt className="h-8 w-8 mt-3" />
+            <FaFileAlt className={`h-8 w-8 mt-3 ${hover}`} />
           </a>
         </li>
       </ul>
