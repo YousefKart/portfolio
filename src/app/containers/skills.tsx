@@ -42,7 +42,7 @@ export default function Skills() {
               { name: 'C#', width: '80%' },
               { name: 'SQL', width: '60%' },
               { name: 'MatLab', width: '60%' },
-              { name: 'Lua', width: '50%' },
+              { name: 'English', width: '100%' },
             ].map((language) => (
               <SkillItem
                 key={language.name}
@@ -57,6 +57,7 @@ export default function Skills() {
           <ul className="relative right-8">
             {[
               { name: 'CUDA Toolkit', width: '90%' },
+              { name: 'OpenGL', width: '80%' },
               { name: 'YOLO', width: '70%' },
               { name: 'OpenCV', width: '80%' },
               { name: 'React', width: '90%' },
@@ -64,8 +65,7 @@ export default function Skills() {
               { name: 'Node.js', width: '80%' },
               { name: 'Next.js', width: '80%' },
               { name: 'Java3D', width: '100%' },
-              { name: 'Swing', width: '75%' },
-              { name: 'PyGame', width: '60%' },
+              { name: 'PyGame', width: '65%' },
             ].map((librarie) => (
               <SkillItem
                 key={librarie.name}
