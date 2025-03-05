@@ -3,6 +3,9 @@ import { HomeIcon } from '@heroicons/react/20/solid';
 import { FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa';
 import { FiMenu, FiX } from 'react-icons/fi';
 
+const hover =
+  'hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out';
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,17 +47,17 @@ export default function Navbar() {
         <ul className="hidden lg:flex justify-end gap-8">
           <li>
             <a href="https://www.github.com/YousefKart" target="_blank">
-              <FaGithub className="h-8 w-8" />
+              <FaGithub className={`h-8 w-8 ${hover}`} />
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/yousef-kart/" target="_blank">
-              <FaLinkedin className="h-8 w-8" />
+              <FaLinkedin className={`h-8 w-8 ${hover}`} />
             </a>
           </li>
           <li>
             <a href="/resume/Yousef%20Kart%20Resume.pdf" target="_blank">
-              <FaFileAlt className="h-8 w-8" />
+              <FaFileAlt className={`h-8 w-8 ${hover}`} />
             </a>
           </li>
         </ul>
