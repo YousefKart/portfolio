@@ -17,7 +17,6 @@ const jobs = [
     ],
     description:
       'Leading rapid prototyping and 3D modeling for pre-construction projects. Creating interactive 3D models to enhance client presentations.',
-    images: '',
   },
 ];
 
@@ -37,7 +36,6 @@ export default function Projects() {
             title={job.title}
             links={job.links}
             description={job.description}
-            images={job.images}
           />
         ))}
       </ul>
