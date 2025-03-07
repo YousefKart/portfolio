@@ -1,6 +1,7 @@
 const listTextStyle = 'text-right w-48 text-lg mr-4 mt-1';
-const listDiv1Style = 'w-48 h-4 border-2 relative';
-const listDiv2Style = 'h-4 bg-white absolute top-0 left-0';
+const listDiv1Style =
+  'w-48 h-4 border-2 relative dark:border-white border-tertiary';
+const listDiv2Style = 'h-4 dark:bg-white bg-tertiary absolute top-0 left-0';
 
 const SkillItem = ({ skill, width }: { skill: string; width: string }) => {
   return (
