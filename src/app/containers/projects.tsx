@@ -7,12 +7,12 @@ const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
 const projects = [
   {
     year: '2025',
-    title: 'AI Monitiring System',
+    title: 'AI Monitoring System',
     links: [
       { icon: <FaGithub />, url: 'https://github.com/ai-monitoring-system' },
       { icon: <FaLink />, url: 'https://4990.tanzimfh.com/' },
     ],
-    media: ['videos/Bedroom.mp4', 'videos/Kitchen.mp4'],
+    media: ['videos/AIMonitoringSystemClip.mp4'],
     description:
       'A software solution designed to provide real-time monitoring and alert capabilities using repurposed devices. The system streams live video to a web application where users can monitor their environment, record footage, and receive notifications for specific events, detected by AI.',
     imageWidth: 'w-128',
@@ -68,7 +68,7 @@ const projects = [
       { icon: <FaLink />, url: 'https://volt.borhansaflo.com/' },
     ],
     media: [
-      'images/projects/VoltVistaRender.webp',
+      'videos/VoltVistaClip.mp4',
       'images/projects/VoltVistaLogo.webp',
       'images/projects/VoltVistaHome.webp',
     ],
