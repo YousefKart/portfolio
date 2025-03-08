@@ -41,7 +41,7 @@ const projects = [
       'images/projects/FlagFrenzyVehicles.webp',
     ],
     description:
-      "A shooter game on Roblox where players are divided into two teams and must capture the opposing team's flag while defending their own. The game features a variety of weapons, maps, and game modes.",
+      "A shooter game on Roblox where players are divided into two teams and must capture the opposing team's flag while defending their own. The game features a variety of weapons and maps.",
   },
   {
     year: '2024',
