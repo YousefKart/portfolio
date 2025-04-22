@@ -21,7 +21,7 @@ const projects = [
     year: '2025',
     title: 'The Last Ride',
     links: [{ icon: <FaLink />, url: 'https://4500.yousefkart.com/' }],
-    media: ['images/projects/TLR1.png', 'images/projects/TLR2.png'],
+    media: ['videos/TheLastRide.mp4'],
     description:
       'A 3D animation project that tells the story of a forgotten vintage car on a journey to reconnect with the modern world.',
     imageWidth: 'w-96',
