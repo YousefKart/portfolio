@@ -11,12 +11,15 @@ const jobs = [
     title: '3D Pre-Construction Lead',
     company: 'Powered by Scelta',
     links: [
-      { icon: <FaLinkedin />, url: 'https://www.linkedin.com/company/sceltatech/posts/?feedView=all' },
+      {
+        icon: <FaLinkedin />,
+        url: 'https://www.linkedin.com/company/sceltatech/posts/?feedView=all',
+      },
       { icon: <FaInstagram />, url: 'https://www.instagram.com/scelta.tech/' },
       { icon: <FaLink />, url: 'https://www.scelta.tech/' },
     ],
     description:
-      'Leading rapid prototyping and 3D modeling for pre-construction projects. Creating interactive 3D models to enhance client presentations.',
+      'Leading rapid prototyping of 3D models for pre-construction projects and developing interactive 3D systems to enhance client presentations.',
   },
 ];
 
