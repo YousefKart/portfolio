@@ -4,7 +4,7 @@ import { MdEmail } from 'react-icons/md';
 const commonStyles = 'w-full flex flex-col items-center';
 const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
 const itemStyles =
-  'flex justify-center items-center gap-4 hover:text-tertiary transition-colors';
+  'flex justify-center items-center gap-2 hover:text-tertiary transition-colors';
 
 const contactItems = [
   {
@@ -52,7 +52,7 @@ export default function Contact() {
       <h1 className={`${titleStyles} w-3/4 text-center`} data-aos="fade-up">
         Contact
       </h1>
-      <ul className="flex flex-col gap-4 mt-4 mb-8">
+      <ul className="flex justify-between w-1/2 gap-4 mt-4 mb-8">
         {contactItems.map((item, index) => (
           <ContactItem key={index} {...item} />
         ))}
