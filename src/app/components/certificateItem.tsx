@@ -1,6 +1,3 @@
-const hover =
-  'hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out';
-
 const CertificateItem = ({
   year,
   title,

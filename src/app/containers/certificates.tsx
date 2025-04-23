@@ -1,5 +1,4 @@
 import CertificateItem from '../components/certificateItem';
-import { FaGithub, FaLink, FaYoutube } from 'react-icons/fa';
 
 const commonStyles = 'w-full flex flex-col items-center';
 const titleStyles = 'border-b-2 border-tertiary text-4xl font-bold mt-16 mb-4';
