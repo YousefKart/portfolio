@@ -52,7 +52,7 @@ export default function Contact() {
       <h1 className={`${titleStyles} w-3/4 text-center`} data-aos="fade-up">
         Contact
       </h1>
-      <ul className="flex justify-between w-1/2 gap-4 mt-4 mb-8">
+      <ul className="flex flex-col md:flex-row justify-between w-1/2 gap-4 mt-4 mb-8">
         {contactItems.map((item, index) => (
           <ContactItem key={index} {...item} />
         ))}
