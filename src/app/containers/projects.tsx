@@ -68,7 +68,7 @@ const projects = [
       { icon: <FaLink />, url: 'https://volt.borhansaflo.com/' },
     ],
     media: [
-      'videos/VoltVistaClip.mp4',
+      'videos/VoltVistaCli.mp4',
       'images/projects/VoltVistaLogo.webp',
       'images/projects/VoltVistaHome.webp',
     ],
