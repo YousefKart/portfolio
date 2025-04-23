@@ -8,6 +8,7 @@ import Navbar from './containers/navbar';
 import Hero from './containers/hero';
 import Experience from './containers/experience';
 import Skills from './containers/skills';
+import Certificates from './containers/certificates';
 import Projects from './containers/projects';
 import Models from './containers/models';
 import Contact from './containers/contact';
@@ -31,6 +32,7 @@ export default function Home() {
         <main className={`${commonStyles} bg-primary mt-16`}>
           <Experience />
           <Skills />
+          <Certificates />
           <Projects />
           <Models />
           <Contact />

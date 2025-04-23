@@ -18,7 +18,7 @@ const JobItem = ({
 }) => {
   return (
     <li
-      className="flex flex-col items-center w-3/4 lg:w-1/2"
+      className="items-center w-3/4 lg:w-1/2"
       data-aos="fade-up"
     >
       <div className="flex flex-col lg:flex-row w-full justify-between">
@@ -47,7 +47,6 @@ const JobItem = ({
           </ul>
         </div>
       </div>
-      <div></div>
     </li>
   );
 };
