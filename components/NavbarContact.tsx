@@ -1,7 +1,4 @@
-'use client';
-
 import { FileCode, Linkedin, Github } from 'lucide-react';
-import { Button } from './ui/button';
 import { NavbarLink } from './NavbarLink';
 
 export default function NavbarContact() {

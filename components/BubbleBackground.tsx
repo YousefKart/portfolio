@@ -2,43 +2,56 @@
 
 import { useRef, useEffect } from 'react';
 
-export default function StarBackground() {
+export default function LightBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext('2d')!;
-    let stars: {
+    let particles: {
       x: number;
       y: number;
       r: number;
-      alpha: number;
-      dAlpha: number;
+      dx: number;
+      dy: number;
+      opacity: number;
     }[] = [];
 
     const init = () => {
       const { width, height } = canvas;
-      stars = Array.from({ length: 200 }).map(() => ({
+      particles = Array.from({ length: 100 }).map(() => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        r: Math.random() * 1.5 + 0.5,
-        alpha: Math.random(),
-        dAlpha: Math.random() * 0.02 + 0.005,
+        r: Math.random() * 2 + 1,
+        dx: (Math.random() - 0.5) * 0.3,
+        dy: (Math.random() - 0.5) * 0.3,
+        opacity: Math.random() * 0.4 + 0.2,
       }));
     };
 
     const draw = () => {
       const { width, height } = canvas;
       ctx.clearRect(0, 0, width, height);
-      stars.forEach((s) => {
-        s.alpha += s.dAlpha;
-        if (s.alpha <= 0 || s.alpha >= 1) s.dAlpha *= -1;
-        ctx.globalAlpha = s.alpha;
+
+      particles.forEach((particle) => {
+        // Update position
+        particle.x += particle.dx;
+        particle.y += particle.dy;
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = width;
+        if (particle.x > width) particle.x = 0;
+        if (particle.y < 0) particle.y = height;
+        if (particle.y > height) particle.y = 0;
+
+        // Draw particle
+        ctx.globalAlpha = particle.opacity;
         ctx.beginPath();
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fillStyle = '#fff';
+        ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
+        ctx.fillStyle = '#64748b'; // Slate color for light theme
         ctx.fill();
       });
+
       ctx.globalAlpha = 1;
       requestAnimationFrame(draw);
     };
