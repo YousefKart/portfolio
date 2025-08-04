@@ -1,16 +1,18 @@
+'use client';
+
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 const ThemeSwitcher: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   return (
     <div
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       className="cursor-pointer hover:text-foreground"
       title="Toggle theme"
     >
-      {theme === 'dark' ? (
+      {resolvedTheme === 'dark' ? (
         <Sun className="w-6 h-6 transition duration-100 hover:text-foreground/50 hover:scale-105" />
       ) : (
         <Moon className="w-6 h-6 transition duration-100 hover:text-foreground/50 hover:scale-105" />

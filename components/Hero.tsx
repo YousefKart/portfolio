@@ -2,7 +2,10 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className="flex items-center justify-around w-full mt-32">
+    <div
+      id="hero"
+      className="flex items-center justify-around w-full scroll-mt-64"
+    >
       <div className="flex-col items-center justify-center text-center space-y-4">
         <h1 className="text-4xl font-bold border-b-2 border-muted-foreground mb-8 pb-2">
           Yousef Kart
