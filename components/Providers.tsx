@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { Toaster } from "@/components/ui/sonner";
-import { ThemeProvider } from "./ThemeProvider";
+import { Toaster } from '@/components/ui/sonner';
+import { ThemeProvider } from './ThemeProvider';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
