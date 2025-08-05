@@ -1,5 +1,5 @@
 import { ExperienceItem } from './ExperienceItem';
-import { experienceData } from './ExperienceData';
+import { experienceData } from './data/ExperienceData';
 
 export default function Experience() {
   return (

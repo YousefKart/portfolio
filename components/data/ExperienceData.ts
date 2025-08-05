@@ -11,7 +11,7 @@ export const experienceData: ExperienceData[] = [
       'Designed and implemented shared-authentication for SSO across the Scelta Suite.',
       'Developed and deployed a standardized UI-package for Scelta web applications.',
       'Created a NextJS app template to streamline web prototyping and testing.',
-      'Collaborated with cross-functional teams to develop and maintain core features on 6 different applications (Scelta Home, REDMap, Sitekick, Speed CRM, Portal and Encore).',
+      'Collaborated with cross-functional teams to develop and maintain core features on 6 different applications (Scelta Home, REDMap, Sitekick, SpeedCRM, Portal, and Encore).',
       'Optimized database queries and API endpoints, reducing loading times and improving user experience.',
     ],
     tools: [
