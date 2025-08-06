@@ -7,7 +7,9 @@ export default function Experience() {
       id="experience"
       className="flex flex-col gap-8 w-2/3 mx-auto scroll-mt-20"
     >
-      <h1 className="text-center text-2xl font-semibold">Experience</h1>
+      <h1 className="text-center text-2xl font-semibold">
+        Professional Experience
+      </h1>
       {experienceData.map((item, index) => (
         <ExperienceItem key={index} data={item} />
       ))}

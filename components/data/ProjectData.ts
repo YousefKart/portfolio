@@ -3,7 +3,7 @@ import { ProjectType } from '@/lib/types/ProjectType';
 export const projectData: ProjectType[] = [
   {
     title: 'AI Monitoring System',
-    images: ['/videos/AIMonitoringSystemClip.mp4'],
+    images: ['/images/AIPMS.png'],
     date: '2025',
     description:
       'A software solution designed to provide real-time monitoring and alert capabilities using repurposed mobile devices. The system streams live video to a web application where users can monitor their environment, record footage, and receive notifications for specific events, detected by AI.',

@@ -5,7 +5,13 @@ const isVideo = (src: string): boolean => {
   return videoExtensions.some((ext) => src.toLowerCase().endsWith(ext));
 };
 
-export function MediaDisplay({ src, title }: { src: string; title: string }) {
+interface MediaDisplayProps {
+  src: string;
+  title: string;
+  className?: string;
+}
+
+export function MediaDisplay({ src, title, className }: MediaDisplayProps) {
   if (isVideo(src)) {
     return (
       <video
@@ -13,7 +19,7 @@ export function MediaDisplay({ src, title }: { src: string; title: string }) {
         controls
         muted
         loop
-        className="w-full h-auto object-cover flex-1 rounded-lg"
+        className={className}
         preload="metadata"
       >
         Your browser does not support the video tag.
@@ -28,7 +34,7 @@ export function MediaDisplay({ src, title }: { src: string; title: string }) {
       layout="responsive"
       width={100}
       height={50}
-      className="w-full h-auto object-cover flex-1 rounded-lg"
+      className={className}
     />
   );
 }

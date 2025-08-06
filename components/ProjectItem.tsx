@@ -12,7 +12,11 @@ export function ProjectItem({ data }: ProjectItemProps) {
         <h2>{data.title}</h2>
         <p>{data.date}</p>
       </div>
-      <MediaDisplay src={data.images[0]} title={data.title} />
+      <MediaDisplay
+        src={data.images[0]}
+        title={data.title}
+        className="max-h-128 w-full object-cover flex-1 rounded-lg"
+      />
       {data.description}
 
       <div className="flex items-center justify-between">
