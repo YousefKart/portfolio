@@ -1,8 +1,8 @@
 import { Dot } from 'lucide-react';
-import { ExperienceData } from '@/lib/types/ExperienceData';
+import { ExperienceType } from '@/lib/types/ExperienceType';
 
 interface ExperienceItemProps {
-  data: ExperienceData;
+  data: ExperienceType;
 }
 
 export function ExperienceItem({ data }: ExperienceItemProps) {

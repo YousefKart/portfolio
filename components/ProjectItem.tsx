@@ -1,8 +1,31 @@
+import { ProjectType } from '@/lib/types/ProjectType';
+import { MediaDisplay } from './MediaDiaplay';
+
 interface ProjectItemProps {
-  // Add props here as needed
+  data: ProjectType;
 }
 
-export function ProjectItem({}: // destructure props here
-ProjectItemProps) {
-  return <div>{/* Add project item content here */}</div>;
+export function ProjectItem({ data }: ProjectItemProps) {
+  return (
+    <div className="flex flex-col justify-start gap-4 border rounded-4xl p-4 backdrop-blur bg-foreground/5">
+      <div className="flex items-center justify-between w-full text-lg font-semibold mb-4">
+        <h2>{data.title}</h2>
+        <p>{data.date}</p>
+      </div>
+      <MediaDisplay src={data.images[0]} title={data.title} />
+      {data.description}
+
+      <div className="flex items-center justify-between">
+        <div className="flex gap-2 flex-wrap text-muted-foreground">
+          {data.tools.map((tool, index) => (
+            <div key={index} className="flex gap-2 items-center flex-wrap">
+              <span key={index} className="bg-muted px-2 py-1 rounded text-sm">
+                {tool}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
