@@ -7,10 +7,10 @@ export const experienceData: ExperienceType[] = [
     location: 'Windsor, ON',
     date: 'Feb 2025 - Present',
     description: [
-      'Designed and implemented shared-authentication for SSO across the Scelta Suite.',
-      'Developed and deployed a standardized UI-package for Scelta web applications.',
+      'Designed and implemented shared authentication for SSO across the Scelta Suite.',
+      'Developed and deployed a standardized UI package for Scelta web applications.',
       'Created a NextJS app template to streamline web prototyping and testing.',
-      'Implemented a powerful and flexible feature for embedding 3D models on a web-based map.',
+      'Implemented a robust and flexible feature for embedding 3D models on a web-based map.',
       'Optimized database queries and API endpoints, reducing loading times and improving user experience.',
       'Collaborated with cross-functional teams to develop and maintain core features on 6 different applications (Scelta Home, REDMap, Sitekick, SpeedCRM, Portal, and Encore).',
     ],
@@ -54,8 +54,8 @@ export const experienceData: ExperienceType[] = [
     location: 'Windsor, ON',
     date: 'Feb 2025 - Present',
     description: [
-      'Created 3D models of proposed real estate developments using architectural blueprints, site plans and inspiration images.',
-      'Produced cost-effective, presentation-ready visualizations in 3–5 days, compared to the industry average of 2–4 weeks.',
+      'Created 3D models of proposed real estate developments using architectural blueprints and site plans. Projects range from single-family homes to $100 million+ developments.',
+      'Produced cost-effective, presentation-ready visualizations in 3–5 days. 300% faster than the competition average.',
       'Enabled successful client pitches, directly contributing to increased sales of other products within the Scelta Suite.',
     ],
     tools: [
