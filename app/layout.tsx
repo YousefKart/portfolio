@@ -3,6 +3,7 @@ import { Rubik } from 'next/font/google';
 import './globals.css';
 import Providers from '@/components/Providers';
 import Navbar from '@/components/Navbar';
+import NavbarMobile from '@/components/NavbarMobile';
 import Footer from '@/components/Footer';
 
 const rubik = Rubik({
@@ -25,7 +26,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${rubik.variable} antialiased font-sans flex flex-col`}>
         <Providers>
-          <Navbar />
+          <div className="hidden lg:block">
+            <Navbar />
+          </div>
+          <div className="block lg:hidden">
+            <NavbarMobile />
+          </div>
           <main className="flex-1">{children}</main>
           <Footer />
         </Providers>

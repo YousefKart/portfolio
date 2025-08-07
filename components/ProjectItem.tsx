@@ -7,7 +7,7 @@ interface ProjectItemProps {
 
 export function ProjectItem({ data }: ProjectItemProps) {
   return (
-    <div className="flex flex-col justify-start gap-4 border rounded-4xl p-4 backdrop-blur bg-foreground/5">
+    <div className="flex flex-col justify-start gap-4 border sm:rounded-4xl p-4 backdrop-blur bg-foreground/5">
       <div className="flex items-center justify-between w-full text-lg font-semibold mb-4">
         <h2>{data.title}</h2>
         <p>{data.date}</p>

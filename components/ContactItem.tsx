@@ -12,7 +12,7 @@ export function ContactItem({ data }: ContactItemProps) {
       target="_blank"
       className={cn(
         'flex items-center justify-center gap-4 border rounded-sm p-2 backdrop-blur bg-foreground/5',
-        'hover:bg-foreground/15 hover:-translate-y-1',
+        'hover:-translate-y-0.75 hover:shadow-[4px_4px_0px_rgba(28,27,44,1)] dark:hover:shadow-[4px_4px_0px_rgba(251,251,251,1)]',
         'transition duration-100'
       )}
     >
