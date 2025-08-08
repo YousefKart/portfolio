@@ -10,36 +10,35 @@ import {
 } from '@/components/ui/dialog';
 
 interface ModelModalProps {
-  model: ModelType;
+  data: ModelType;
   isOpen: boolean;
   onClose: () => void;
 }
 
-export function ModelModal({ model, isOpen, onClose }: ModelModalProps) {
+export function ModelModal({ data, isOpen, onClose }: ModelModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="!w-[90vw] !max-w-[1000px] max-h-[80vh] overflow-auto">
         <DialogHeader className="space-y-3 pb-4">
           <DialogTitle className="text-2xl font-bold text-center">
-            {model.title}
+            {data.title}
           </DialogTitle>
-          <DialogDescription className="text-center text-muted-foreground">
+          <DialogDescription className="flex items-center justify-center gap-2 text-muted-foreground">
             3D Model Preview
           </DialogDescription>
         </DialogHeader>
 
         <div className="flex-1 overflow-hidden rounded-xl bg-muted/20 p-2">
           <MediaDisplay
-            src={model.image}
-            title={model.title}
+            src={data.image}
+            title={data.title}
             className="rounded-lg w-full h-full object-contain"
           />
         </div>
 
         <DialogFooter className="pt-4">
           <p className="text-sm text-muted-foreground text-center w-full">
-            This model was made for recreational purposes and is not for
-            commercial use.
+            This model was made for recreational purposes.
           </p>
         </DialogFooter>
       </DialogContent>
