@@ -47,9 +47,7 @@ export function ProjectModal({ data, isOpen, onClose }: ProjectModalProps) {
               <FileText className="h-5 w-5 text-primary" />
               About this Project
             </h3>
-            <p className="text-muted-foreground leading-relaxed text-base">
-              {data.description}
-            </p>
+            <p className="leading-relaxed text-base">{data.description}</p>
           </div>
 
           <Separator />
