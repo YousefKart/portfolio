@@ -1,5 +1,6 @@
 import { Dot } from 'lucide-react';
 import { ExperienceType } from '@/lib/types/ExperienceType';
+import { cn } from '@/lib/utils';
 
 interface ExperienceItemProps {
   data: ExperienceType;
@@ -7,7 +8,11 @@ interface ExperienceItemProps {
 
 export function ExperienceItem({ data }: ExperienceItemProps) {
   return (
-    <div className="flex flex-col gap-4 border rounded-4xl p-4 backdrop-blur bg-foreground/5">
+    <div
+      className={cn(
+        'flex flex-col gap-4 border rounded-4xl p-4 backdrop-blur bg-foreground/5'
+      )}
+    >
       <div className="flex items-start justify-between w-full gap-16">
         <div className="flex flex-col items-start justify-start flex-1">
           <h2 className="text-lg font-semibold">{data.title}</h2>

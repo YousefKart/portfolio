@@ -31,9 +31,10 @@ export function MediaDisplay({ src, title, className }: MediaDisplayProps) {
     <Image
       src={src}
       alt={title + ' Image'}
-      layout="responsive"
       width={100}
       height={50}
+      sizes="100vw"
+      style={{ width: '100%', height: 'auto' }}
       className={className}
     />
   );

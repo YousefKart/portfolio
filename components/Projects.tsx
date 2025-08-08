@@ -1,4 +1,4 @@
-import { ProjectItem } from './ProjectItem';
+import { ProjectItem } from './ProjectItemCompressed';
 import { projectData } from './data/ProjectData';
 
 export default function Projects() {

@@ -3,7 +3,7 @@ import { ProjectModal } from './ProjectModal';
 import { MediaDisplay } from './MediaDiaplay';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { hover2 } from '@/lib/utils';
+import { hover } from '@/lib/utils';
 
 interface ProjectItemProps {
   data: ProjectType;
@@ -18,7 +18,7 @@ export function ProjectItem({ data }: ProjectItemProps) {
         onClick={() => setIsOpen(true)}
         className={cn(
           'flex flex-col justify-start gap-4 border sm:rounded-4xl p-4 backdrop-blur bg-foreground/5',
-          hover2
+          hover
         )}
       >
         <div className="flex items-center justify-between w-full text-lg font-semibold mb-4">
