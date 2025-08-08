@@ -23,7 +23,7 @@ export const modelData: ModelType[] = [
   },
   {
     title: 'Sci-Fi Weapons',
-    image: '/models/Low Poly Sci-Fi Weapons.png',
+    image: '/models/Low poly Sci-Fi Weapons.png',
   },
   {
     title: 'Low Poly Guns',
