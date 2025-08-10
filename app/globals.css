@@ -122,3 +122,51 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Glow border effect */
+.glow-border {
+  position: relative;
+  /* Enable border visibility even without the glow */
+  border: 1px solid var(--border);
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: var(--glow-radius, inherit);
+  /* We only show a thin ring via masking */
+  padding: var(--glow-border-width, 2px);
+  /* Create a ring-only region by subtracting inner rect from outer rect */
+  -webkit-mask: radial-gradient(
+      circle var(--glow-size, 160px) at var(--glow-x, -200px)
+        var(--glow-y, -200px),
+      rgb(0 0 0 / var(--glow-opacity, 0.9)),
+      transparent 60%
+    ),
+    linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  -webkit-mask-composite: source-in, xor;
+  mask: radial-gradient(
+      circle var(--glow-size, 160px) at var(--glow-x, -200px)
+        var(--glow-y, -200px),
+      rgb(0 0 0 / var(--glow-opacity, 0.9)),
+      transparent 60%
+    ),
+    linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  mask-composite: intersect, exclude;
+  background: radial-gradient(
+    circle var(--glow-size, 160px) at var(--glow-x, -200px)
+      var(--glow-y, -200px),
+    var(--glow-color, var(--ring)) 0%,
+    var(--glow-color2, transparent) 40%,
+    transparent 60%
+  );
+  filter: blur(var(--glow-blur, 1px));
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.glow-border[data-hover='true']::before {
+  opacity: 1;
+}

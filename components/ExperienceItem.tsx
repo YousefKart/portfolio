@@ -1,16 +1,21 @@
 import { Dot } from 'lucide-react';
 import { ExperienceType } from '@/lib/types/ExperienceType';
 import { cn } from '@/lib/utils';
+import useGlowBorder from '@/hooks/use-glow-border';
 
 interface ExperienceItemProps {
   data: ExperienceType;
 }
 
 export function ExperienceItem({ data }: ExperienceItemProps) {
+  const glow = useGlowBorder({ size: 500 });
+
   return (
     <div
+      {...glow.props}
       className={cn(
-        'flex flex-col gap-4 border rounded-4xl p-4 backdrop-blur bg-foreground/5'
+        'flex flex-col gap-4 border rounded-4xl p-4 backdrop-blur bg-foreground/5',
+        'glow-border'
       )}
     >
       <div className="flex items-start justify-between w-full gap-16">
