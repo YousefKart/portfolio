@@ -4,6 +4,7 @@ import { MediaDisplay } from './MediaDiaplay';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { hover } from '@/lib/utils';
+import useGlowBorder from '@/hooks/use-glow-border';
 
 interface ModelItemProps {
   data: ModelType;
@@ -11,13 +12,16 @@ interface ModelItemProps {
 
 export function ModelItem({ data }: ModelItemProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const glow = useGlowBorder({ size: 300 });
 
   return (
     <>
       <div
+        {...glow.props}
         onClick={() => setIsOpen(true)}
         className={cn(
           'flex flex-col items-center justify-center gap-4 border sm:rounded-4xl pb-4 backdrop-blur bg-foreground/5',
+          'glow-border',
           hover
         )}
       >

@@ -15,7 +15,7 @@ export function ExperienceItem({ data }: ExperienceItemProps) {
     <div
       {...glow.props}
       className={cn(
-        'flex flex-col gap-4 border rounded-4xl p-4 backdrop-blur bg-foreground/5 cursor-default',
+        'flex flex-col gap-4 border rounded-4xl py-6 px-8 backdrop-blur bg-foreground/5 cursor-default',
         'glow-border'
       )}
     >

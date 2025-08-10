@@ -45,7 +45,7 @@ export function ProjectModal({ data, isOpen, onClose }: ProjectModalProps) {
           <div className="space-y-4">
             <h3 className="text-xl font-semibold flex items-center gap-2">
               <FileText className="h-5 w-5 text-primary" />
-              About this Project
+              About This Project
             </h3>
             <p className="leading-relaxed text-base">{data.description}</p>
           </div>
@@ -88,14 +88,13 @@ export function ProjectModal({ data, isOpen, onClose }: ProjectModalProps) {
           </div>
         </div>
 
-        <DialogFooter className="pt-6 border-t">
+        {/* <DialogFooter className="pt-6 border-t">
           <div className="w-full text-center">
             <p className="text-sm text-muted-foreground">
-              This project is a personal and/or school project created for
-              learning and showcasing purposes.
+              This project was created for recreational purposes.
             </p>
           </div>
-        </DialogFooter>
+        </DialogFooter> */}
       </DialogContent>
     </Dialog>
   );

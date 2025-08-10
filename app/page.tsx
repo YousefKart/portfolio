@@ -16,8 +16,8 @@ export default function Home() {
     <div className="flex flex-col w-full h-full bg-background">
       {resolvedTheme === 'dark' ? <StarBackground /> : <BubbleBackground />}
 
-      <main className="flex-1 bg-gradient-to-b from-background to-accent mt-16">
-        <div className="flex flex-col gap-32 w-full sm:w-3/4 mx-auto mt-32 mb-16">
+      <main className="flex-1 bg-gradient-to-b from-background to-accent">
+        <div className="flex flex-col gap-32 w-full sm:w-3/4 mx-auto mb-16">
           <Hero />
           <Experience />
           <Projects />

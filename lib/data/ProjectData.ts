@@ -3,7 +3,7 @@ import { ProjectType } from '@/lib/types/ProjectType';
 export const projectData: ProjectType[] = [
   {
     title: 'AI Monitoring System',
-    images: ['/images/AIPMS.png'],
+    images: ['/videos/AIMonitoringSystemClip.mp4', '/images/AIPMS.png'],
     date: '2025',
     duration: '8 months',
     description:
@@ -21,7 +21,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'The Last Ride',
-    images: ['/images/TLR2.png', '/images/TLR1.png'],
+    images: ['/videos/TheLastRide.mp4', '/images/TLR2.png', '/images/TLR1.png'],
     date: '2025',
     duration: '4 months',
     description:
@@ -31,7 +31,11 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Flag Frenzy',
-    images: ['/images/FlagFrenzyGame.webp', '/images/FlagFrenzyVehicles.webp'],
+    images: [
+      '/videos/FlagFrenzyClip.mp4',
+      '/images/FlagFrenzyGame.webp',
+      '/images/FlagFrenzyVehicles.webp',
+    ],
     date: '2024',
     duration: '8 months',
     description:
@@ -57,8 +61,8 @@ export const projectData: ProjectType[] = [
     title: 'Volt Vista',
     images: [
       '/images/VoltVistaLogo.webp',
+      '/videos/VoltVistaClip.mp4',
       '/images/VoltVistaHome.webp',
-      '/images/VoltVistaRender.webp',
     ],
     date: '2023',
     duration: '4 months',

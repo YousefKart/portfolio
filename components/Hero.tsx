@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="flex items-center justify-around w-full scroll-mt-64 px-4"
+      className="flex items-center justify-around h-[90vh] w-full scroll-mt-64 px-4"
     >
       <div className="flex-col items-center justify-center text-center space-y-4">
         <h1 className="text-4xl font-bold border-b-2 border-muted-foreground mb-8 pb-2">

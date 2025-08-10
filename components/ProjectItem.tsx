@@ -4,6 +4,7 @@ import { MediaDisplay } from './MediaDiaplay';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { hover } from '@/lib/utils';
+import useGlowBorder from '@/hooks/use-glow-border';
 
 interface ProjectItemProps {
   data: ProjectType;
@@ -11,13 +12,16 @@ interface ProjectItemProps {
 
 export function ProjectItem({ data }: ProjectItemProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const glow = useGlowBorder({ size: 400 });
 
   return (
     <>
       <div
+        {...glow.props}
         onClick={() => setIsOpen(true)}
         className={cn(
           'flex flex-col justify-start gap-4 border sm:rounded-4xl p-4 backdrop-blur bg-foreground/5',
+          'glow-border',
           hover
         )}
       >
