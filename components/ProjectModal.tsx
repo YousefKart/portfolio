@@ -8,7 +8,6 @@ import {
   DialogTitle,
   DialogDescription,
 } from '@/components/ui/dialog';
-import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Calendar, Code2, ImageIcon, Clock, FileText } from 'lucide-react';
 import { ToolItem } from './toolItem';
