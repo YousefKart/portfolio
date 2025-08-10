@@ -71,7 +71,6 @@ export function GlowBorder<T extends React.ElementType = 'div'>(
     const el = ref.current;
     if (!el) return;
     el.removeAttribute('data-hover');
-    // Park the glow far away so it doesn't flash when re-entering fast.
     el.style.setProperty('--glow-x', `-999px`);
     el.style.setProperty('--glow-y', `-999px`);
   };
@@ -96,12 +95,11 @@ export function GlowBorder<T extends React.ElementType = 'div'>(
 
   return (
     <Tag
-      // The class provides the pseudo-element + masking; inline vars tune it.
       className={['glow-border', className].filter(Boolean).join(' ')}
       onMouseMove={handleMove}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
-      ref={ref as unknown as React.Ref<any>}
+      ref={ref}
       style={styleVars}
       {...rest}
     >
