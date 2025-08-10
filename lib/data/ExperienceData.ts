@@ -49,14 +49,15 @@ export const experienceData: ExperienceType[] = [
   },
 
   {
-    title: '3D Design Lead',
-    company: 'Scelta',
-    location: 'Windsor, ON',
-    date: 'Feb 2025 - Present',
+    title: '3D Modeller and Designer',
+    company: 'Freelance',
+    location: 'Global',
+    date: 'Jun 2021 - Feb 2025',
     description: [
+      'Modelled hundreds of optimized 3D assets for video games and animations.',
       'Created 3D models of proposed real estate developments using architectural blueprints and site plans. Projects range from single-family homes to $100 million+ developments.',
       'Produced cost-effective, presentation-ready visualizations in 3–5 days. 300% faster than the competition average.',
-      'Enabled successful client pitches, directly contributing to increased sales of other products within the Scelta Suite.',
+      'Enabled successful client pitches, directly contributing to increased sales of other products within company suites.',
     ],
     tools: [
       {

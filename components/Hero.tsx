@@ -12,7 +12,7 @@ export default function Hero() {
           Software Developer and 3D Modeller
         </h2>
         <p>
-          Honours Graduate in Computer Science from the University of Windsor
+          Computer Science (Honours) Graduate from the University of Windsor
         </p>
       </div>
 
