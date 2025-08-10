@@ -1,5 +1,5 @@
 import { ContactItem } from './ContactItem';
-import { contactData } from './data/ContactData';
+import { contactData } from '../lib/data/ContactData';
 
 export default function Contact() {
   return (

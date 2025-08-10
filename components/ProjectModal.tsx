@@ -11,6 +11,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Calendar, Code2, ImageIcon, Clock, FileText } from 'lucide-react';
+import { ToolItem } from './toolItem';
 
 interface ProjectModalProps {
   data: ProjectType;
@@ -61,7 +62,7 @@ export function ProjectModal({ data, isOpen, onClose }: ProjectModalProps) {
               {data.images.map((image, index) => (
                 <div
                   key={index}
-                  className="aspect-video overflow-hidden rounded-lg bg-muted/20"
+                  className="aspect-video overflow-hidden rounded-lg bg-muted/20 flex justify-center items-center"
                 >
                   <MediaDisplay
                     src={image}
@@ -82,13 +83,7 @@ export function ProjectModal({ data, isOpen, onClose }: ProjectModalProps) {
             </h3>
             <div className="flex flex-wrap gap-2">
               {data.tools.map((tool, index) => (
-                <Badge
-                  key={index}
-                  variant="secondary"
-                  className="px-3 py-1 text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
-                >
-                  {tool}
-                </Badge>
+                <ToolItem key={index} tool={tool} />
               ))}
             </div>
           </div>

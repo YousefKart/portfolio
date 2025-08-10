@@ -1,6 +1,6 @@
 import { ExperienceItem } from './ExperienceItem';
 import { ExperienceItemMobile } from './ExperienceItemMobile';
-import { experienceData } from './data/ExperienceData';
+import { experienceData } from '../lib/data/ExperienceData';
 
 export default function Experience() {
   return (

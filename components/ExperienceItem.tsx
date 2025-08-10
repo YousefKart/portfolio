@@ -2,6 +2,7 @@ import { Dot } from 'lucide-react';
 import { ExperienceType } from '@/lib/types/ExperienceType';
 import { cn } from '@/lib/utils';
 import useGlowBorder from '@/hooks/use-glow-border';
+import { ToolItem } from './toolItem';
 
 interface ExperienceItemProps {
   data: ExperienceType;
@@ -14,7 +15,7 @@ export function ExperienceItem({ data }: ExperienceItemProps) {
     <div
       {...glow.props}
       className={cn(
-        'flex flex-col gap-4 border rounded-4xl p-4 backdrop-blur bg-foreground/5',
+        'flex flex-col gap-4 border rounded-4xl p-4 backdrop-blur bg-foreground/5 cursor-default',
         'glow-border'
       )}
     >
@@ -43,12 +44,7 @@ export function ExperienceItem({ data }: ExperienceItemProps) {
           <div key={index} className="flex gap-2 items-center flex-wrap">
             <p className="font-semibold">{category.title}:</p>
             {category.tools.map((tool, toolIndex) => (
-              <span
-                key={toolIndex}
-                className="bg-muted px-2 py-1 rounded text-sm"
-              >
-                {tool}
-              </span>
+              <ToolItem tool={tool} key={toolIndex} />
             ))}
           </div>
         ))}

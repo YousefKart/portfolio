@@ -1,5 +1,5 @@
 import { ModelItem } from './ModelItem';
-import { modelData } from './data/ModelData';
+import { modelData } from '../lib/data/ModelData';
 
 export default function Models() {
   return (
