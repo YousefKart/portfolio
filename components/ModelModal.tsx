@@ -18,7 +18,7 @@ interface ModelModalProps {
 export function ModelModal({ data, isOpen, onClose }: ModelModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="!w-[90vw] !max-w-[1000px] max-h-[80vh] overflow-auto">
+      <DialogContent className="!w-[90vw] !max-w-[1000px] max-h-[80vh] overflow-auto dark:bg-slate-900 rounded-2xl">
         <DialogHeader className="space-y-3 pb-4">
           <DialogTitle className="text-2xl font-bold text-center">
             {data.title}
@@ -38,7 +38,7 @@ export function ModelModal({ data, isOpen, onClose }: ModelModalProps) {
 
         <DialogFooter className="pt-4">
           <p className="text-sm text-muted-foreground text-center w-full">
-            This model was made for recreational purposes.
+            This model was created for recreational purposes.
           </p>
         </DialogFooter>
       </DialogContent>
