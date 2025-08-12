@@ -13,7 +13,7 @@ export function NavbarLink({
   href = '',
   target = '',
   label,
-  scale = false,
+  scale = true,
   children,
 }: NavbarLinkProps) {
   const isHashLink = href.startsWith('#'); // Use regular anchor tag for in-page navigation and NextLink for page navigation

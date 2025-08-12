@@ -11,9 +11,7 @@ export default function Hero() {
         <h2 className="text-2xl font-semibold">
           Software Developer and 3D Modeller
         </h2>
-        <p>
-          Computer Science (Honours) Graduate from the University of Windsor
-        </p>
+        <p>Honours Computer Science Graduate from the University of Windsor</p>
       </div>
 
       {/*
