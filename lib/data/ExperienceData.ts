@@ -55,7 +55,7 @@ export const experienceData: ExperienceType[] = [
     location: 'Global',
     date: 'Jun 2021 - Feb 2025',
     description: [
-      'Modelled hundreds of optimized assets for video games and 3D animations.',
+      'Created hundreds of optimized assets for video games and 3D animations.',
       'Modelled and rendered dozens of proposed real estate developments using architectural blueprints and site plans. Projects range from single-family homes to $100 million+ developments.',
       'Produced cost-effective, presentation-ready visualizations in 3–5 days, 300% faster than the competition average.',
       'Enabled successful client pitches, directly contributing to increased sales of other products within company suites.',
