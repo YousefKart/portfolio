@@ -2,6 +2,10 @@ import { ModelType } from '@/lib/types/ModelType';
 
 export const modelData: ModelType[] = [
   {
+    title: 'Log Truck',
+    image: '/models/Log Truck Textured.png',
+  },
+  {
     title: 'Cargo',
     image: '/models/Cargo.png',
   },
