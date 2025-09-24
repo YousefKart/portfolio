@@ -9,11 +9,11 @@ export const experienceData: ExperienceType[] = [
     description: [
       'Implemented a shared-authentication system for SSO across the Scelta Suite.',
       'Designed and deployed a standardized UI package for Scelta web applications.',
-      'Created a NextJS application template to streamline web prototyping and testing.',
-      'Developed a flexible feature for embedding 3D models onto a web-based map.',
-      'Optimized database queries and API endpoints, reducing loading times and improving user experience.',
-      'Introduced an internal tool for automating UI testing across multiple applications.',
-      'Collaborated with cross-functional teams to develop and maintain core features on 6 different applications (Scelta Home, REDMap, Sitekick, SpeedCRM, Portal, and Encore).',
+      'Created a NextJS application template to fill in boilerplate code, reducing initial build time by more than 50%.',
+      'Built a system to seamlessly embed 3D models into web maps, speeding up workflows.',
+      'Optimized database queries and API endpoints, decreasing loading times by up to 25%.',
+      'Developed an internal tool for automated testing across multiple applications, significantly reducing build cycle times.',
+      'Collaborated with cross-functional teams to ship and maintain features across 6 applications.',
     ],
     tools: [
       {

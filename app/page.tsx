@@ -6,8 +6,8 @@ import Projects from '@/components/Projects';
 import Models from '@/components/Models';
 import Contact from '@/components/Contact';
 import { useTheme } from 'next-themes';
-import StarBackground from '@/components/StarBackground';
-import BubbleBackground from '@/components/BubbleBackground';
+import StarBackground from '@/components/backgrounds/StarBackground';
+import BubbleBackground from '@/components/backgrounds/BubbleBackground';
 
 export default function Home() {
   const { resolvedTheme } = useTheme();
