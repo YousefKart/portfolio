@@ -17,6 +17,7 @@ export const projectData: ProjectType[] = [
       'OpenCV',
       'Python',
     ],
+    url: 'https://4990.tanzimfh.com/',
   },
 
   {
@@ -41,6 +42,7 @@ export const projectData: ProjectType[] = [
     description:
       "A shooter game on Roblox where players are divided into two teams and must capture the opposing team's flag while defending their own. The game features a variety of weapons and maps hand-crafted to maximize player engagement.",
     tools: ['Roblox Studio', 'Blender', 'Lua'],
+    url: 'https://www.roblox.com/games/15222475262/NEW-GUNS-FLAG-FRENZY-RED-VS-BLUE',
   },
 
   {
@@ -69,6 +71,7 @@ export const projectData: ProjectType[] = [
     description:
       'An energy monitoring and management solution. The system allows users to monitor their energy usage, set goals, and receive notifications when they are close to exceeding their budget. The system also provides recommendations on how to reduce energy consumption.',
     tools: ['React', 'NextJS', 'Vercel'],
+    url: 'https://volt.borhansaflo.com/',
   },
 
   {
@@ -83,6 +86,7 @@ export const projectData: ProjectType[] = [
     description:
       'A Java3D project designed to simulate an escape room game set in the Java Lounge (computer science commons). The game is designed to challenge players with various puzzles and obstacles, created purely in Java (no visual tools!).',
     tools: ['Java3D', 'Blender'],
+    url: 'https://youtu.be/1XG5x_ulwCk?si=Oc4ZvaU4J1N6x4HN',
   },
 
   {

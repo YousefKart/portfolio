@@ -5,4 +5,5 @@ export type ProjectType = {
   duration: string;
   description: string;
   tools: string[];
+  url?: string;
 };

@@ -12,9 +12,17 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog';
 import { Separator } from '@/components/ui/separator';
-import { Calendar, Code2, ImageIcon, Clock, FileText } from 'lucide-react';
+import {
+  Calendar,
+  Code2,
+  ImageIcon,
+  Clock,
+  FileText,
+  Link,
+} from 'lucide-react';
 import { ToolItem } from './toolItem';
 import { Gallery } from './Gallery';
+import { Button } from './ui/button';
 
 interface ProjectModalProps {
   data: ProjectType;
@@ -46,8 +54,13 @@ export function ProjectModal({ data, isOpen, onClose }: ProjectModalProps) {
         <DialogContent className="!w-[90vw] !max-w-[800px] max-h-[90vh] overflow-auto dark:bg-slate-900 rounded-2xl">
           <DialogHeader className="space-y-2">
             <div className="flex items-center gap-3 justify-center">
-              <DialogTitle className="text-3xl font-bold text-center">
+              <DialogTitle className="flex items-center justify-center text-3xl font-bold text-center">
                 {data.title}
+                {data.url && (
+                  <a href={data.url} target="_blank">
+                    <Link className="ml-2 size-6 hover:text-blue-500 transition duration-100" />
+                  </a>
+                )}
               </DialogTitle>
             </div>
             <div className="flex items-center gap-2 justify-center">
