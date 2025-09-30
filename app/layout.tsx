@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 import './globals.css';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 import Providers from '@/components/Providers';
 import Navbar from '@/components/Navbar';
 import NavbarMobile from '@/components/NavbarMobile';
@@ -25,6 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rubik.variable} antialiased font-sans flex flex-col`}>
+        <SpeedInsights />
+        <Analytics />
         <Providers>
           <div className="hidden lg:block">
             <Navbar />
