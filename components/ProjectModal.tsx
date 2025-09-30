@@ -22,7 +22,6 @@ import {
 } from 'lucide-react';
 import { ToolItem } from './toolItem';
 import { Gallery } from './Gallery';
-import { Button } from './ui/button';
 
 interface ProjectModalProps {
   data: ProjectType;
