@@ -75,6 +75,9 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --scrollbar-thumb: oklch(0.554 0.046 257.417);
+  --scrollbar-thumb-hover: oklch(0.408 0.042 264.695);
+  --scrollbar-track: oklch(0.968 0.007 247.896);
 }
 
 .dark {
@@ -109,6 +112,9 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --scrollbar-thumb: oklch(0.704 0.04 256.788);
+  --scrollbar-thumb-hover: oklch(0.929 0.013 255.508);
+  --scrollbar-track: oklch(0.279 0.041 260.031);
 }
 
 @layer base {
@@ -169,4 +175,34 @@
 
 .glow-border[data-hover='true']::before {
   opacity: 1;
+}
+
+* {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: var(--radius-sm);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--scrollbar-track);
+  transition: background-color 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
 }
