@@ -18,7 +18,7 @@ import {
   ImageIcon,
   Clock,
   FileText,
-  Link,
+  ExternalLink,
 } from 'lucide-react';
 import { ToolItem } from './toolItem';
 import { Gallery } from './Gallery';
@@ -57,7 +57,7 @@ export function ProjectModal({ data, isOpen, onClose }: ProjectModalProps) {
                 {data.title}
                 {data.url && (
                   <a href={data.url} target="_blank">
-                    <Link className="ml-2 size-6 hover:text-blue-500 transition duration-100" />
+                    <ExternalLink className="ml-2 size-6 hover:text-blue-500 transition duration-100" />
                   </a>
                 )}
               </DialogTitle>
