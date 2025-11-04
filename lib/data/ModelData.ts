@@ -46,7 +46,7 @@ export const modelData: ModelType[] = [
     image: '/models/Vehicle Wheel.png',
   },
   {
-    title: 'Space Shuttle (WIP)',
+    title: 'Space Shuttle',
     image: '/models/WIP Shuttle.png',
   },
 ];

@@ -38,7 +38,7 @@ export function ModelModal({ data, isOpen, onClose }: ModelModalProps) {
 
         <DialogFooter className="pt-4">
           <p className="text-sm text-muted-foreground text-center w-full">
-            This model was created for recreational purposes.
+            This model was created for educational or recreational purposes.
           </p>
         </DialogFooter>
       </DialogContent>

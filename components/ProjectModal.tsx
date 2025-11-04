@@ -137,7 +137,8 @@ export function ProjectModal({ data, isOpen, onClose }: ProjectModalProps) {
           <DialogFooter className="pt-6 border-t">
             <div className="w-full text-center">
               <p className="text-sm text-muted-foreground">
-                This project was created for recreational purposes.
+                This project was created for educational or recreational
+                purposes.
               </p>
             </div>
           </DialogFooter>
