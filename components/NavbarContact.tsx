@@ -5,7 +5,7 @@ export default function NavbarContact() {
   return (
     <div className="flex items-center justify-center gap-4">
       <NavbarLink
-        href="/Yousef_Kart_Resume.pdf"
+        href="/Yousef_Kart_Software_Engineer_Resume.pdf"
         target="_blank"
         label="Resume"
         scale={true}
