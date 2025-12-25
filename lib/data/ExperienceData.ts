@@ -2,7 +2,7 @@ import { ExperienceType } from '@/lib/types/ExperienceType';
 
 export const experienceData: ExperienceType[] = [
   {
-    title: 'Software Engineer (Full Stack)',
+    title: 'Software Engineer',
     company: 'Scelta',
     location: 'Windsor, ON',
     date: 'Feb 2025 - Present',
