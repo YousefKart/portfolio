@@ -4,7 +4,7 @@ import { FileCode, Linkedin, Github, Mail, Phone } from 'lucide-react';
 export const contactData: ContactType[] = [
   {
     title: 'Resume',
-    href: '/Yousef_Kart_Software_Engineer_Resume.pdf',
+    href: '/Yousef_Kart_Resume.pdf',
     icon: FileCode,
   },
   {
