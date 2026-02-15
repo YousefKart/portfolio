@@ -2,6 +2,20 @@ import { ProjectType } from '@/lib/types/ProjectType';
 
 export const projectData: ProjectType[] = [
   {
+    title: 'Black-Scholes Visualizer',
+    images: [
+      '/images/BlackScholesVisualizer1.png',
+      '/images/BlackScholesVisualizer2.png',
+    ],
+    date: '2026',
+    duration: 'In Progress',
+    description:
+      'An interactive Qt-based desktop app that visualizes Black-Scholes option pricing with real-time parameter controls, dynamic plots, and an optimized recomputation pipeline that keeps frame rates smooth.',
+    tools: ['C++', 'Qt', 'CMake'],
+    url: 'https://github.com/YousefKart/Black-Scholes',
+  },
+
+  {
     title: 'AI Monitoring System',
     images: ['/videos/AIMonitoringSystemClip.mp4', '/images/AIPMS.png'],
     date: '2025',
