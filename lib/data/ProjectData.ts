@@ -3,10 +3,7 @@ import { ProjectType } from '@/lib/types/ProjectType';
 export const projectData: ProjectType[] = [
   {
     title: 'Black-Scholes Visualizer',
-    images: [
-      '/images/BlackScholesVisualizer1.png',
-      '/images/BlackScholesVisualizer2.png',
-    ],
+    images: ['/images/BlackScholesVisualizer.png'],
     date: '2026',
     duration: 'In Progress',
     description:
