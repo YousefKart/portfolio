@@ -19,7 +19,7 @@ export default function Home() {
       <main className="flex-1 bg-gradient-to-b from-background to-accent">
         <div className="flex flex-col gap-32 w-full sm:w-3/4 mx-auto mb-16">
           <Hero />
-          <Experience />
+          {/* <Experience /> */}
           <Projects />
           <Models />
           <Contact />

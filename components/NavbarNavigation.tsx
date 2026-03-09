@@ -3,9 +3,9 @@ import { NavbarLink } from './NavbarLink';
 export default function NavbarNavigation() {
   return (
     <div className="flex items-center justify-center gap-12 text-lg">
-      <NavbarLink href="#experience" label="experience" scale={false}>
+      {/* <NavbarLink href="#experience" label="experience" scale={false}>
         <p>Experience</p>
-      </NavbarLink>
+      </NavbarLink> */}
 
       <NavbarLink href="#projects" label="projects" scale={false}>
         <p>Projects</p>
