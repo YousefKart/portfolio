@@ -4,12 +4,7 @@ import { NavbarLink } from './NavbarLink';
 export default function NavbarContact() {
   return (
     <div className="flex items-center justify-center gap-4">
-      <NavbarLink
-        href="/Yousef_Kart_Resume.pdf"
-        target="_blank"
-        label="Resume"
-        scale={true}
-      >
+      <NavbarLink href="/resume" target="_self" label="Resume" scale={true}>
         <FileCode className="h-6 w-6" />
       </NavbarLink>
 

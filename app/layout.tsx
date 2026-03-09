@@ -4,9 +4,7 @@ import './globals.css';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
 import Providers from '@/components/Providers';
-import Navbar from '@/components/Navbar';
-import NavbarMobile from '@/components/NavbarMobile';
-import Footer from '@/components/Footer';
+import SiteChrome from '@/components/SiteChrome';
 
 const rubik = Rubik({
   variable: '--font-rubik',
@@ -30,14 +28,7 @@ export default function RootLayout({
         <SpeedInsights />
         <Analytics />
         <Providers>
-          <div className="hidden lg:block">
-            <Navbar />
-          </div>
-          <div className="block lg:hidden">
-            <NavbarMobile />
-          </div>
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <SiteChrome>{children}</SiteChrome>
         </Providers>
       </body>
     </html>

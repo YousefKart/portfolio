@@ -10,7 +10,7 @@ export function ContactItem({ data }: ContactItemProps) {
   return (
     <a
       href={data.href}
-      target="_blank"
+      target={data.target}
       className={cn(
         'flex items-center justify-center gap-4 border rounded-sm p-2 backdrop-blur bg-foreground/5',
         hover
