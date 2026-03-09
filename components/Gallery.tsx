@@ -88,6 +88,10 @@ export function Gallery({
               <MediaDisplay
                 src={images[index]}
                 title={`${title ?? 'Image'} - ${index + 1} (enlarged)`}
+                quality={100}
+                unoptimized
+                priority={open}
+                sizes="92vw"
                 className="w-full max-h-[92vh] max-w-[92vw] object-contain rounded-lg"
               />
             )}

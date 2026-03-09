@@ -10,9 +10,21 @@ interface MediaDisplayProps {
   src: string;
   title: string;
   className?: string;
+  quality?: number;
+  sizes?: string;
+  priority?: boolean;
+  unoptimized?: boolean;
 }
 
-export function MediaDisplay({ src, title, className }: MediaDisplayProps) {
+export function MediaDisplay({
+  src,
+  title,
+  className,
+  quality,
+  sizes = '100vw',
+  priority = false,
+  unoptimized = false,
+}: MediaDisplayProps) {
   if (isVideo(src)) {
     return (
       <video
@@ -34,7 +46,10 @@ export function MediaDisplay({ src, title, className }: MediaDisplayProps) {
       alt={title + ' Image'}
       width={1920}
       height={1080}
-      sizes="100vw"
+      sizes={sizes}
+      quality={quality}
+      priority={priority}
+      unoptimized={unoptimized}
       className={cn('w-full h-auto', className)}
     />
   );
