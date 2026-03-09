@@ -6,15 +6,15 @@ import Projects from '@/components/Projects';
 import Models from '@/components/Models';
 import Contact from '@/components/Contact';
 import { useTheme } from 'next-themes';
-import StarBackground from '@/components/backgrounds/StarBackground';
-import BubbleBackground from '@/components/backgrounds/BubbleBackground';
+// import StarBackground from '@/components/backgrounds/StarBackground';
+// import BubbleBackground from '@/components/backgrounds/BubbleBackground';
 
 export default function Home() {
   const { resolvedTheme } = useTheme();
 
   return (
     <div className="flex flex-col w-full h-full bg-background">
-      {resolvedTheme === 'dark' ? <StarBackground /> : <BubbleBackground />}
+      {/* {resolvedTheme === 'dark' ? <StarBackground /> : <BubbleBackground />} */}
 
       <main className="flex-1 bg-gradient-to-b from-background to-accent">
         <div className="flex flex-col gap-32 w-full sm:w-3/4 mx-auto mb-16">
@@ -22,7 +22,6 @@ export default function Home() {
           {/* <Experience /> */}
           <Projects />
           <Models />
-          <Contact />
         </div>
       </main>
     </div>

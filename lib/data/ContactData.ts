@@ -20,16 +20,16 @@ export const contactData: ContactType[] = [
     target: '_blank',
     icon: Github,
   },
-  {
-    title: 'yousefkart21@gmail.com',
-    href: 'mailto:yousefkart21@gmail.com',
-    target: '_blank',
-    icon: Mail,
-  },
-  {
-    title: '+1 (519) 991-6921',
-    href: 'tel:+15199916921',
-    target: '_self',
-    icon: Phone,
-  },
+  // {
+  //   title: 'yousefkart21@gmail.com',
+  //   href: 'mailto:yousefkart21@gmail.com',
+  //   target: '_blank',
+  //   icon: Mail,
+  // },
+  // {
+  //   title: '+1 (519) 991-6921',
+  //   href: 'tel:+15199916921',
+  //   target: '_self',
+  //   icon: Phone,
+  // },
 ];

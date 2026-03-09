@@ -9,7 +9,7 @@ export default function Hero() {
           Yousef Kart
         </h1>
         <h2 className="text-2xl font-semibold">
-          Software Developer and 3D Modeller
+          Software Engineer and 3D Modeler
         </h2>
         <p>Honours Computer Science Graduate from the University of Windsor</p>
       </div>
