@@ -50,7 +50,7 @@ export function ProjectModal({ data, isOpen, onClose }: ProjectModalProps) {
   return (
     <>
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="!w-[90vw] !max-w-[800px] max-h-[90vh] overflow-auto dark:bg-slate-900 rounded-2xl">
+        <DialogContent className="!w-[90vw] !max-w-[800px] max-h-[90vh] overflow-auto rounded-2xl">
           <DialogHeader className="space-y-2">
             <div className="flex items-center gap-3 justify-center">
               <DialogTitle className="flex items-center justify-center text-3xl font-bold text-center">

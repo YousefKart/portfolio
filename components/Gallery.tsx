@@ -55,7 +55,7 @@ export function Gallery({
 
   return (
     <Dialog open={open} onOpenChange={(o) => (!o ? onClose() : void 0)}>
-      <DialogContent className="!w-[96vw] !max-w-[1200px] bg-transparent border bg-accent dark:bg-slate-800 shadow-none p-0">
+      <DialogContent className="!w-[96vw] !max-w-[1500px] bg-transparent border bg-accent shadow-none p-0">
         <div className="relative w-full h-full flex items-center justify-center">
           {hasMultipleImages && (
             <>
@@ -88,7 +88,7 @@ export function Gallery({
               <MediaDisplay
                 src={images[index]}
                 title={`${title ?? 'Image'} - ${index + 1} (enlarged)`}
-                className="w-full max-h-[80vh] max-w-[92vw] object-contain rounded-lg"
+                className="w-full max-h-[92vh] max-w-[92vw] object-contain rounded-lg"
               />
             )}
           </div>
