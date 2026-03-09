@@ -29,8 +29,8 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
       <div
         {...glow.props}
         className={cn(
-          'flex justify-start gap-8 sm:rounded-2xl p-4 backdrop-blur max-h-[45vh]',
-          index % 2 === 1 ? 'flex-row-reverse' : ''
+          'flex flex-col sm:flex-row justify-start gap-8 sm:rounded-2xl p-4 backdrop-blur sm:max-h-[45vh]',
+          index % 2 === 1 ? 'sm:flex-row-reverse' : ''
         )}
       >
         <div className="flex-1 flex flex-col gap-4 w-full min-w-0">

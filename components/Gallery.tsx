@@ -92,7 +92,7 @@ export function Gallery({
                 unoptimized
                 priority={open}
                 sizes="92vw"
-                className="w-full max-h-[92vh] max-w-[92vw] object-contain rounded-lg"
+                className="w-full max-h-[92vh] object-contain rounded-lg"
               />
             )}
           </div>
