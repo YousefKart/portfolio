@@ -18,7 +18,7 @@ interface ModelModalProps {
 export function ModelModal({ data, isOpen, onClose }: ModelModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="!w-[90vw] !max-w-[1000px] max-h-[80vh] overflow-auto dark:bg-slate-900 rounded-2xl">
+      <DialogContent className="!w-[90vw] !max-w-[1000px] max-h-[80vh] overflow-auto rounded-2xl">
         <DialogHeader className="space-y-3 pb-4">
           <DialogTitle className="text-2xl font-bold text-center">
             {data.title}

@@ -1,5 +1,5 @@
 import { ModelType } from '@/lib/types/ModelType';
-import { ModelModal } from './ModelModal';
+import { Gallery } from './Gallery';
 import { MediaDisplay } from './MediaDiaplay';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
@@ -33,9 +33,11 @@ export function ModelItem({ data }: ModelItemProps) {
         <h2 className="text-lg font-semibold">{data.title}</h2>
       </div>
 
-      <ModelModal
-        data={data}
-        isOpen={isOpen}
+      <Gallery
+        open={isOpen}
+        title={data.title}
+        startIndex={0}
+        images={[data.image]}
         onClose={() => setIsOpen(false)}
       />
     </>

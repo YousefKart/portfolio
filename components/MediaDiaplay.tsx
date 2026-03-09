@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 const isVideo = (src: string): boolean => {
   const videoExtensions = ['.mp4', '.webm', '.mov', '.avi', '.mkv'];
@@ -31,10 +32,10 @@ export function MediaDisplay({ src, title, className }: MediaDisplayProps) {
     <Image
       src={src}
       alt={title + ' Image'}
-      width={100}
-      height={50}
+      width={1920}
+      height={1080}
       sizes="100vw"
-      className={className}
+      className={cn('w-full h-auto', className)}
     />
   );
 }
