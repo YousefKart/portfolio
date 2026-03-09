@@ -2,12 +2,23 @@ import { ProjectType } from '@/lib/types/ProjectType';
 
 export const projectData: ProjectType[] = [
   {
-    title: 'Black-Scholes Visualizer',
-    images: ['/images/BlackScholesVisualizer.png'],
+    title: 'Monte Carlo Engine',
+    images: ['/images/MonteCarloEngine.png'],
     date: '2026',
     duration: 'In Progress',
     description:
-      'An interactive Qt-based desktop app that visualizes Black-Scholes option pricing with real-time parameter controls, dynamic plots, and an optimized recomputation pipeline that keeps frame rates smooth.',
+      'High-performance C++ Monte Carlo simulation engine for option pricing, featuring stochastic stock path generation, real-time visualization of simulated trajectories, and a modular architecture designed for large-scale numerical experimentation.',
+    tools: ['C++', 'OpenGL', 'GLFW', 'ImGui', 'CMake'],
+    url: 'https://github.com/YousefKart/Monte-Carlo',
+  },
+
+  {
+    title: 'Black-Scholes Visualizer',
+    images: ['/images/BlackScholesVisualizer.png'],
+    date: '2026',
+    duration: '2 months',
+    description:
+      'Interactive C++/Qt application for visualizing Black-Scholes option pricing with real-time parameter controls, dynamic surface plots, and an optimized recomputation pipeline designed to maintain smooth frame rates under heavy numerical workloads.',
     tools: ['C++', 'Qt', 'CMake'],
     url: 'https://github.com/YousefKart/Black-Scholes',
   },
