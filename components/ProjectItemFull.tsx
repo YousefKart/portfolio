@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import useGlowBorder from '@/hooks/use-glow-border';
 import { Gallery } from './Gallery';
+import { ExternalLink } from 'lucide-react';
 
 interface ProjectItemProps {
   data: ProjectType;
@@ -35,7 +36,20 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
       >
         <div className="flex-1 flex flex-col gap-4 w-full min-w-0">
           <div className="flex items-center justify-between w-full text-lg font-semibold">
-            <h2 className="font-bold text-2xl">{data.title}</h2>
+            <div className="flex items-center gap-2 min-w-0">
+              <h2 className="font-bold text-2xl">{data.title}</h2>
+              {data.url ? (
+                <a
+                  href={data.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${data.title} project link`}
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              ) : null}
+            </div>
             <p className="text-muted-foreground">{data.date}</p>
           </div>
 
