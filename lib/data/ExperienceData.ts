@@ -52,8 +52,8 @@ export const experienceData: ExperienceType[] = [
 
   {
     title: '3D Modeller and Designer',
-    company: 'Freelance',
-    location: 'Global',
+    company: 'Contract',
+    location: 'Remote',
     date: 'Jun 2021 - Feb 2025',
     description: [
       'Created hundreds of optimized assets for video games and 3D animations across 40+ clients globally',
