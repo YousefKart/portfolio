@@ -2,7 +2,7 @@ import { Dot } from 'lucide-react';
 import { ExperienceType } from '@/lib/types/ExperienceType';
 import { cn } from '@/lib/utils';
 import useGlowBorder from '@/hooks/use-glow-border';
-import { ToolItem } from './toolItem';
+import { ToolItem } from './toolItem_remove';
 
 interface ExperienceItemProps {
   data: ExperienceType;

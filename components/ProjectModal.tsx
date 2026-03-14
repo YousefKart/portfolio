@@ -20,7 +20,7 @@ import {
   FileText,
   ExternalLink,
 } from 'lucide-react';
-import { ToolItem } from './toolItem';
+import { ToolItem } from './toolItem_remove';
 import { Gallery } from './Gallery';
 
 interface ProjectModalProps {
