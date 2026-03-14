@@ -9,7 +9,7 @@ export function ExperienceItem({ data }: ExperienceItemProps) {
     <div className="flex h-full flex-col justify-start gap-4 p-4 backdrop-blur sm:rounded-2xl">
       <div className="flex flex-col gap-3 w-full min-w-0">
         <div className="flex items-start justify-between w-full gap-3 text-lg font-semibold">
-          <h2 className="font-bold text-2xl leading-tight">{data.title}</h2>
+          <h2 className="font-semibold text-2xl leading-tight">{data.title}</h2>
           <p className="text-muted-foreground text-sm sm:text-base shrink-0">
             {data.date}
           </p>
