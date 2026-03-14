@@ -5,7 +5,7 @@ export const experienceData: ExperienceType[] = [
     title: 'Software Engineer',
     company: 'Scelta',
     location: 'Windsor, ON',
-    date: 'Feb 2025 - Present',
+    date: 'Feb 2025 - Sep 2025',
     description: [
       'Implemented a shared-authentication system for SSO across the Scelta Suite',
       'Co-developed a Retrieval Augmented Generation (RAG) data pipeline for the Sitekick AI assistant',
