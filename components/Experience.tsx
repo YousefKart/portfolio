@@ -1,5 +1,4 @@
 import { ExperienceItem } from './ExperienceItemFull';
-import { ExperienceItemMobile } from './ExperienceItemMobile';
 import { experienceData } from '../lib/data/ExperienceData';
 
 export default function Experience() {
@@ -10,14 +9,7 @@ export default function Experience() {
     >
       <h1 className="text-center text-3xl font-semibold">Experience</h1>
       {experienceData.map((item, index) => (
-        <div key={index}>
-          <div className="hidden lg:block">
-            <ExperienceItem data={item} />
-          </div>
-          <div className="block lg:hidden">
-            <ExperienceItemMobile data={item} />
-          </div>
-        </div>
+        <ExperienceItem key={index} data={item} />
       ))}
     </div>
   );

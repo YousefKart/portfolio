@@ -15,7 +15,7 @@ export function ExperienceItem({ data }: ExperienceItemProps) {
           </p>
         </div>
 
-        <div className="flex flex-col gap-1 border-b border-border/60 pb-2 text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+        <div className="flex border-b border-border/60 pb-2 text-muted-foreground items-center justify-between gap-3">
           <p className="text-base sm:text-lg">{data.company}</p>
           <p className="text-sm sm:text-base">{data.location}</p>
         </div>
