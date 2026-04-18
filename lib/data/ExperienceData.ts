@@ -2,10 +2,18 @@ import { ExperienceType } from '@/lib/types/ExperienceType';
 
 export const experienceData: ExperienceType[] = [
   {
+    title: 'Full Stack Software Developer',
+    company: 'Red Piston',
+    location: 'Windsor, ON',
+    date: 'Apr 2026 - Present',
+    description: [],
+    tools: [],
+  },
+  {
     title: 'Software Engineer',
     company: 'Scelta',
     location: 'Windsor, ON',
-    date: 'Feb 2025 - Sep 2025',
+    date: 'Feb 2025 - Sep 2025', // 8 months
     description: [
       'Implemented a shared-authentication system for SSO across the Scelta Suite',
       'Co-developed a Retrieval Augmented Generation (RAG) data pipeline for the Sitekick AI assistant',
@@ -54,7 +62,7 @@ export const experienceData: ExperienceType[] = [
     title: '3D Modeller and Designer',
     company: 'Contract',
     location: 'Remote',
-    date: 'Jun 2021 - Feb 2025',
+    date: 'Jun 2021 - Feb 2025', // 3 years 9 months
     description: [
       'Created hundreds of optimized assets for video games and 3D animations across 40+ clients globally',
       'Modelled and rendered dozens of proposed real estate developments using architectural blueprints and site plans, ranging from single-family homes to $100 million+ developments',
@@ -81,7 +89,7 @@ export const experienceData: ExperienceType[] = [
     title: 'Programming & Mathematics Tutor',
     company: 'Freelance',
     location: 'Windsor, ON & Detroit, MI',
-    date: 'Sep 2022 - May 2024',
+    date: 'Sep 2022 - May 2024', // 1 year 9 months
     description: [
       'Tutored more than 10 engineering students in programming (Python, C++, MATLAB), data structures, and algorithms, by simplifying complex concepts into practical examples',
       "Strengthened students' problem solving skills by guiding them through proper programming practices, debugging, and exam preparation",
