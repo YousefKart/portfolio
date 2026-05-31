@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import useGlowBorder from '@/hooks/use-glow-border';
 import { Gallery } from './Gallery';
 import { ExternalLink } from 'lucide-react';
+import WorkInProgress from './WorkInProgress';
 
 interface ProjectItemProps {
   data: ProjectType;
@@ -68,25 +69,31 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
           </p>
         </div>
 
-        <div
-          className="flex-1 max-h-128 w-full min-w-0 cursor-zoom-in overflow-hidden rounded-lg"
-          role="button"
-          tabIndex={0}
-          aria-label={`Open gallery for ${data.title}`}
-          onClick={() => openLightbox(0)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              openLightbox(0);
-            }
-          }}
-        >
-          <MediaDisplay
-            src={data.images[0]}
-            title={data.title}
-            className="h-full w-full min-w-0 object-cover"
-          />
-        </div>
+        {data.images?.length ? (
+          <div
+            className="flex-1 max-h-128 w-full min-w-0 cursor-zoom-in overflow-hidden rounded-lg"
+            role="button"
+            tabIndex={0}
+            aria-label={`Open gallery for ${data.title}`}
+            onClick={() => openLightbox(0)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openLightbox(0);
+              }
+            }}
+          >
+            <MediaDisplay
+              src={data.images[0]}
+              title={data.title}
+              className="h-full w-full min-w-0 object-cover"
+            />
+          </div>
+        ) : (
+          <div className="flex-1 max-h-128 w-full min-w-0 overflow-hidden rounded-lg">
+            <WorkInProgress />
+          </div>
+        )}
       </div>
 
       <Gallery
