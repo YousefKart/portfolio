@@ -1,4 +1,4 @@
-import { ExperienceItem } from './ExperienceItemFull';
+import { ExperienceItem } from './ExperienceItem';
 import { experienceData } from '../lib/data/ExperienceData';
 
 export default function Experience() {
