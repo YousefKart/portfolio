@@ -3,14 +3,19 @@ import { experienceData } from '../lib/data/ExperienceData';
 
 export default function Experience() {
   return (
-    <div
+    <section
       id="experience"
-      className="flex flex-col gap-8 w-full 2xl:w-2/3 mx-auto scroll-mt-20"
+      className="w-full 2xl:w-2/3 mx-auto scroll-mt-20 px-4 sm:px-6"
     >
-      <h1 className="text-center text-3xl font-semibold">Experience</h1>
+      <h1 className="text-center text-3xl font-semibold mb-10">Experience</h1>
       {experienceData.map((item, index) => (
-        <ExperienceItem key={index} data={item} />
+        <ExperienceItem
+          key={index}
+          data={item}
+          index={index}
+          isLast={index === experienceData.length - 1}
+        />
       ))}
-    </div>
+    </section>
   );
 }
