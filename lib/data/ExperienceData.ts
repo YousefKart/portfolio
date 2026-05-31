@@ -86,7 +86,7 @@ export const experienceData: ExperienceType[] = [
   },
 
   {
-    title: 'Programming & Mathematics Tutor',
+    title: 'Programming Tutor',
     company: 'Freelance',
     location: 'Windsor, ON & Detroit, MI',
     date: 'Sep 2022 - May 2024', // 1 year 9 months

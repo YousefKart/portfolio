@@ -2,10 +2,29 @@ import { ProjectType } from '@/lib/types/ProjectType';
 
 export const projectData: ProjectType[] = [
   {
+    title: 'Eyez and Earz',
+    images: [],
+    date: '2026',
+    duration: 'In Progress',
+    description: `Eyez & Earz is a market intelligence platform designed to identify, evaluate, and validate news-driven trading opportunities.\n
+    Earz acts as the real-time intelligence layer, ingesting financial news from multiple sources and using LLMs to extract structured, actionable data. Incoming articles are classified by event type (earnings, guidance changes, mergers, partnerships, analyst ratings, regulatory actions, and more), enriched with market data, and scored using factors such as sentiment, liquidity, relative volume, market capitalization, and historical price behavior.\n
+    Eyez serves as the validation and research engine. Using historical news, market data, and generated signals, it backtests Earz's decision-making process to determine which event types, scoring factors, and market conditions consistently produce profitable outcomes. This feedback loop allows strategies to be refined using empirical results rather than assumptions.\n
+    Together, the two systems form a complete pipeline that transforms unstructured financial news into measurable trading signals while continuously validating their effectiveness against historical market performance.`,
+    tools: [
+      'Python',
+      'SQLite',
+      'LLMs',
+      'Finnhub',
+      'Massive',
+      'SEC EDGAR',
+      'yfinance',
+    ],
+  },
+  {
     title: 'Monte Carlo Engine',
     images: ['/images/MonteCarloEngine.png'],
     date: '2026',
-    duration: 'In Progress',
+    duration: '2 months',
     description:
       'High-performance C++ Monte Carlo simulation engine for option pricing, featuring stochastic stock path generation, real-time visualization of simulated trajectories, and a modular architecture designed for large-scale numerical experimentation.',
     tools: ['C++', 'OpenGL', 'GLFW', 'ImGui', 'CMake'],

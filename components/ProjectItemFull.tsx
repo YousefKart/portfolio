@@ -63,7 +63,9 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
             ))}
           </div>
 
-          {data.description}
+          <p className="leading-relaxed whitespace-pre-line">
+            {data.description}
+          </p>
         </div>
 
         <div
