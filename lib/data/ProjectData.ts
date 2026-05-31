@@ -164,13 +164,13 @@ export const projectData: ProjectType[] = [
     tools: ['Swing', 'Pix2D', 'Java'],
   },
 
-  {
-    title: 'Idle Island',
-    images: ['/images/IdleIslandHome.png'],
-    date: '2021',
-    duration: '1 month',
-    description:
-      'A 2D idle game where players must manage and grow a factory on an island. Players build structures to gain resources, which are then used to build more advanced structures.',
-    tools: ['PyGame', 'Pix2D', 'Python'],
-  },
+  // {
+  //   title: 'Idle Island',
+  //   images: ['/images/IdleIslandHome.png'],
+  //   date: '2021',
+  //   duration: '1 month',
+  //   description:
+  //     'A 2D idle game where players must manage and grow a factory on an island. Players build structures to gain resources, which are then used to build more advanced structures.',
+  //   tools: ['PyGame', 'Pix2D', 'Python'],
+  // },
 ];
