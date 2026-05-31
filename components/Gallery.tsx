@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogTitle, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { MediaDisplay } from './MediaDiaplay';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -55,6 +55,7 @@ export function Gallery({
 
   return (
     <Dialog open={open} onOpenChange={(o) => (!o ? onClose() : void 0)}>
+      <DialogTitle></DialogTitle> {/* Prevents screen-reader error */}
       <DialogContent className="!w-[96vw] !max-w-[1500px] bg-transparent border bg-accent shadow-none p-0">
         <div className="relative w-full h-full flex items-center justify-center">
           {hasMultipleImages && (
