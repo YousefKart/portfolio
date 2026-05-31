@@ -1,7 +1,6 @@
 'use client';
 
-import Hero from '@/components/Hero';
-import Experience from '@/components/Experience';
+import HeroExperience from '@/components/HeroExperience';
 import Projects from '@/components/Projects';
 import Models from '@/components/Models';
 import { useTheme } from 'next-themes';
@@ -17,8 +16,7 @@ export default function Home() {
 
       <main className="flex-1 bg-gradient-to-b from-background to-accent">
         <div className="flex flex-col gap-32 w-full sm:w-3/4 mx-auto mb-16">
-          <Hero />
-          <Experience />
+          <HeroExperience />
           <Projects />
           <Models />
         </div>

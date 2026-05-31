@@ -1,13 +1,16 @@
+import { cn } from '@/lib/utils';
 import { ExperienceItem } from './ExperienceItem';
 import { experienceData } from '../lib/data/ExperienceData';
 
-export default function Experience() {
+export default function Experience({ className }: { className?: string }) {
   return (
     <section
       id="experience"
-      className="w-full 2xl:w-2/3 mx-auto scroll-mt-20 px-4 sm:px-6"
+      className={cn(
+        'w-full 2xl:w-2/3 mx-auto scroll-mt-20 px-4 sm:px-6',
+        className
+      )}
     >
-      <h1 className="text-center text-3xl font-semibold mb-10">Experience</h1>
       {experienceData.map((item, index) => (
         <ExperienceItem
           key={index}
