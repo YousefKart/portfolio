@@ -55,7 +55,7 @@ export function Gallery({
 
   return (
     <Dialog open={open} onOpenChange={(o) => (!o ? onClose() : void 0)}>
-      <DialogTitle></DialogTitle> {/* Prevents screen-reader error */}
+      <DialogTitle className="sr-only"></DialogTitle>
       <DialogContent className="!w-[96vw] !max-w-[1500px] bg-transparent border bg-accent shadow-none p-0">
         <div className="relative w-full h-full flex items-center justify-center">
           {hasMultipleImages && (
