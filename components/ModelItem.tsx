@@ -1,37 +1,62 @@
+'use client';
+
+import { useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { ZoomIn } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import { ModelType } from '@/lib/types/ModelType';
 import { Gallery } from './Gallery';
 import { MediaDisplay } from './MediaDiaplay';
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import { hover } from '@/lib/utils';
-import useGlowBorder from '@/hooks/use-glow-border';
 
 interface ModelItemProps {
   data: ModelType;
+  index: number;
 }
 
-export function ModelItem({ data }: ModelItemProps) {
+export function ModelItem({ data, index }: ModelItemProps) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '-40px' });
   const [isOpen, setIsOpen] = useState(false);
-  const glow = useGlowBorder({ size: 300 });
 
   return (
     <>
-      <div
-        {...glow.props}
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 16 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{
+          duration: 0.45,
+          delay: (index % 4) * 0.07,
+          ease: [0.16, 1, 0.3, 1],
+        }}
         onClick={() => setIsOpen(true)}
-        className={cn(
-          'flex flex-col items-center justify-center gap-4 border sm:rounded-4xl pb-4 backdrop-blur bg-foreground/5',
-          'glow-border',
-          hover
-        )}
+        className="group cursor-pointer overflow-hidden rounded-xl border border-border/60 bg-card"
       >
-        <MediaDisplay
-          src={data.image}
-          title={data.title}
-          className="sm:rounded-t-4xl min-h-48 max-h-48 w-full object-cover"
-        />
-        <h2 className="text-lg font-semibold">{data.title}</h2>
-      </div>
+        {/* Image */}
+        <div className="relative aspect-[4/3] overflow-hidden">
+          <motion.div
+            className="h-full w-full"
+            whileHover={{ scale: 1.04 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <MediaDisplay
+              src={data.image}
+              title={data.title}
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
+
+          {/* Hover overlay */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/25 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+            <ZoomIn className="h-5 w-5 text-white" />
+          </div>
+        </div>
+
+        {/* Title */}
+        <div className="px-3 py-2.5">
+          <p className="truncate text-sm font-medium">{data.title}</p>
+        </div>
+      </motion.div>
 
       <Gallery
         open={isOpen}

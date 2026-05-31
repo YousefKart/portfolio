@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ZoomIn } from 'lucide-react';
 import { ProjectType } from '@/lib/types/ProjectType';
 import { MediaDisplay } from './MediaDiaplay';
 import { Gallery } from './Gallery';
@@ -36,7 +36,7 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
         {/* Image */}
         {data.images?.length ? (
           <button
-            className="block w-full cursor-zoom-in overflow-hidden"
+            className="group relative block w-full cursor-pointer overflow-hidden"
             onClick={() => {
               setCurrentIndex(0);
               setLightboxOpen(true);
@@ -44,9 +44,9 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
             aria-label={`Open gallery for ${data.title}`}
           >
             <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.4, ease: 'easeOut' }}
-              className="h-64 sm:h-96 w-full"
+              className="h-64 w-full sm:h-96"
+              whileHover={{ scale: 1.04 }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             >
               <MediaDisplay
                 src={data.images[0]}
@@ -54,6 +54,11 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
                 className="h-full w-full object-cover"
               />
             </motion.div>
+
+            {/* Hover overlay */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/25 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+              <ZoomIn className="h-5 w-5 text-white" />
+            </div>
           </button>
         ) : (
           <div className="h-64 sm:h-96 border-b border-border/40">

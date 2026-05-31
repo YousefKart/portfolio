@@ -9,15 +9,15 @@ import { InfoIcon } from 'lucide-react';
 
 export default function Models() {
   return (
-    <div id="models" className="flex flex-col gap-8 scroll-mt-20">
-      <div className="flex items-center justify-center gap-2">
-        <h1 className="text-center text-3xl font-semibold">3D Models</h1>
+    <section id="models" className="scroll-mt-20">
+      <div className="flex items-center justify-center gap-2 mb-8">
+        <h1 className="text-3xl font-semibold">3D Models</h1>
         <Tooltip>
           <TooltipTrigger asChild>
             <button
               type="button"
               aria-label="More information about 3D models"
-              className="inline-flex items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
+              className="text-muted-foreground/50 hover:text-foreground transition-colors"
             >
               <InfoIcon className="h-4 w-4" />
             </button>
@@ -27,11 +27,12 @@ export default function Models() {
           </TooltipContent>
         </Tooltip>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
         {modelData.map((item, index) => (
-          <ModelItem key={index} data={item} />
+          <ModelItem key={index} data={item} index={index} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
