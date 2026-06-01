@@ -3,18 +3,14 @@
 import HeroExperience from '@/components/HeroExperience';
 import Projects from '@/components/Projects';
 import Models from '@/components/Models';
-import { useTheme } from 'next-themes';
-// import StarBackground from '@/components/backgrounds/StarBackground';
-// import BubbleBackground from '@/components/backgrounds/BubbleBackground';
+import CubeBackground from '@/components/backgrounds/3DBackground';
 
 export default function Home() {
-  const { resolvedTheme } = useTheme();
-
   return (
-    <div className="flex flex-col w-full h-full bg-background">
-      {/* {resolvedTheme === 'dark' ? <StarBackground /> : <BubbleBackground />} */}
+    <div className="flex flex-col w-full min-h-screen bg-gradient-to-b from-background/0 to-background">
+      <CubeBackground />
 
-      <main className="flex-1 bg-gradient-to-b from-background to-accent">
+      <main className="flex-1">
         <div className="flex flex-col gap-32 w-full sm:w-3/4 mx-auto mb-16">
           <HeroExperience />
           <Projects />
