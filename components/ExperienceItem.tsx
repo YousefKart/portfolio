@@ -15,7 +15,7 @@ export function ExperienceItem({ data, index, isLast }: ExperienceItemProps) {
   const inView = useInView(ref, { once: true, margin: '-60px' });
 
   return (
-    <div ref={ref} className="relative flex items-stretch">
+    <div ref={ref} className="relative flex items-stretch group">
       <motion.div
         initial={{ opacity: 0, x: -8 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -50,7 +50,7 @@ export function ExperienceItem({ data, index, isLast }: ExperienceItemProps) {
           delay: index * 0.1 + 0.05,
           ease: [0.16, 1, 0.3, 1],
         }}
-        className="absolute left-0 bottom-0 h-px w-full origin-left bg-border"
+        className="absolute left-0 bottom-0 h-px w-full origin-left bg-border transition-colors duration-300 ease-out group-hover:bg-foreground"
       />
     </div>
   );
