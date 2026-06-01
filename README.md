@@ -16,12 +16,12 @@ Personal portfolio website showcasing my software engineering experience, techni
 
 This portfolio serves as a central hub for my professional work, featuring:
 
-* Professional experience
-* Software engineering projects
-* Technical skills and technologies
-* Resume and contact information
-* Project demonstrations and source code links
-* Public 3D Models
+- Professional experience
+- Software engineering projects
+- Technical skills and technologies
+- Resume and contact information
+- Project demonstrations and source code links
+- Public 3D Models
 
 ---
 
@@ -76,6 +76,6 @@ http://localhost:3000
 
 Software Engineer | Full-Stack Development | C++ Development
 
-* LinkedIn: https://linkedin.com/in/yousef-kart
-* Email: [yousefkart21@gmail.com](mailto:yousefkart21@gmail.com)
-* Location: Windsor, Ontario, Canada
+- LinkedIn: https://linkedin.com/in/yousef-kart
+- Email: [yousefkart21@gmail.com](mailto:yousefkart21@gmail.com)
+- Location: Windsor, Ontario, Canada
