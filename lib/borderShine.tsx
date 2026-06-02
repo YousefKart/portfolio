@@ -20,7 +20,7 @@ type GlowBorderProps<T extends React.ElementType = 'div'> = {
   blur?: number;
   /** Controls max opacity of the glow when hovered (0..1). */
   opacity?: number;
-} & Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'className' | 'children'>;
+} & Omit<React.ComponentPropsWithRef<T>, 'as' | 'className' | 'children'>;
 
 /**
  * GlowBorder: wraps any element and adds a cursor-following glow that lights up only the border.
@@ -46,9 +46,9 @@ export function GlowBorder<T extends React.ElementType = 'div'>(
     blur = 0.75,
     opacity = 1,
     ...rest
-  } = props as GlowBorderProps;
+  } = props;
 
-  const Tag = (as || 'div') as React.ElementType;
+  const Tag = (as ?? 'div') as React.ElementType;
   const ref = useRef<HTMLElement | null>(null);
 
   const handleMove = (e: React.MouseEvent<HTMLElement>) => {
@@ -93,18 +93,18 @@ export function GlowBorder<T extends React.ElementType = 'div'>(
     '--glow-opacity': String(opacity),
   };
 
-  return (
-    <Tag
-      className={['glow-border', className].filter(Boolean).join(' ')}
-      onMouseMove={handleMove}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
-      ref={ref}
-      style={styleVars}
-      {...rest}
-    >
-      {children}
-    </Tag>
+  return React.createElement(
+    Tag,
+    {
+      className: ['glow-border', className].filter(Boolean).join(' '),
+      onMouseMove: handleMove,
+      onMouseEnter: handleEnter,
+      onMouseLeave: handleLeave,
+      ref,
+      style: styleVars,
+      ...rest,
+    },
+    children
   );
 }
 
