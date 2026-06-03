@@ -3,7 +3,7 @@
 import HeroExperience from '@/components/HeroExperience';
 import Projects from '@/components/Projects';
 import Models from '@/components/Models';
-import CubeBackground from '@/components/backgrounds/3DBackground';
+import CubeBackground from '@/components/backgrounds/Custom3DBackground';
 
 export default function Home() {
   return (
