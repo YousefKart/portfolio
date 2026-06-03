@@ -3,6 +3,7 @@
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, useGLTF } from '@react-three/drei';
 import { Suspense, useMemo, useRef } from 'react';
+import { useTheme } from 'next-themes';
 import * as THREE from 'three';
 
 const objects: Array<{
@@ -27,6 +28,8 @@ function CustomObject({
 }) {
   const ref = useRef<THREE.Group>(null);
   const elapsed = useRef(0);
+  const { resolvedTheme } = useTheme();
+  const edgeColor = resolvedTheme === 'dark' ? '#f8fafc' : '#111827';
   const gltf = useGLTF(`/meshes/${name}.glb`) as any;
   const { scene, edgeObjects } = useMemo(() => {
     const cloned = gltf.scene.clone(true);
@@ -41,7 +44,7 @@ function CustomObject({
         edgeGeometry.setDrawRange(0, 0);
 
         const edgeMaterial = new THREE.LineBasicMaterial({
-          color: new THREE.Color('#888888'),
+          color: new THREE.Color(edgeColor),
           linewidth: lineWidth,
           depthTest: false,
         });
@@ -61,13 +64,13 @@ function CustomObject({
     });
 
     return { scene: cloned, edgeObjects };
-  }, [gltf.scene]);
+  }, [gltf.scene, edgeColor]);
 
   useFrame((_, delta) => {
     if (!ref.current) return;
 
     elapsed.current += delta;
-    const delay = index * 0.12;
+    const delay = index * 0.05;
     const duration = 1.5;
     const raw = Math.max(0, Math.min(1, (elapsed.current - delay) / duration));
     const ease = raw < 0.5 ? 2 * raw * raw : 1 - Math.pow(-2 * raw + 2, 2) / 2;

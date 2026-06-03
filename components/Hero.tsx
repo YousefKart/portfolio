@@ -79,7 +79,7 @@ export default function Hero({ className }: { className?: string }) {
             href="#projects"
             className={cn(
               'inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-medium transition-colors',
-              'border-border/60 bg-background/60 text-muted-foreground hover:bg-muted/30',
+              'border-border/60 bg-background/60 text-muted-foreground',
               hover
             )}
             whileHover={{ y: -2 }}
@@ -91,7 +91,7 @@ export default function Hero({ className }: { className?: string }) {
             href="#contact"
             className={cn(
               'inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-medium transition-colors',
-              'border-border/60 bg-background/60 text-muted-foreground hover:bg-muted/30',
+              'border-border/60 bg-background/60 text-muted-foreground',
               hover
             )}
             whileHover={{ y: -2 }}

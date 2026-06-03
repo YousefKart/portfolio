@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-background">
-      <div className="bg-gradient-to-b from-background to-accent/25">
+      <div className="bg-gradient-to-b from-background to-accent/50">
         <div className="w-full sm:w-3/4 mx-auto px-4 py-12 space-y-10">
           <Contact />
         </div>
