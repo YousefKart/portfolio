@@ -2,7 +2,7 @@
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, useGLTF } from '@react-three/drei';
-import { Suspense, useMemo, useRef } from 'react';
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
 import * as THREE from 'three';
 

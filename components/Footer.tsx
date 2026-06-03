@@ -3,13 +3,6 @@ import { Copyright } from 'lucide-react';
 import Contact from '@/components/Contact';
 
 export default function Footer() {
-  const quickLinks = [
-    { href: '#hero', label: 'Home' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#models', label: 'Models' },
-    { href: '/resume', label: 'Resume' },
-  ];
-
   return (
     <footer className="bg-background">
       <div className="bg-gradient-to-b from-background to-accent/50">

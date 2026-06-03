@@ -2,9 +2,15 @@
 
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 const ThemeSwitcher: React.FC = () => {
   const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <div
@@ -12,11 +18,13 @@ const ThemeSwitcher: React.FC = () => {
       className="cursor-pointer hover:text-foreground"
       title="Toggle theme"
     >
-      {resolvedTheme === 'dark' ? (
-        <Sun className="w-6 h-6 transition duration-100 hover:text-foreground/50 hover:scale-105" />
-      ) : (
-        <Moon className="w-6 h-6 transition duration-100 hover:text-foreground/50 hover:scale-105" />
-      )}
+      {mounted ? (
+        resolvedTheme === 'dark' ? (
+          <Sun className="w-6 h-6 transition duration-100 hover:text-foreground/50 hover:scale-105" />
+        ) : (
+          <Moon className="w-6 h-6 transition duration-100 hover:text-foreground/50 hover:scale-105" />
+        )
+      ) : null}
     </div>
   );
 };

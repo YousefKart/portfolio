@@ -28,14 +28,14 @@ export function ExperienceItem({ data, index, isLast }: ExperienceItemProps) {
       >
         <div className="flex items-baseline justify-between gap-3 flex-wrap">
           <h2 className="font-medium leading-snug">{data.title}</h2>
-          <span className="text-sm text-muted-foreground/70 tabular-nums shrink-0">
+          <span className="text-sm text-muted-foreground tabular-nums shrink-0">
             {data.date}
           </span>
         </div>
         <div className="flex items-center justify-between gap-3 mt-1 flex-wrap">
           <span className="text-md text-muted-foreground">{data.company}</span>
           {data.location && (
-            <span className="text-sm text-muted-foreground/60">
+            <span className="text-sm text-muted-foreground">
               {data.location}
             </span>
           )}

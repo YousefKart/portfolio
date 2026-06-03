@@ -64,7 +64,7 @@ export default function Hero({ className }: { className?: string }) {
 
         {/* Credential */}
         <motion.p
-          className="text-sm tracking-wide text-muted-foreground/70"
+          className="text-sm tracking-wide text-muted-foreground"
           variants={fadeUp}
         >
           Honours Computer Science · University of Windsor
