@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-20">
       <h1 className="text-center text-3xl font-semibold mb-8">Projects</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {projectData.map((item, index) => (
           <ProjectItem key={index} data={item} index={index} />
         ))}

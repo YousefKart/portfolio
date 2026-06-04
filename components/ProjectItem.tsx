@@ -1,12 +1,17 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { ExternalLink, ZoomIn } from 'lucide-react';
+import {
+  motion,
+  useInView,
+  useMotionValue,
+  useTransform,
+  useSpring,
+} from 'framer-motion';
 import { ProjectType } from '@/lib/types/ProjectType';
 import { MediaDisplay } from './MediaDiaplay';
-import { Gallery } from './Gallery';
 import WorkInProgress from './WorkInProgress';
+import { ProjectModal } from './ProjectModal';
 
 interface ProjectItemProps {
   data: ProjectType;
@@ -14,110 +19,207 @@ interface ProjectItemProps {
 }
 
 export function ProjectItem({ data, index }: ProjectItemProps) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const row = Math.floor(index / 2);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [hovered, setHovered] = useState(false);
+
+  // Magnetic tilt on hover
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const springCfg = { stiffness: 140, damping: 18, mass: 0.6 };
+  const rotateX = useSpring(useTransform(mouseY, [-1, 1], [4, -4]), springCfg);
+  const rotateY = useSpring(useTransform(mouseX, [-1, 1], [-5, 5]), springCfg);
+
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    mouseX.set(((e.clientX - rect.left) / rect.width - 0.5) * 2);
+    mouseY.set(((e.clientY - rect.top) / rect.height - 0.5) * 2);
+  }
+  function handleMouseLeave() {
+    mouseX.set(0);
+    mouseY.set(0);
+    setHovered(false);
+  }
+
+  const col = index % 3;
+  const row = Math.floor(index / 3);
+  const delay = row * 0.07 + col * 0.1;
+  const label = String(index + 1).padStart(2, '0');
+
+  // Primary tool category shown on card
+  const category = data.tools?.[0] ?? null;
 
   return (
     <>
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, x: index % 2 === 0 ? -80 : 80, y: 24 }}
-        animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
-        transition={{
-          duration: 0.65,
-          delay: row * 0.08,
-          ease: [0.16, 1, 0.3, 1],
+        initial={{ opacity: 0, y: 36 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.65, delay, ease: [0.16, 1, 0.3, 1] }}
+        style={{ perspective: 800 }}
+        className="cursor-pointer"
+        onClick={() => setModalOpen(true)}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={handleMouseLeave}
+        role="button"
+        tabIndex={0}
+        aria-label={`View ${data.title}`}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setModalOpen(true);
+          }
         }}
-        className="overflow-hidden rounded-xl border border-border/60 bg-card flex flex-col"
       >
-        {/* Image */}
-        {data.images?.length ? (
-          <button
-            className="group relative block w-full cursor-pointer overflow-hidden"
-            onClick={() => {
-              setCurrentIndex(0);
-              setLightboxOpen(true);
+        <motion.div
+          style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+          className="relative flex flex-col bg-card overflow-hidden select-none"
+          /*
+           * The signature shape: a notch cut from the bottom-right corner.
+           * clip-path polygon draws the card outline clockwise,
+           * skipping the corner to create a chamfered cut.
+           */
+          css-clip="chamfer"
+          // We apply via inline style so Tailwind purge doesn't strip it
+          style={{
+            clipPath:
+              'polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%)',
+            rotateX,
+            rotateY,
+            transformStyle: 'preserve-3d',
+          }}
+        >
+          {/* ── Ambient border (drawn as outline, respects clip-path via box-shadow trick) ── */}
+          <motion.div
+            className="absolute inset-0 z-20 pointer-events-none"
+            style={{
+              clipPath: 'inherit',
+              outline: hovered
+                ? '1.5px solid hsl(var(--foreground) / 0.35)'
+                : '1px solid hsl(var(--border) / 0.6)',
+              transition: 'outline 0.3s ease',
             }}
-            aria-label={`Open gallery for ${data.title}`}
+          />
+
+          {/* ── Image area ── */}
+          <div
+            className="relative overflow-hidden"
+            style={{ aspectRatio: '16 / 10' }}
           >
+            {data.images?.length ? (
+              <motion.div
+                className="absolute inset-0"
+                animate={{ scale: hovered ? 1.06 : 1 }}
+                transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <MediaDisplay
+                  src={data.images[0]}
+                  title={data.title}
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
+            ) : (
+              <WorkInProgress />
+            )}
+
+            {/* Scrim */}
             <motion.div
-              className="h-64 w-full sm:h-96"
-              whileHover={{ scale: 1.04 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <MediaDisplay
-                src={data.images[0]}
-                title={data.title}
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
+              className="absolute inset-0 bg-black pointer-events-none"
+              animate={{ opacity: hovered ? 0.18 : 0.04 }}
+              transition={{ duration: 0.3 }}
+            />
 
-            {/* Hover overlay */}
-            <div className="absolute inset-0 flex items-center justify-center bg-black/25 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-              <ZoomIn className="h-5 w-5 text-white" />
+            {/* Index badge — top-right, etched look */}
+            <div className="absolute top-3 right-3 z-10">
+              <span
+                className="text-[10px] font-mono tracking-[0.2em] text-white/50
+                            px-2 py-0.5 rounded-sm"
+                style={{
+                  background: 'hsl(0 0% 0% / 0.35)',
+                  backdropFilter: 'blur(6px)',
+                }}
+              >
+                {label}
+              </span>
             </div>
-          </button>
-        ) : (
-          <div className="h-64 sm:h-96 border-b border-border/40">
-            <WorkInProgress />
           </div>
-        )}
 
-        {/* Content */}
-        <div className="p-4 sm:p-5 flex flex-col gap-4 flex-1">
-          {/* Title row */}
-          <div className="flex items-start justify-between gap-3 mb-2 flex-wrap">
-            <div className="flex items-center gap-2 min-w-0">
-              <h2 className="text-base font-semibold leading-snug">
+          {/* ── Footer ── */}
+          <div className="relative px-4 pt-3 pb-4 flex items-end justify-between gap-3 bg-card">
+            {/* Title */}
+            <div className="min-w-0">
+              <motion.h2
+                className="text-sm font-semibold leading-snug tracking-tight truncate"
+                animate={{ x: hovered ? 3 : 0 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              >
                 {data.title}
-              </h2>
-              {data.url && (
-                <a
-                  href={data.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Open ${data.title}`}
-                  className="text-muted-foreground/50 hover:text-foreground transition-colors"
-                >
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </a>
+              </motion.h2>
+              {category && (
+                <span className="mt-1 block text-[11px] text-muted-foreground/60 font-mono">
+                  {category}
+                </span>
               )}
             </div>
-            <span className="text-xs text-muted-foreground/60 shrink-0 pt-0.5">
-              {data.date}
-            </span>
+
+            {/* Arrow indicator — slides in on hover */}
+            <motion.div
+              className="shrink-0 w-7 h-7 rounded-full border border-border/50
+                          flex items-center justify-center text-muted-foreground"
+              animate={{
+                scale: hovered ? 1 : 0.85,
+                opacity: hovered ? 1 : 0.4,
+                borderColor: hovered
+                  ? 'hsl(var(--foreground) / 0.4)'
+                  : 'hsl(var(--border) / 0.5)',
+              }}
+              transition={{ duration: 0.25 }}
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                className="stroke-current"
+                strokeWidth="1.5"
+              >
+                <motion.line
+                  x1="2"
+                  y1="10"
+                  x2="10"
+                  y2="2"
+                  animate={{ x2: hovered ? 10 : 9, y2: hovered ? 2 : 3 }}
+                  transition={{ duration: 0.2 }}
+                />
+                <polyline points="4,2 10,2 10,8" />
+              </svg>
+            </motion.div>
           </div>
 
-          {/* Description */}
-          <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
-            {data.description}
-          </p>
-
-          {/* Tools */}
-          {data.tools?.length > 0 && (
-            <div className="mt-auto flex flex-wrap gap-1.5 pt-3 border-t border-border/40">
-              {data.tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="text-[11px] px-2.5 py-1 rounded-full border border-border/50 text-muted-foreground"
-                >
-                  {tool}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
+          {/* ── Chamfer corner accent — a tiny triangle fill matching card bg ── */}
+          {/* This fills the notch so there's no transparent gap */}
+          <div
+            className="absolute bottom-0 right-0 z-10 pointer-events-none"
+            style={{
+              width: 22,
+              height: 22,
+              background: `linear-gradient(
+                135deg,
+                transparent 50%,
+                hsl(var(--border) / ${hovered ? '0.5' : '0.3'}) 50%
+              )`,
+              transition: 'background 0.3s ease',
+            }}
+          />
+        </motion.div>
       </motion.div>
 
-      <Gallery
-        open={lightboxOpen}
-        images={data.images}
-        startIndex={currentIndex}
-        title={data.title}
-        onClose={() => setLightboxOpen(false)}
+      <ProjectModal
+        data={data}
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
       />
     </>
   );
