@@ -74,7 +74,6 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
         }}
       >
         <motion.div
-          style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
           className="relative flex flex-col bg-card overflow-hidden select-none"
           /*
            * The signature shape: a notch cut from the bottom-right corner.
@@ -109,17 +108,13 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
             style={{ aspectRatio: '16 / 10' }}
           >
             {data.images?.length ? (
-              <motion.div
-                className="absolute inset-0"
-                animate={{ scale: hovered ? 1.06 : 1 }}
-                transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              >
+              <div className="absolute inset-0">
                 <MediaDisplay
                   src={data.images[0]}
                   title={data.title}
                   className="h-full w-full object-cover"
                 />
-              </motion.div>
+              </div>
             ) : (
               <WorkInProgress />
             )}
