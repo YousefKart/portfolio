@@ -64,18 +64,17 @@ export function ProjectModal({ data, open, onClose }: ProjectModalProps) {
             ease: [0.16, 1, 0.3, 1],
           }}
         >
-          {/* Hero Image */}
-          {data.images?.length ? (
-            <div className="max-w-3xl mx-auto px-6 sm:px-8 mt-16">
-              <div className="mb-4 flex justify-start">
-                <button
-                  onClick={onClose}
-                  aria-label="Back"
-                  className="inline-flex items-center justify-center gap-1 my-2 text-muted-foreground hover:text-foreground transition-colors duration-100"
-                >
-                  <ChevronLeft className="size-4" /> Back
-                </button>
-              </div>
+          <div className="max-w-3xl mx-auto px-6 sm:px-8 mt-16">
+            <div className="mb-4 flex justify-start">
+              <button
+                onClick={onClose}
+                aria-label="Back"
+                className="inline-flex items-center justify-center gap-1 my-2 text-muted-foreground hover:text-foreground transition-colors duration-100"
+              >
+                <ChevronLeft className="size-4" /> Back
+              </button>
+            </div>
+            {data.images?.length ? (
               <div className="relative w-full overflow-hidden rounded-xl border border-border/40 aspect-video">
                 <MediaDisplay
                   src={data.images[0]}
@@ -83,10 +82,8 @@ export function ProjectModal({ data, open, onClose }: ProjectModalProps) {
                   className="h-full w-full"
                 />
               </div>
-            </div>
-          ) : (
-            <div className="h-12" />
-          )}
+            ) : null}
+          </div>
 
           {/* Content */}
           <div className="px-6 pb-10 pt-6 sm:px-8 sm:pb-12 max-w-3xl mx-auto">

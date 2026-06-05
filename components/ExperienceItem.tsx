@@ -24,7 +24,7 @@ export function ExperienceItem({ data, index, isLast }: ExperienceItemProps) {
           delay: index * 0.08 + 0.05,
           ease: [0.16, 1, 0.3, 1],
         }}
-        className="flex-1 min-w-0 mb-2 mt-6 z-50"
+        className="flex-1 min-w-0 mb-2 mt-6 z-30"
       >
         <div className="flex items-baseline justify-between gap-3 flex-wrap">
           <h2 className="font-medium leading-snug">{data.title}</h2>
