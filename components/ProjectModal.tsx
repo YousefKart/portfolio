@@ -2,10 +2,9 @@
 
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink } from 'lucide-react';
+import { X, ExternalLink, ChevronLeft } from 'lucide-react';
 import { ProjectType } from '@/lib/types/ProjectType';
 import { MediaDisplay } from './MediaDiaplay';
-import { Gallery } from './Gallery';
 
 interface ProjectModalProps {
   data: ProjectType | null;
@@ -68,6 +67,15 @@ export function ProjectModal({ data, open, onClose }: ProjectModalProps) {
           {/* Hero Image */}
           {data.images?.length ? (
             <div className="max-w-3xl mx-auto px-6 sm:px-8 mt-16">
+              <div className="mb-4 flex justify-start">
+                <button
+                  onClick={onClose}
+                  aria-label="Back"
+                  className="inline-flex items-center justify-center gap-1 my-2 text-muted-foreground hover:text-foreground transition-colors duration-100"
+                >
+                  <ChevronLeft className="size-4" /> Back
+                </button>
+              </div>
               <div className="relative w-full overflow-hidden rounded-xl border border-border/40 aspect-video">
                 <MediaDisplay
                   src={data.images[0]}
@@ -79,22 +87,6 @@ export function ProjectModal({ data, open, onClose }: ProjectModalProps) {
           ) : (
             <div className="h-12" />
           )}
-
-          {/* Close button */}
-          <button
-            onClick={onClose}
-            aria-label="Close modal"
-            className="
-              fixed top-4 right-4 z-10
-              flex h-8 w-8 items-center justify-center
-              rounded-full bg-background/70 backdrop-blur-md
-              border border-border/50
-              text-muted-foreground hover:text-foreground
-              transition-colors duration-150
-            "
-          >
-            <X className="h-4 w-4" />
-          </button>
 
           {/* Content */}
           <div className="px-6 pb-10 pt-6 sm:px-8 sm:pb-12 max-w-3xl mx-auto">
