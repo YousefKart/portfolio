@@ -2,7 +2,7 @@
 
 import HeroExperience from '@/components/HeroExperience';
 import Projects from '@/components/Projects';
-import Models from '@/components/Models';
+// import Models from '@/components/Models';
 import CubeBackground from '@/components/backgrounds/Custom3DBackground';
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <div className="flex flex-col gap-32 w-full sm:w-3/4 mx-auto mb-16">
           <HeroExperience />
           <Projects />
-          <Models />
+          {/* <Models /> */}
         </div>
       </main>
     </div>
