@@ -75,11 +75,11 @@ export function ProjectModal({ data, open, onClose }: ProjectModalProps) {
               </button>
             </div>
             {data.images?.length ? (
-              <div className="relative w-full overflow-hidden rounded-xl border border-border/40 aspect-video">
+              <div className="relative w-full overflow-hidden rounded-xl border border-border/40">
                 <MediaDisplay
                   src={data.images[0]}
                   title={data.title}
-                  className="h-full w-full"
+                  className="w-full"
                 />
               </div>
             ) : null}

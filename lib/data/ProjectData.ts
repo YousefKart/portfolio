@@ -3,6 +3,7 @@ import { ProjectType } from '@/lib/types/ProjectType';
 export const projectData: ProjectType[] = [
   {
     title: 'Eyez and Earz',
+    subtitle: 'AI Market Intelligence Platform',
     images: [],
     date: '2026',
     duration: 'In Progress',
@@ -22,6 +23,7 @@ export const projectData: ProjectType[] = [
   },
   {
     title: 'Monte Carlo Engine',
+    subtitle: 'Stochastic Stock Path Simulator',
     images: ['/images/MonteCarloEngine.png'],
     date: '2026',
     duration: '2 months',
@@ -35,6 +37,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Black-Scholes Visualizer',
+    subtitle: 'Interactive Options Pricing Visualizer',
     images: ['/images/BlackScholesVisualizer.png'],
     date: '2026',
     duration: '2 months',
@@ -48,6 +51,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Sentinel AI',
+    subtitle: 'AI-Powered Monitoring System',
     images: ['/videos/AIMonitoringSystemClip.mp4', '/images/AIPMS.png'],
     date: '2025',
     duration: '8 months',
@@ -69,6 +73,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'The Last Ride',
+    subtitle: 'Cinematic 3D Car Animation',
     images: ['/videos/TheLastRide.mp4', '/images/TLR2.png', '/images/TLR1.png'],
     date: '2025',
     duration: '4 months',
@@ -79,6 +84,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Flag Frenzy',
+    subtitle: 'Roblox Capture-the-Flag Shooter',
     images: [
       '/videos/FlagFrenzyClip.mp4',
       '/images/FlagFrenzyGame.webp',
@@ -96,6 +102,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Tourify',
+    subtitle: 'Tourist Discovery Mobile App',
     images: [
       '/images/TourifyLogo.webp',
       '/images/TourifyHome.webp',
@@ -110,6 +117,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Volt Vista',
+    subtitle: 'Smart Energy Management App',
     images: [
       '/images/VoltVistaLogo.webp',
       '/videos/VoltVistaClip.mp4',
@@ -125,6 +133,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Escape Java',
+    subtitle: 'Escape Room Game',
     images: [
       '/images/EscapeJavaGame2.png',
       '/images/EscapeJavaGame1.webp',
@@ -142,6 +151,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Ocean Anarchy',
+    subtitle: 'Pirate Shipping Game',
     images: ['/images/OceanAnarchyAlpha.png', '/images/OceanAnarchyBoats.png'],
     date: '2022',
     duration: '1 week',
@@ -152,6 +162,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Take Cover',
+    subtitle: 'Zombie Survival Game',
     images: [
       '/images/TakeCoverGame3.png',
       '/images/TakeCoverGame1.png',
@@ -166,6 +177,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Frogger',
+    subtitle: 'Classic Frogger Remake',
     images: ['/images/FroggerGame.png'],
     date: '2021',
     duration: '2 weeks',
@@ -176,6 +188,7 @@ export const projectData: ProjectType[] = [
 
   {
     title: 'Idle Island',
+    subtitle: 'Idle Economy Game',
     images: ['/images/IdleIslandHome.png'],
     date: '2021',
     duration: '1 month',

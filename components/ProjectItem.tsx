@@ -46,9 +46,7 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
   const row = Math.floor(index / 3);
   const delay = row * 0.07 + col * 0.1;
   const label = '#' + String(index + 1);
-
-  // Primary tool category shown on card
-  const category = data.tools?.[0] ?? null;
+  const category = data.subtitle;
 
   return (
     <>
