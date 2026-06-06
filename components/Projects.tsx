@@ -12,7 +12,7 @@ export default function Projects() {
   const showAll = projectData.length > featuredProjects.length;
 
   return (
-    <section id="projects" className="mt-16">
+    <section id="projects" className="w-3/5 mx-auto mt-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {featuredProjects.map((item, index) => (
           <ProjectItem key={index} data={item} index={index} />

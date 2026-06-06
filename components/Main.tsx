@@ -41,7 +41,7 @@ export default function HeroExperience() {
         <Hero className="w-full sm:max-w-[50vw] h-auto mt-16 sm:mt-48" />
 
         <div className="w-full max-w-[80vw] flex-1 min-h-0">
-          <Experience className="w-full mx-auto" />
+          <Experience className="w-full xl:max-w-1/2 mx-auto" />
         </div>
 
         <GithubContribution />

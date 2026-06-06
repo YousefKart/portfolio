@@ -11,7 +11,7 @@ export default function Home() {
       <CubeBackground />
 
       <main className="flex-1">
-        <div className="flex flex-col gap-16 w-full xl:w-3/5 mx-auto mb-16">
+        <div className="flex flex-col gap-16 w-full mx-auto mb-16">
           <HeroExperience />
           <Projects />
           {/* <Models /> */}

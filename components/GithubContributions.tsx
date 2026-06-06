@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import type { ContributionWeek } from '@/lib/github-contributions';
 
@@ -38,14 +38,6 @@ export function GithubContribution() {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const totalContributions = useMemo(() => {
-    return weeks.reduce(
-      (total, week) =>
-        total + week.days.reduce((sum, day) => sum + day.count, 0),
-      0
-    );
-  }, [weeks]);
-
   useEffect(() => {
     const abortController = new AbortController();
 
@@ -55,15 +47,11 @@ export function GithubContribution() {
           signal: abortController.signal,
         });
 
-        if (!res.ok) {
-          throw new Error('Failed request');
-        }
+        if (!res.ok) throw new Error('Failed request');
 
         const data = await res.json();
 
-        if (!Array.isArray(data)) {
-          throw new Error('Unexpected response');
-        }
+        if (!Array.isArray(data)) throw new Error('Unexpected response');
 
         setWeeks(data);
       } catch (err) {
@@ -83,7 +71,7 @@ export function GithubContribution() {
 
   if (error || isLoading) {
     return (
-      <section className="mx-auto">
+      <section className="mx-auto w-full">
         <div className="flex min-h-[180px] items-center justify-center rounded-2xl bg-muted/10 text-sm text-muted-foreground">
           {error ?? 'Loading contributions...'}
         </div>
@@ -92,24 +80,23 @@ export function GithubContribution() {
   }
 
   return (
-    <section className="mx-auto">
-      {/* <div className="mb-3 flex items-end justify-between gap-4">
-        <div>
-          <p className="text-xs text-muted-foreground">
-            {totalContributions.toLocaleString()} contributions
-          </p>
-        </div>
-      </div> */}
-
-      <div className="overflow-x-auto pb-1">
+    <section className="mx-auto w-full overflow-hidden mt-8">
+      <div className="flex w-full justify-center pb-1">
         <div
-          className="inline-grid min-w-max grid-flow-col auto-cols-[12px] gap-1 px-1 py-2"
+          className="
+        grid grid-flow-col justify-center
+        gap-[clamp(1px,0.35vw,4px)]
+        px-0 py-2
+      "
+          style={{
+            gridTemplateColumns: `repeat(${weeks.length}, clamp(5px, 1.05vw, 12px))`,
+          }}
           aria-label="GitHub contribution graph"
         >
           {weeks.map((week, weekIndex) => (
             <motion.div
               key={weekIndex}
-              className="grid grid-rows-7 gap-1"
+              className="grid grid-rows-7 gap-[clamp(1px,0.35vw,4px)]"
               custom={weekIndex}
               variants={weekVariants}
               initial="hidden"
@@ -119,7 +106,7 @@ export function GithubContribution() {
                 <div
                   key={day.date}
                   className={[
-                    'h-3 w-3 border transition-all duration-200',
+                    'aspect-square w-full border transition-all duration-200',
                     levelStyles[day.level],
                   ].join(' ')}
                   title={`${day.count} contribution${
