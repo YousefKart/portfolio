@@ -1,4 +1,5 @@
 export type ModelType = {
-  title: string;
-  image: string;
+  name: string;
+  description?: string;
+  url: string;
 };

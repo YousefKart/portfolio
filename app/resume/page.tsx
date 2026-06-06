@@ -1,4 +1,4 @@
-export default function ResumePage() {
+export default function Resume() {
   return (
     <iframe
       src="/Yousef_Kart_Resume.pdf"

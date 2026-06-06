@@ -1,11 +1,14 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { ZoomIn } from 'lucide-react';
+import { Canvas } from '@react-three/fiber';
+import { useGLTF, OrbitControls, Stage } from '@react-three/drei';
+import { Suspense } from 'react';
 import { ModelType } from '@/lib/types/ModelType';
-// import { Gallery } from './Gallery';
-import { MediaDisplay } from './MediaDiaplay';
+
+function Model({ url }: { url: string }) {
+  const { scene } = useGLTF(url);
+  return <primitive object={scene} />;
+}
 
 interface ModelItemProps {
   data: ModelType;
@@ -13,57 +16,43 @@ interface ModelItemProps {
 }
 
 export function ModelItem({ data, index }: ModelItemProps) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-40px' });
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <>
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 16 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{
-          duration: 0.45,
-          delay: (index % 4) * 0.07,
-          ease: [0.16, 1, 0.3, 1],
-        }}
-        onClick={() => setIsOpen(true)}
-        className="group cursor-pointer overflow-hidden rounded-xl border border-border/60 bg-card"
+    <div
+      className="group relative aspect-square overflow-hidden"
+      style={{ animationDelay: `${index * 60}ms` }}
+    >
+      {/* 3D Canvas */}
+      <Canvas
+        className="absolute inset-0"
+        camera={{ position: [0, 0, 4], fov: 45 }}
+        gl={{ antialias: true, alpha: true }}
       >
-        {/* Image */}
-        <div className="relative aspect-[4/3] overflow-hidden">
-          <motion.div
-            className="h-full w-full"
-            whileHover={{ scale: 1.04 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <MediaDisplay
-              src={data.image}
-              title={data.title}
-              className="h-full w-full object-cover"
-            />
-          </motion.div>
+        <Suspense fallback={null}>
+          <Stage environment="city" intensity={0.6} adjustCamera={1.2}>
+            <Model url={data.url} />
+          </Stage>
+          <OrbitControls
+            enablePan={false}
+            enableZoom={true}
+            autoRotate
+            autoRotateSpeed={0.5}
+            minDistance={0.1}
+            maxDistance={100}
+          />
+        </Suspense>
+      </Canvas>
 
-          {/* Hover overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black/25 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-            <ZoomIn className="h-5 w-5 text-white" />
-          </div>
-        </div>
-
-        {/* Title */}
-        <div className="px-3 py-2.5">
-          <p className="truncate text-sm font-medium">{data.title}</p>
-        </div>
-      </motion.div>
-
-      {/* <Gallery
-        open={isOpen}
-        title={data.title}
-        startIndex={0}
-        images={[data.image]}
-        onClose={() => setIsOpen(false)}
-      /> */}
-    </>
+      {/* Label */}
+      <div className="absolute bottom-0 inset-x-0  px-3 pb-2.5 pt-8">
+        <p className="text-white/90 text-xs font-semibold tracking-wide truncate">
+          {data.name}
+        </p>
+        {data.description && (
+          <p className="text-white/40 text-[0.65rem] truncate mt-0.5">
+            {data.description}
+          </p>
+        )}
+      </div>
+    </div>
   );
 }
