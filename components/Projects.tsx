@@ -3,7 +3,7 @@ import { ProjectItem } from './ProjectItem';
 import { cn, hover } from '../lib/utils';
 import { projectData } from '../lib/data/ProjectData';
 
-const featuredProjectIndexes = [0, 1, 2, 3, 5, 8];
+const featuredProjectIndexes = [0, 1, 2, 4, 6, 9];
 
 export default function Projects() {
   const featuredProjects = featuredProjectIndexes
