@@ -27,9 +27,8 @@ const fadeUp = {
 export default function Hero({ className }: { className?: string }) {
   return (
     <motion.section
-      id="hero"
       className={cn(
-        'flex h-[90vh] w-full scroll-mt-64 items-center justify-center px-4',
+        'flex h-[90vh] w-full items-center justify-center px-4',
         className
       )}
       initial="hidden"

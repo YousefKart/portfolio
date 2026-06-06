@@ -7,7 +7,7 @@ export default function NavbarNavigationMobile() {
         <p className="text-center">Home</p>
       </NavbarLink>
 
-      <NavbarLink href="projects" label="projects">
+      <NavbarLink href="/projects" label="projects">
         <p className="text-center">Projects</p>
       </NavbarLink>
 
@@ -15,9 +15,9 @@ export default function NavbarNavigationMobile() {
         <p className="text-center">Models</p>
       </NavbarLink> */}
 
-      <NavbarLink href="contact" label="contact">
+      {/* <NavbarLink href="contact" label="contact">
         <p className="text-center">Contact</p>
-      </NavbarLink>
+      </NavbarLink> */}
     </div>
   );
 }

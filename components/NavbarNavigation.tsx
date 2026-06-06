@@ -7,7 +7,7 @@ export default function NavbarNavigation() {
         <p>Home</p>
       </NavbarLink>
 
-      <NavbarLink href="projects" label="projects" scale={false}>
+      <NavbarLink href="/projects" label="projects" scale={false}>
         <p>Projects</p>
       </NavbarLink>
 
@@ -15,9 +15,9 @@ export default function NavbarNavigation() {
         <p>Models</p>
       </NavbarLink> */}
 
-      <NavbarLink href="contact" label="contact" scale={false}>
+      {/* <NavbarLink href="contact" label="contact" scale={false}>
         <p>Contact</p>
-      </NavbarLink>
+      </NavbarLink> */}
     </div>
   );
 }

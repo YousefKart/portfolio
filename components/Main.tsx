@@ -32,8 +32,7 @@ const fadeUp = {
 export default function HeroExperience() {
   return (
     <motion.section
-      id="home"
-      className="mw-full scroll-mt-64 overflow-hidden"
+      className="mw-full overflow-hidden"
       initial="hidden"
       animate="visible"
       variants={container}

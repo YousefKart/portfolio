@@ -9,7 +9,7 @@ import { InfoIcon } from 'lucide-react';
 
 export default function Models() {
   return (
-    <section id="models" className="scroll-mt-20">
+    <section>
       <div className="flex items-center justify-center gap-2 mb-8">
         <h1 className="text-3xl font-semibold">3D Models</h1>
         <Tooltip>
