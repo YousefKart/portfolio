@@ -5,6 +5,7 @@ import Hero from './Hero';
 import Experience from './Experience';
 import { ExperienceItem } from './ExperienceItem';
 import { experienceData } from '@/lib/data/ExperienceData';
+import { GithubContribution } from './GithubContributions';
 
 const container = {
   hidden: {},
@@ -37,12 +38,14 @@ export default function HeroExperience() {
       animate="visible"
       variants={container}
     >
-      <div className="flex min-h-[90vh] w-full flex-col px-4 sm:px-6 py-8 items-center gap-16 sm:gap-32">
-        <Hero className="w-full sm:max-w-[50vw] h-auto mt-16 sm:mt-64" />
+      <div className="flex min-h-[90vh] w-full flex-col px-4 sm:px-6 py-8 items-center gap-24">
+        <Hero className="w-full sm:max-w-[50vw] h-auto mt-16 sm:mt-48" />
 
-        <div className="mt-8 w-full max-w-[80vw] flex-1 min-h-0">
+        <div className="w-full max-w-[80vw] flex-1 min-h-0">
           <Experience className="w-full mx-auto" />
         </div>
+
+        <GithubContribution />
       </div>
     </motion.section>
   );

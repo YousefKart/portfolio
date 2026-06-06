@@ -6,10 +6,7 @@ export default function Experience({ className }: { className?: string }) {
   return (
     <section
       id="experience"
-      className={cn(
-        'w-full 2xl:w-2/3 mx-auto scroll-mt-20 px-4 sm:px-6',
-        className
-      )}
+      className={cn('w-full 2xl:w-2/3 mx-auto px-4 sm:px-6', className)}
     >
       {experienceData.map((item, index) => (
         <ExperienceItem

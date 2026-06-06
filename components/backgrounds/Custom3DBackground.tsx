@@ -70,8 +70,8 @@ function CustomObject({
     if (!ref.current) return;
 
     elapsed.current += delta;
-    const delay = index * 0.05;
-    const duration = 1.5;
+    const delay = index * 0.01;
+    const duration = 0.8;
     const raw = Math.max(0, Math.min(1, (elapsed.current - delay) / duration));
     const ease = raw < 0.5 ? 2 * raw * raw : 1 - Math.pow(-2 * raw + 2, 2) / 2;
 

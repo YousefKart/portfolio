@@ -1,6 +1,6 @@
 'use client';
 
-import HeroExperience from '@/components/HeroExperience';
+import HeroExperience from '@/components/Main';
 import Projects from '@/components/Projects';
 // import Models from '@/components/Models';
 import CubeBackground from '@/components/backgrounds/Custom3DBackground';
@@ -11,7 +11,7 @@ export default function Home() {
       <CubeBackground />
 
       <main className="flex-1">
-        <div className="flex flex-col gap-32 w-full xl:w-3/5 mx-auto mb-16">
+        <div className="flex flex-col gap-16 w-full xl:w-3/5 mx-auto mb-16">
           <HeroExperience />
           <Projects />
           {/* <Models /> */}
