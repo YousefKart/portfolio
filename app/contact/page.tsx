@@ -1,80 +1,39 @@
 'use client';
 
-import { cn } from '@/lib/utils';
-import { hover } from '@/lib/utils';
+import { cn, hover } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const container = {
   hidden: {},
   visible: {
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.12,
-    },
+    transition: { staggerChildren: 0.1, delayChildren: 0.05 },
   },
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.55,
-      ease: [0.16, 1, 0.3, 1] as const,
-    },
+    transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] as const },
   },
 };
 
 const contactInfo = [
   {
     label: 'Email',
-    value: 'yousef@yousef.dev',
-    href: 'mailto:yousef@yousef.dev',
-    icon: (
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect x="2" y="4" width="20" height="16" rx="2" />
-        <path d="m2 7 10 7 10-7" />
-      </svg>
-    ),
+    value: 'yousefkart21@gmail.com',
+    href: 'mailto:yousefkart21@gmail.com',
   },
-  {
-    label: 'Phone',
-    value: '+1 (226) 000-0000',
-    href: 'tel:+12260000000',
-    icon: (
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12.32a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.41 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-      </svg>
-    ),
-  },
+  { label: 'Phone', value: '+1 (519) 991-6921', href: 'tel:+15199916921' },
 ];
 
 function InfoCard({
-  icon,
   label,
   value,
   href,
 }: {
-  icon: React.ReactNode;
   label: string;
   value: string;
   href: string;
@@ -86,18 +45,25 @@ function InfoCard({
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.98 }}
       className={cn(
-        'flex items-center gap-4 rounded-xl border px-5 py-4 text-sm transition-colors',
-        'border-border/60 bg-background/60',
-        hover
+        'group flex w-full flex-col items-start justify-between gap-4 rounded-xl border border-border/60 bg-background/60 px-5 py-5 text-sm text-muted-foreground transition-colors',
+        'sm:flex-row sm:items-center',
+        'hover:bg-background/70 hover:text-foreground',
+        hover,
+        'outline-none focus-visible:ring-1 focus-visible:ring-ring/50'
       )}
     >
-      <span className="text-muted-foreground/60">{icon}</span>
-      <div className="flex flex-col gap-0.5">
-        <span className="text-[11px] font-normal uppercase tracking-[0.14em] text-muted-foreground/50">
+      <div className="flex flex-col gap-1 text-left">
+        <span className="text-[10px] font-normal uppercase tracking-[0.2em] text-muted-foreground">
           {label}
         </span>
-        <span className="font-light text-muted-foreground">{value}</span>
+        <span className="text-base font-light tracking-[0.01em] text-foreground">
+          {value}
+        </span>
       </div>
+      <ArrowRight
+        className="hidden h-4 w-4 text-muted-foreground opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100 sm:inline-flex"
+        aria-hidden="true"
+      />
     </motion.a>
   );
 }
@@ -106,40 +72,49 @@ export default function ContactPage({ className }: { className?: string }) {
   return (
     <motion.section
       className={cn(
-        'flex min-h-[90vh] w-full items-center justify-center px-4 py-24',
+        'flex min-h-dvh w-full items-center justify-center px-6 py-24',
         className
       )}
       initial="hidden"
       animate="visible"
       variants={container}
     >
-      <div className="flex w-full max-w-2xl flex-col items-center gap-10 text-center">
-        <motion.div className="flex items-center gap-3" variants={fadeUp}>
-          <div className="h-px w-8 bg-border" />
-          <span className="text-[11px] font-normal uppercase tracking-[0.18em] text-muted-foreground">
+      <div className="flex w-full max-w-[560px] flex-col items-center text-center">
+        {/* Eyeline */}
+        <motion.div className="mb-10 flex items-center gap-3" variants={fadeUp}>
+          <div className="h-px w-6 bg-border/40" />
+          <span className="text-xs font-normal uppercase tracking-[0.2em] text-muted-foreground">
             Get in touch
           </span>
-          <div className="h-px w-8 bg-border" />
+          <div className="h-px w-6 bg-border/40" />
         </motion.div>
 
+        {/* Heading */}
         <motion.h1
-          className="text-[clamp(2.4rem,6vw,3.8rem)] font-normal leading-[1.1] tracking-tight"
+          className="mb-7 text-[clamp(3rem,10vw,5.2rem)] leading-[0.95] tracking-[-0.02em] text-foreground"
           variants={fadeUp}
         >
           Contact
         </motion.h1>
 
+        {/* Sub */}
         <motion.p
-          className="text-sm font-light leading-relaxed text-muted-foreground"
+          className="mb-12 max-w-[380px] text-sm font-light leading-[1.75] tracking-[0.01em] text-muted-foreground"
           variants={fadeUp}
         >
-          I'm open to new opportunities, collaborations, and conversations.
-          <br />
-          Reach out directly through the contact options below.
+          Open to new opportunities, collaborations, and&nbsp;conversations.
+          Reach out directly below.
         </motion.p>
 
+        {/* Divider */}
         <motion.div
-          className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2"
+          className="mb-7 h-px w-full bg-border/40"
+          variants={fadeUp}
+        />
+
+        {/* Cards */}
+        <motion.div
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2"
           variants={fadeUp}
         >
           {contactInfo.map((item) => (
@@ -147,9 +122,13 @@ export default function ContactPage({ className }: { className?: string }) {
           ))}
         </motion.div>
 
-        <motion.div className="w-full" variants={fadeUp}>
-          <div className="h-px w-full bg-border/40" />
-        </motion.div>
+        {/* Footnote */}
+        <motion.p
+          className="mt-8 text-xs tracking-[0.05em] text-muted-foreground"
+          variants={fadeUp}
+        >
+          Talk to you soon.
+        </motion.p>
       </div>
     </motion.section>
   );

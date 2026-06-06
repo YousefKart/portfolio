@@ -15,9 +15,9 @@ export default function NavbarNavigationMobile() {
         <p className="text-center">Models</p>
       </NavbarLink> */}
 
-      {/* <NavbarLink href="/contact" label="contact">
+      <NavbarLink href="/contact" label="contact">
         <p className="text-center">Contact</p>
-      </NavbarLink> */}
+      </NavbarLink>
     </div>
   );
 }

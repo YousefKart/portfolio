@@ -15,9 +15,9 @@ export default function NavbarNavigation() {
         <p>Models</p>
       </NavbarLink> */}
 
-      {/* <NavbarLink href="/contact" label="contact" scale={false}>
+      <NavbarLink href="/contact" label="contact" scale={false}>
         <p>Contact</p>
-      </NavbarLink> */}
+      </NavbarLink>
     </div>
   );
 }
