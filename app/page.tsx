@@ -7,7 +7,7 @@ import CubeBackground from '@/components/backgrounds/Custom3DBackground';
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full min-h-screen bg-gradient-to-b from-background/0 to-background">
+    <div className="flex flex-col w-full min-h-screen bg-gradient-to-b from-50% from-background/0 to-background">
       <CubeBackground />
 
       <main className="flex-1">

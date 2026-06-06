@@ -21,7 +21,7 @@ export function ModelModal({ data, isOpen, onClose }: ModelModalProps) {
       <DialogContent className="!w-[90vw] !max-w-[1000px] max-h-[80vh] overflow-auto rounded-2xl">
         <DialogHeader className="space-y-3 pb-4">
           <DialogTitle className="text-2xl font-bold text-center">
-            {data.title}
+            {data.name}
           </DialogTitle>
           <DialogDescription className="flex items-center justify-center gap-2 text-muted-foreground">
             3D Model Preview
@@ -30,8 +30,8 @@ export function ModelModal({ data, isOpen, onClose }: ModelModalProps) {
 
         <div className="flex-1 overflow-hidden rounded-xl bg-muted/20 p-2">
           <MediaDisplay
-            src={data.image}
-            title={data.title}
+            src={data.url}
+            title={data.name}
             className="rounded-lg w-full h-full object-contain"
           />
         </div>

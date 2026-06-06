@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import type { ContributionWeek } from '@/lib/github-contributions';
 
 const levelStyles: Record<number, string> = {
@@ -20,14 +20,14 @@ function formatDate(date: string) {
   }).format(new Date(date));
 }
 
-const weekVariants = {
+const weekVariants: Variants = {
   hidden: { opacity: 0, y: 8 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
       delay: i * 0.015,
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeOut',
     },
   }),
