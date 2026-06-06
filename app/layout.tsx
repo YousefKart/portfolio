@@ -12,9 +12,13 @@ const rubik = Rubik({
   weight: ['300', '400', '500', '600', '700'],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Yousef Kart',
-  description: "Yousef Kart's Personal Portfolio",
+  description: 'Software Engineer & 3D Developer',
+
+  openGraph: {
+    images: ['/og-image'],
+  },
 };
 
 export default function RootLayout({

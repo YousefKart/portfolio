@@ -93,13 +93,13 @@ export function GithubContribution() {
 
   return (
     <section className="mx-auto">
-      <div className="mb-3 flex items-end justify-between gap-4">
+      {/* <div className="mb-3 flex items-end justify-between gap-4">
         <div>
           <p className="text-xs text-muted-foreground">
             {totalContributions.toLocaleString()} contributions
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="overflow-x-auto pb-1">
         <div
