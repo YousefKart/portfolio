@@ -11,11 +11,11 @@ export default function NavbarNavigationMobile() {
         <p className="text-center">Projects</p>
       </NavbarLink>
 
-      {/* <NavbarLink href="#models" label="models">
+      {/* <NavbarLink href="/#models" label="models">
         <p className="text-center">Models</p>
       </NavbarLink> */}
 
-      {/* <NavbarLink href="contact" label="contact">
+      {/* <NavbarLink href="/contact" label="contact">
         <p className="text-center">Contact</p>
       </NavbarLink> */}
     </div>

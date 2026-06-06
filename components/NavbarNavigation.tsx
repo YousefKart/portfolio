@@ -11,11 +11,11 @@ export default function NavbarNavigation() {
         <p>Projects</p>
       </NavbarLink>
 
-      {/* <NavbarLink href="models" label="models" scale={false}>
+      {/* <NavbarLink href="/models" label="models" scale={false}>
         <p>Models</p>
       </NavbarLink> */}
 
-      {/* <NavbarLink href="contact" label="contact" scale={false}>
+      {/* <NavbarLink href="/contact" label="contact" scale={false}>
         <p>Contact</p>
       </NavbarLink> */}
     </div>
