@@ -14,7 +14,7 @@ const rubik = Rubik({
 
 export const metadata = {
   title: 'Yousef Kart',
-  description: 'Software Engineer & 3D Developer',
+  description: 'Software Developer & 3D Modeler',
 
   openGraph: {
     images: ['/og-image'],

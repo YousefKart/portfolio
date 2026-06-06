@@ -43,7 +43,7 @@ export default function Image() {
           height: '100%',
           zIndex: 1,
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px)',
+            'linear-gradient(rgba(255,255,255,0.06) 2px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px)',
           backgroundSize: '48px 48px',
           opacity: 0.45,
         }}
@@ -67,7 +67,7 @@ export default function Image() {
       <div
         style={{
           position: 'absolute',
-          top: '64px',
+          top: '112px',
           left: '72px',
           zIndex: 15,
           display: 'flex',
@@ -101,6 +101,7 @@ export default function Image() {
           position: 'relative',
           zIndex: 10,
           gap: '20px',
+          marginTop: '48px',
         }}
       >
         {/* Name */}
