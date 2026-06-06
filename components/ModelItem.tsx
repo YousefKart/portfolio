@@ -3,9 +3,8 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ZoomIn } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import { ModelType } from '@/lib/types/ModelType';
-import { Gallery } from './Gallery';
+// import { Gallery } from './Gallery';
 import { MediaDisplay } from './MediaDiaplay';
 
 interface ModelItemProps {
@@ -58,13 +57,13 @@ export function ModelItem({ data, index }: ModelItemProps) {
         </div>
       </motion.div>
 
-      <Gallery
+      {/* <Gallery
         open={isOpen}
         title={data.title}
         startIndex={0}
         images={[data.image]}
         onClose={() => setIsOpen(false)}
-      />
+      /> */}
     </>
   );
 }
