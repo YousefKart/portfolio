@@ -50,6 +50,18 @@ export const projectData: ProjectType[] = [
   },
 
   {
+    title: 'Nova Detail Studio',
+    subtitle: 'Auto Detailing Website',
+    images: ['/images/NovaDetailStudio.png'],
+    date: '2025',
+    duration: '1 week',
+    description:
+      'Nova Detail Studio is the website for my auto detailing business, built to showcase services, streamline bookings, and establish an online presence. Developed using React and Next.js, the site features a modern responsive design, detailed service information, and an integrated booking workflow to help convert visitors into customers.',
+    tools: ['React', 'Next.js', 'Vacuum', 'Microfibre Towels'],
+    url: 'https://www.novadetailstudio.ca/',
+  },
+
+  {
     title: 'Sentinel AI',
     subtitle: 'AI-Powered Monitoring System',
     images: ['/videos/AIMonitoringSystemClip.mp4', '/images/AIPMS.png'],
@@ -78,7 +90,7 @@ export const projectData: ProjectType[] = [
     date: '2025',
     duration: '4 months',
     description:
-      'A 3D animation project that tells the story of a forgotten vintage car on a journey to reconnect with the modern world.',
+      'The Last Ride is a cinematic 3D animation that tells the story of a forgotten vintage car reconnecting with the modern world. Developed using Blender, Maya, Adobe Premiere, and AI-generated voice narration, the project combined modelling, animation, rendering, and visual storytelling to create a complete short film experience.',
     tools: ['Blender', 'Maya', 'Adobe Premiere', 'ElevenLabs'],
   },
 
@@ -111,7 +123,7 @@ export const projectData: ProjectType[] = [
     date: '2024',
     duration: '4 months',
     description:
-      'An Android mobile application that allows users to share and discover tourist locations around the world. Users can create and share their own tours, view tours created by others, and rate tours they have visited.',
+      'Tourify is an Android application that helps users discover, create, and share tourist experiences from around the world. Built with Kotlin, Firebase, and the Google Places API, the platform enables users to publish custom tours, explore destinations created by others, and leave ratings and reviews, creating a community-driven approach to travel discovery.',
     tools: ['Android Studio', 'Firebase', 'Google Places', 'Kotlin'],
   },
 
@@ -126,7 +138,7 @@ export const projectData: ProjectType[] = [
     date: '2023',
     duration: '4 months',
     description:
-      'An energy monitoring and management solution. The system allows users to monitor their energy usage, set goals, and receive notifications when they are close to exceeding their budget. The system also provides recommendations on how to reduce energy consumption.',
+      'Volt Vista is a smart energy management platform designed to help users monitor electricity usage, track spending, and make informed decisions about their consumption. Built with React and Next.js, the application provides real-time insights, budget tracking, usage alerts, and personalized recommendations to encourage more efficient energy use.',
     tools: ['React', 'NextJS', 'Vercel'],
     url: 'https://volt.borhansaflo.com/',
   },
@@ -154,9 +166,9 @@ export const projectData: ProjectType[] = [
     subtitle: 'Pirate Shipping Game',
     images: ['/images/OceanAnarchyAlpha.png', '/images/OceanAnarchyBoats.png'],
     date: '2022',
-    duration: '1 week',
+    duration: '3 weeks',
     description:
-      "A pirate-themed open-world game where players can explore the high seas, engage in naval battles, and search for hidden treasures. The game features a variety of ships, weapons, and upgrades to customize the player's experience.",
+      'Ocean Anarchy is a pirate-themed game prototype developed in Unity that allows players to explore an open world of islands, ships, and treasures. The project combines custom 3D assets from Blender with gameplay systems built in C#, featuring naval exploration, ship customization, and combat mechanics inspired by Tradelands.',
     tools: ['Unity', 'Blender', 'C#'],
   },
 
@@ -171,7 +183,7 @@ export const projectData: ProjectType[] = [
     date: '2021',
     duration: '2 months',
     description:
-      'A top-down shooter game where players must survive waves of zombies that get progressively stronger. The game features a variety of weapons, power-ups, and enemy types to keep players engaged.',
+      'Take Cover is a top-down zombie survival game developed in Java, where players battle increasingly difficult waves of enemies using a variety of weapons and power-ups. Built with Java Swing for rendering and UI, the project focused on game mechanics, enemy AI, progression systems, and responsive gameplay to create an engaging arcade-style survival experience.',
     tools: ['Swing', 'Pix2D', 'Soundly', 'Java'],
   },
 
@@ -182,7 +194,7 @@ export const projectData: ProjectType[] = [
     date: '2021',
     duration: '2 weeks',
     description:
-      'A remake of the popular arcade game Frogger. Players must guide a frog across a busy road and river to reach their home. The game features multiple levels and a high score system to challenge players.',
+      'Frogger is a modern recreation of the classic arcade game, built in Java using Swing. Players navigate a frog through traffic and across hazardous waterways while avoiding obstacles and timing their movements carefully. The project focused on collision detection, game loops, level progression, and recreating the fast-paced gameplay that made the original a timeless classic.',
     tools: ['Swing', 'Pix2D', 'Java'],
   },
 
@@ -193,7 +205,7 @@ export const projectData: ProjectType[] = [
     date: '2021',
     duration: '1 month',
     description:
-      'A 2D idle game where players must manage and grow a factory on an island. Players build structures to gain resources, which are then used to build more advanced structures.',
+      'Idle Island is a 2D resource management game developed in Python using Pygame. Players expand a small island economy by constructing buildings, generating resources, and unlocking increasingly advanced production chains. The project explored progression systems, balancing mechanics, and the core gameplay loops that drive idle and incremental games.',
     tools: ['PyGame', 'Pix2D', 'Python'],
   },
 ];
