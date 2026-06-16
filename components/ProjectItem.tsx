@@ -143,11 +143,7 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
           <div className="relative px-4 pt-3 pb-4 flex items-end justify-between gap-3 bg-card">
             {/* Title */}
             <div className="min-w-0">
-              <motion.h2
-                className="text-sm font-semibold leading-snug tracking-tight truncate"
-                animate={{ x: hovered ? 3 : 0 }}
-                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              >
+              <motion.h2 className="text-sm font-semibold leading-snug tracking-tight truncate">
                 {data.title}
               </motion.h2>
               {category && (
@@ -162,7 +158,6 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
               className="shrink-0 w-7 h-7 rounded-full border border-border/50
                           flex items-center justify-center text-muted-foreground"
               animate={{
-                scale: hovered ? 1 : 0.85,
                 opacity: hovered ? 1 : 0.4,
                 borderColor: hovered
                   ? 'hsl(var(--foreground) / 0.4)'

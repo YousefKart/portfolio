@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, ChevronLeft } from 'lucide-react';
+import { ExternalLink, ChevronLeft } from 'lucide-react';
 import { ProjectType } from '@/lib/types/ProjectType';
 import { MediaDisplay } from './MediaDiaplay';
 
