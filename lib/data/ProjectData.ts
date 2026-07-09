@@ -2,12 +2,12 @@ import { ProjectType } from '@/lib/types/ProjectType';
 
 export const projectData: ProjectType[] = [
   {
-    title: 'Eyez and Earz',
+    title: 'ABG Horizon',
     subtitle: 'AI Market Intelligence Platform',
-    images: [],
+    images: ['/images/ABGHorizon.png'],
     date: '2026',
     duration: 'In Progress',
-    description: `Eyez & Earz is a market intelligence platform designed to identify, evaluate, and validate news-driven trading opportunities.\n
+    description: `Alpha-Benchmark-Group Horizon is a market intelligence platform designed to identify, evaluate, and validate news-driven trading opportunities.\n
       Earz is the real-time intelligence engine of the platform. It continuously monitors financial news, extracts relevant companies and events, enriches them with live market data, and uses AI-driven analysis and custom scoring algorithms to identify potential trading opportunities. The resulting structured signals are published to the platform for visualization and further analysis.\n
       Eyez is the historical validation and backtesting engine, currently under active development. It is designed to replay historical news events and evaluate how Earz's generated signals would have performed over time, enabling quantitative analysis, strategy refinement, and continuous improvement of the system's decision-making capabilities.\n
       The platform is built on a modular architecture with FastAPI serving as the central API layer and Supabase PostgreSQL handling persistent storage for news events, market snapshots, and AI-generated signals. A Next.js dashboard consumes the API to provide a real-time view of incoming opportunities and historical data.`,
