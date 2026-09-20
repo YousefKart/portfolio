@@ -2,12 +2,35 @@ import { ProjectType } from '@/lib/types/ProjectType';
 
 export const projectData: ProjectType[] = [
   {
-    title: 'ABG Horizon',
-    subtitle: 'AI Market Intelligence Platform',
-    images: ['/images/ABGHorizon.png'],
+    title: 'Horizon 2.0',
+    subtitle: 'Event-Driven Quantitative Trading System',
+    images: [],
     date: '2026',
-    duration: 'In Progress',
-    description: `Alpha-Benchmark-Group Horizon is a market intelligence platform designed to identify, evaluate, and validate news-driven trading opportunities.\n
+    duration: 'Ongoing',
+    description: `Horizon 2.0 is a ground-up rebuild of Horizon focused on real-time quantitative analysis, autonomous paper trading, and portfolio-level performance tracking.\n
+    The system continuously monitors financial news and market data to identify potentially market-moving events. Incoming events are enriched with live pricing and statistical data before being processed by a quantitative engine that evaluates volatility, abnormal price movement, risk, and other market conditions to generate structured trading signals.\n
+    A dedicated C++ engine handles compute-intensive quantitative workloads, including statistical analysis, Monte Carlo simulation, signal generation, and risk and position-sizing calculations. Python services handle external data ingestion, event processing, and paper-trading execution, while FastAPI provides the orchestration layer between the system's components.\n
+    Unlike Horizon 1.0's historical backtesting approach, Horizon 2.0 evaluates strategies through live paper trading. Generated signals can create simulated orders and positions whose executions, portfolio value, and eventual outcomes are persisted and analyzed over time, allowing the system to measure how its decisions perform under real market conditions.\n
+    The platform is structured as a unified monorepo with a Next.js dashboard for monitoring news events, signals, positions, trades, and portfolio performance. Supabase PostgreSQL provides persistent storage for the complete trading lifecycle, from the original market event through signal generation, execution, and final outcome.`,
+    tools: [
+      'C++',
+      'Python',
+      'FastAPI',
+      'NextJS',
+      'TypeScript',
+      'Supabase',
+      'PostgreSQL',
+      'Monte Carlo',
+      'LLMs',
+    ],
+  },
+  {
+    title: 'Horizon 1.0',
+    subtitle: 'AI Market Intelligence Platform',
+    images: ['/images/Horizon1.png'],
+    date: '2026',
+    duration: '3 months',
+    description: `Horizon (1.0) is a market intelligence platform designed to identify, evaluate, and validate news-driven trading opportunities.\n
       Earz is the real-time intelligence engine of the platform. It continuously monitors financial news, extracts relevant companies and events, enriches them with live market data, and uses AI-driven analysis and custom scoring algorithms to identify potential trading opportunities. The resulting structured signals are published to the platform for visualization and further analysis.\n
       Eyez is the historical validation and backtesting engine, currently under active development. It is designed to replay historical news events and evaluate how Earz's generated signals would have performed over time, enabling quantitative analysis, strategy refinement, and continuous improvement of the system's decision-making capabilities.\n
       The platform is built on a modular architecture with FastAPI serving as the central API layer and Supabase PostgreSQL handling persistent storage for news events, market snapshots, and AI-generated signals. A Next.js dashboard consumes the API to provide a real-time view of incoming opportunities and historical data.`,
