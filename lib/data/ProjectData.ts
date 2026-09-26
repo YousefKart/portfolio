@@ -21,6 +21,7 @@ export const projectData: ProjectType[] = [
       'Supabase',
       'PostgreSQL',
       'Monte Carlo',
+      'Alpaca',
       'LLMs',
     ],
   },
