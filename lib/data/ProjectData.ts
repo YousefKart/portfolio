@@ -84,7 +84,7 @@ export const projectData: ProjectType[] = [
       'OpenCV',
       'Python',
     ],
-    url: 'https://4990.tanzimfh.com/',
+    url: 'https://4990.tanzimfh.com/welcome',
   },
 
   {
