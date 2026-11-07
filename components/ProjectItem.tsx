@@ -154,53 +154,56 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
               )}
             </div>
 
-            {/* Arrow button — highlights with the card and uses the accent on direct hover */}
-            <motion.button
-              type="button"
-              aria-label={`Visit ${data.title}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                if (data.url)
+            {data.url && (
+              /* Arrow button — highlights with the card and uses the accent on direct hover */
+              <motion.button
+                type="button"
+                aria-label={`Visit ${data.title}`}
+                onClick={(e) => {
+                  e.stopPropagation();
                   window.open(data.url, '_blank', 'noopener,noreferrer');
-              }}
-              onKeyDown={(e) => e.stopPropagation()}
-              onMouseEnter={() => setArrowHovered(true)}
-              onMouseLeave={() => setArrowHovered(false)}
-              className="shrink-0 w-7 h-7 rounded-full border
+                }}
+                onKeyDown={(e) => e.stopPropagation()}
+                onMouseEnter={() => setArrowHovered(true)}
+                onMouseLeave={() => setArrowHovered(false)}
+                className="shrink-0 w-7 h-7 rounded-full border
                           flex cursor-pointer items-center justify-center
                           focus-visible:outline focus-visible:outline-2
                           focus-visible:outline-offset-2 focus-visible:outline-accent"
-              animate={{
-                opacity: hovered ? 1 : 0.4,
-                borderColor: arrowHovered
-                  ? 'hsl(var(--border) / 0.5)'
-                  : 'var(--accent)',
-                backgroundColor: arrowHovered ? 'transparent' : 'var(--accent)',
-                color: arrowHovered
-                  ? 'hsl(var(--muted-foreground))'
-                  : 'var(--accent-foreground)',
-              }}
-              transition={{ duration: 0.25 }}
-            >
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                className="stroke-current"
-                strokeWidth="1.5"
+                animate={{
+                  opacity: hovered ? 1 : 0.4,
+                  borderColor: arrowHovered
+                    ? 'hsl(var(--border) / 0.5)'
+                    : 'var(--accent)',
+                  backgroundColor: arrowHovered
+                    ? 'transparent'
+                    : 'var(--accent)',
+                  color: arrowHovered
+                    ? 'hsl(var(--muted-foreground))'
+                    : 'var(--accent-foreground)',
+                }}
+                transition={{ duration: 0.25 }}
               >
-                <motion.line
-                  x1="2"
-                  y1="10"
-                  x2="10"
-                  y2="2"
-                  animate={{ x2: hovered ? 10 : 9, y2: hovered ? 2 : 3 }}
-                  transition={{ duration: 0.2 }}
-                />
-                <polyline points="4,2 10,2 10,8" />
-              </svg>
-            </motion.button>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  className="stroke-current"
+                  strokeWidth="1.5"
+                >
+                  <motion.line
+                    x1="2"
+                    y1="10"
+                    x2="10"
+                    y2="2"
+                    animate={{ x2: hovered ? 10 : 9, y2: hovered ? 2 : 3 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                  <polyline points="4,2 10,2 10,8" />
+                </svg>
+              </motion.button>
+            )}
           </div>
 
           {/* ── Chamfer corner accent — a tiny triangle fill matching card bg ── */}
