@@ -23,6 +23,7 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
   const inView = useInView(ref, { once: true, margin: '-60px' });
   const [modalOpen, setModalOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [arrowHovered, setArrowHovered] = useState(false);
 
   // Magnetic tilt on hover
   const mouseX = useMotionValue(0);
@@ -153,15 +154,31 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
               )}
             </div>
 
-            {/* Arrow indicator — slides in on hover */}
-            <motion.div
-              className="shrink-0 w-7 h-7 rounded-full border border-border/50
-                          flex items-center justify-center text-muted-foreground"
+            {/* Arrow button — highlights with the card and uses the accent on direct hover */}
+            <motion.button
+              type="button"
+              aria-label={`Visit ${data.title}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                if (data.url)
+                  window.open(data.url, '_blank', 'noopener,noreferrer');
+              }}
+              onKeyDown={(e) => e.stopPropagation()}
+              onMouseEnter={() => setArrowHovered(true)}
+              onMouseLeave={() => setArrowHovered(false)}
+              className="shrink-0 w-7 h-7 rounded-full border
+                          flex cursor-pointer items-center justify-center
+                          focus-visible:outline focus-visible:outline-2
+                          focus-visible:outline-offset-2 focus-visible:outline-accent"
               animate={{
                 opacity: hovered ? 1 : 0.4,
-                borderColor: hovered
-                  ? 'hsl(var(--foreground) / 0.4)'
-                  : 'hsl(var(--border) / 0.5)',
+                borderColor: arrowHovered
+                  ? 'hsl(var(--border) / 0.5)'
+                  : 'var(--accent)',
+                backgroundColor: arrowHovered ? 'transparent' : 'var(--accent)',
+                color: arrowHovered
+                  ? 'hsl(var(--muted-foreground))'
+                  : 'var(--accent-foreground)',
               }}
               transition={{ duration: 0.25 }}
             >
@@ -183,7 +200,7 @@ export function ProjectItem({ data, index }: ProjectItemProps) {
                 />
                 <polyline points="4,2 10,2 10,8" />
               </svg>
-            </motion.div>
+            </motion.button>
           </div>
 
           {/* ── Chamfer corner accent — a tiny triangle fill matching card bg ── */}
