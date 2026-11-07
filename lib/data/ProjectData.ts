@@ -2,7 +2,7 @@ import { ProjectType } from '@/lib/types/ProjectType';
 
 export const projectData: ProjectType[] = [
   {
-    title: 'Horizon 2.0',
+    title: 'Horizon 2',
     subtitle: 'Event-Driven Quantitative Trading System',
     images: [],
     date: '2026',
@@ -11,7 +11,9 @@ export const projectData: ProjectType[] = [
     The system continuously monitors financial news and market data to identify potentially market-moving events. Incoming events are enriched with live pricing and statistical data before being processed by a quantitative engine that evaluates volatility, abnormal price movement, risk, and other market conditions to generate structured trading signals.\n
     A dedicated C++ engine handles compute-intensive quantitative workloads, including statistical analysis, Monte Carlo simulation, signal generation, and risk and position-sizing calculations. Python services handle external data ingestion, event processing, and paper-trading execution, while FastAPI provides the orchestration layer between the system's components.\n
     Unlike Horizon 1.0's historical backtesting approach, Horizon 2.0 evaluates strategies through live paper trading. Generated signals can create simulated orders and positions whose executions, portfolio value, and eventual outcomes are persisted and analyzed over time, allowing the system to measure how its decisions perform under real market conditions.\n
-    The platform is structured as a unified monorepo with a Next.js dashboard for monitoring news events, signals, positions, trades, and portfolio performance. Supabase PostgreSQL provides persistent storage for the complete trading lifecycle, from the original market event through signal generation, execution, and final outcome.`,
+    The platform is structured as a unified monorepo with a Next.js dashboard for monitoring news events, signals, positions, trades, and portfolio performance. Supabase PostgreSQL provides persistent storage for the complete trading lifecycle, from the original market event through signal generation, execution, and final outcome.\n
+    username: demo
+    password: 86b66a2c7ffd8a86`,
     tools: [
       'C++',
       'Python',
@@ -22,11 +24,11 @@ export const projectData: ProjectType[] = [
       'PostgreSQL',
       'Monte Carlo',
       'Alpaca',
-      'LLMs',
     ],
+    url: 'https://horizon.yousefkart.com/',
   },
   {
-    title: 'Horizon 1.0',
+    title: 'Horizon 1',
     subtitle: 'AI Market Intelligence Platform',
     images: ['/images/Horizon1.png'],
     date: '2026',
